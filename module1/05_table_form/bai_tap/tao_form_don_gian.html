@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .or{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <form action="google.com">
+        <table style="font-family: Verdana, Geneva, Tahoma, sans-serif;"> 
+            <tr>
+                <th colspan = "4" style="background-color: rgb(255, 0, 0);"> Sở thích của bạn</th>
+            </tr>
+           <tr>
+               <td style="text-align: right;"> Họ và Tên</td>
+               <td colspan="3"><input type="text" style="width: 250px;"></td>
+           </tr>
+           <tr>
+               <td style="text-align: right;"> Email</td>
+               <td colspan="3"> <input type="text"></td>
+           </tr>
+           <tr>
+               <td rowspan="4" style="text-align: right;">Sở Thích</td>
+               <td><input type="checkbox" name="hobby" class="or"  >Thể thao</td>
+               <td><input type="checkbox" name="hobby" class="or" > Âm nhạc</td>
+               <td><input type="checkbox" name="hobby" class="or"  > Đọc Sách </td>
+
+           </tr>
+           <tr>
+               <td><input type="checkbox" name="hobby" class="or"  >lướt Web</td>
+               <td><input type="checkbox" name="hobby" class="or"  >Chơi game</td>
+               <td><input type="checkbox" name="hobby" class="or" >Điện ảnh</td>
+           </tr>
+           <tr>
+               <td><input type="checkbox" name="hobby" class="or" >Du lịch</td>
+           </tr>
+           <tr>
+               <!-- <td><label for=""><input type="submit"> Gửi thông tin</label></td>
+               <td><label for=""><input type="reset">Nhập lại</label></td> -->
+               <td><button type="submit" value="Submit" >Gửi thông tin</button></td>
+               <td><button type="reset" value="Reset"> Nhập lại</button></td>
+           </tr>
+
+           
+        </table>
+        <table style="background-color: yellow;">
+            <tr>
+                <th colspan="3" style="background-color: aquamarine; color: blue;"> ĐĂNG KÍ HỌC VIÊN</th>
+            </tr>
+            <tr>
+                <td> Họ và tên</td>
+                <td colspan="2"> <input type="text"></td>
+            </tr>
+            <tr>
+                <td> Ngày sinh</td>
+                <td colspan="2"> <input type="text"></td>
+            </tr>
+            <tr>
+                <td>Giới tính</td>
+                <td><input type="radio">Nam</td>
+                <td><input type="radio">Nữ</td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td colspan="2"><input type="text" name="" id=""></td>
+            </tr>
+            <tr>
+                <td>lớp</td>
+                <td><select name="" id="">Chọn lớp
+                <option value="">chọn lớp</option>
+                <option value="">2</option>
+            </select></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td colspan="2"><input type="text"></td>
+            </tr>
+            <tr>
+                <td rowspan="2">Điện thoại</td>
+                <td colspan="2"><input type="text"></td>
+            </tr>
+            <tr>
+                <td><button type="submit" value="Submit"> Đăng kí</button></td>
+                <td><button type="reset" value="Reset"> Nhập lại</button></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
