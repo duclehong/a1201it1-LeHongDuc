@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<form>
+		<table cellpadding="15">
+			<tr>
+				<th>Amount</th>
+				<th>From Currency</th>
+				<th>To Currency</th>
+				<th></th>
+			</tr>
+			<tr>
+				<th><input id="money"></th>
+				<th>
+					<select id="from">
+						<option value="vnd">VND</option>
+						<option value="usd">USD</option>
+					</select>
+				</th>
+				<th>
+					<select id="to">
+						<option value="usd">USD</option>
+						<option value="vnd">VND</option>
+					</select>
+				</th>
+				<th>
+					<button type="button" onclick="tiente()">Convert</button>
+				</th>
+			</tr>
+		</table>
+		<p id="result" style="color: blue;"></p>
+	</form>
+	<script>
+		function tiente() {
+			let money, fr, to, rs, text;
+
+			money = document.getElementById('money').value;
+			money = parseInt(money);
+			fr = document.getElementById('from').value;
+			to = document.getElementById('to').value;
+
+			if (fr == "vnd" && to =="usd") {
+				rs = money / 23000;
+			}else if (fr == "usd" && to == "vnd") {
+				rs = money * 23000;
+			}else {
+				rs = money;
+			}
+			text = "Result: " +rs;
+			document.getElementById('result').innerHTML = text;
+		}
+	</script>
+
+</body>
+</html>

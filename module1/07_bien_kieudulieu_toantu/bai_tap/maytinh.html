@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Calculator</h1>
+	<input id="fn1">
+	<input id="fn2">
+	<br><br>
+	<button type="button" onclick="sum()">Addition(+)</button>
+	<button type="button" onclick="sub()">Subtraction(-)</button>
+	<button type="button" onclick="mul()">Multiplication(x)</button>
+	<button type="button" onclick="div()">Division(/)</button>
+	<p id="result"></p>
+	<script>
+		let fn1, fn2, rs, text;
+
+		
+
+		function sum() {
+			fn1 = document.getElementById('fn1').value;
+			fn1 = parseInt(fn1);
+			fn2 = document.getElementById('fn2').value;
+			fn2 = parseInt(fn2);
+
+			rs = fn1 + fn2;
+			text = "Result Addition:" +rs;
+			document.getElementById('result').innerHTML = text;
+		}
+		function sub() {
+			fn1 = document.getElementById('fn1').value;
+			fn1 = parseInt(fn1);
+			fn2 = document.getElementById('fn2').value;
+			fn2 = parseInt(fn2);
+			
+			rs = fn1 - fn2;
+			text = "Result Subtraction:" +rs;
+			document.getElementById('result').innerHTML = text;
+		}
+		function mul() {
+			fn1 = document.getElementById('fn1').value;
+			fn1 = parseInt(fn1);
+			fn2 = document.getElementById('fn2').value;
+			fn2 = parseInt(fn2);
+			
+			rs = fn1 * fn2;
+			text = "Result Multiplication:" +rs;
+			document.getElementById('result').innerHTML = text;
+		}
+		function div() {
+			fn1 = document.getElementById('fn1').value;
+			fn1 = parseInt(fn1);
+			fn2 = document.getElementById('fn2').value;
+			fn2 = parseInt(fn2);
+			
+			rs = fn1 / fn2;
+			text = "Result Division:" +rs;
+			document.getElementById('result').innerHTML = text;
+		}
+	</script>
+</body>
+</html>

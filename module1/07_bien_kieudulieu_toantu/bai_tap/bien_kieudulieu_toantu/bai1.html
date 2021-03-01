@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let vatly;
+		let hoahoc;
+		let sinhhoc;
+
+		vatly = prompt("nhập điểm vật lý");
+		hoahoc = prompt("nhập điểm hóa học");
+		sinhhoc = prompt("nhập điểm sinh học");
+
+		let vl = parseInt(vatly);
+		let hh = parseInt(hoahoc);
+		let sh = parseInt(sinhhoc);
+
+		let diem = (vl + hh + sh) / 3;
+		let tong = vl + hh + sh;
+
+		document.write('Điểm trung bình = '+ diem );
+		document.write('<br/>');
+		document.write('Tổng điểm = '+ tong );
+	</script>
+</body>
+</html>
