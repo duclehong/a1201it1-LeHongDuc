@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="c" placeholder="nhap do dai canh a">
+    <input type="text" name="" id="d" placeholder="nhap do dai canh b">
+    <button onclick="cd()"> = </button>
+    <input type="text" name="" id="k" style="width: 300px;"> 
+    <br>
+    <script>
+        function cd() {
+            var c,d,s;
+            c = document.getElementById('c').value;
+            c = parseFloat(c);
+            d = document.getElementById('d').value;
+            d = parseFloat(d);
+            s = c*d;
+            document.getElementById('k').value =  "dien tich hinh chu nhat la: " + s;
+        }
+    </script>
+</body>
+</html>

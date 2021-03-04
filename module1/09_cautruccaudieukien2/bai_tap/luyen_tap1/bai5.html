@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="kt" placeholder="nhap diem kiem tra">
+    <input type="text" name="" id="gk" placeholder="nhap diem gia ky">
+    <input type="text" name="" id="ck" placeholder="nhap diem cuoi ky">
+    <button onclick="kt()"> Kiem tra xep loai hoc luc </button>
+    <input type="text" name="" id="fn"> 
+    <script>
+        function kt() {
+            var kt, gk, ck, fn;
+
+            kt = document.getElementById('kt').value;
+            kt = parseFloat(kt);
+            gk = document.getElementById('gk').value;
+            gk = parseFloat(gk);
+            ck = document.getElementById('ck').value;
+            ck = parseFloat(ck);
+            fn = kt*0.2+gk*0.3+ck*0.5;
+            console.log(fn);
+            if (fn >= 8) {
+                document.getElementById('fn').value = fn + " diem! nai xu";
+            } else if (fn>=5) {
+                document.getElementById('fn').value = fn + " diem, kha!";
+            } else{
+                document.getElementById('fn').value = fn + " diem - ga";
+            }
+        }
+    </script>
+
+</body>
+</html>

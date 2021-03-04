@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="a" placeholder="nhap so a">
+    <input type="text" name="" id="b" placeholder="nhap so b">
+    <input type="text" name="" id="c" placeholder="nhap so c">
+    <button onclick="ptb2()">Tinh nghiem</button>
+    <br>
+    <input type="text" id="kq" style="width: 300px;">
+    <script>
+        function ptb2() {
+            var a,b,c,d,kq,s1,s2;
+            a = document.getElementById('a').value;
+            a = parseFloat(a);
+            console.log(a);
+            b = document.getElementById('b').value;
+            b = parseFloat(b);
+            console.log(b);
+            c = document.getElementById('c').value;
+            c = parseFloat(c);
+            console.log(c);
+
+            d = b*b-(4*a*c);
+            console.log(d);
+            if (d<0) {
+                document.getElementById('kq').value =  "phuong trinh vo nghiem ";
+            } else if (d=0) {
+                s1 = s2 = -(b/(2*a));
+                document.getElementById('kq').value = " phuong trinh co nghiem kep la: " + s1;
+            } else{
+                s1 = -((-b+Math.sqrt(d))/(2*a))
+                s2 = ((-b+Math.sqrt(d))/(2*a))
+                document.getElementById('kq').value = " phuong trinh co hai nghiem la: " + s1 + "va" + s2;
+                
+            }
+            
+        }
+    </script>
+
+</body>
+</html>

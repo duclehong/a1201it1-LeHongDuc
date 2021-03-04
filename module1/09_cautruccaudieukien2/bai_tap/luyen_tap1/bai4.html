@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="1" placeholder="nhap so thu nhat">
+    <input type="text" name="" id="2" placeholder="nhap so thu hai">
+    <input type="text" name="" id="3" placeholder="nhap so thu ba">
+    <button onclick="kt()">kiemtra</button>
+    <input type="text" name="" id="dc"  >
+    <script>
+        function kt(params) {
+            let a,b,c,max;
+        a = document.getElementById('1').value;
+        a = parseInt(a);
+        console.log(a);
+        b = document.getElementById('2').value;
+        b = parseInt(b);
+        c = document.getElementById('3').value;
+        c = parseInt(c);
+        max = a;
+        if (b > max) {
+            max = b;
+            
+        }
+        if (c > max) {
+            max= c;
+        }
+        document.getElementById('dc').value = "so lon nhat la " + max;
+        // document.write(max);
+        }
+    </script>
+</body>
+</html>

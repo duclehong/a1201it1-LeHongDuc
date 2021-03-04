@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="c" placeholder="nhap do dai canh a">
+    <button onclick="cd()"> = </button>
+    <input type="text" name="" id="k"> 
+    <br>
+    <script>
+        function cd() {
+            var c,k;
+            c = document.getElementById('c').value;
+            c = parseFloat(c);
+            k = c * 4;
+            document.getElementById('k').value =  "dien tich hinh vuong la: " + k;
+        }
+    </script>
+</body>
+</html>
