@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="dem100()"> dem 100</button>
+    <button onclick="nhietdo()">nhietdo</button>
+    <button onclick="fibo()"> hien thi 20 so dau cua day fibo</button>
+    <button onclick="tim_So_chia_5()"> so dau tien cua day fibo chia het cho 5</button>
+    <button onclick="tinhtong20sodau()">Tinh tong 20 so dau cua day fibo</button>
+    <button onclick="chiahetcho7()">Tinh tong 30 so dau chia het cho 7</button>
+    <button onclick="fizzbuzz()">FizzBuzz</button>
+    <button onclick="doan()">FizzBuzz</button>
+    <script>
+        function dem100() {
+            for (let i = 0; i < 100; i++) {
+            document.write(i);
+            
+        }
+        }
+        function nhietdo() {
+            var nd = prompt('nhap nhiet do:', )
+            if(nd>100){
+                document.write('yeu cau giam nhiet do')
+            }else if (nd<20) {
+                document.write('yeu cau tang nhiet do')
+            } else {
+                document.write('nhiet do binh thuong')
+            }
+        }
+        function fibo() {
+            var num1 =0;
+            var num2 =1;
+            var num3 =0;
+            for (let i = 0; i < 20; i++) {
+                num3 = num2+num1;
+                num1=num2;
+                num2=num3;
+
+                document.write(num3 + "<br/>")
+                
+            }
+           
+        }
+        function tim_So_chia_5() {
+            var num1 =0;
+            var num2 =1;
+            var num3 =0;
+            for (let i = 0; i < 20; i++) {
+                num3 = num2+num1;
+                num1=num2;
+                num2=num3;
+
+                if (num3 % 5==0) {
+                    document.write(num3 + "<br/>");
+                    break;
+                }
+                
+            }
+        }
+        function tinhtong20sodau() {
+            var num1 =0;
+            var num2 =1;
+            var num3 =0;
+            var tong = 0;
+            for (let i = 0; i < 20; i++) {
+                num3 = num2+num1;
+                tong+=num3;
+                
+                num1=num2;
+                num2=num3;
+
+               
+                
+            }
+        document.write(tong);
+        }
+        function chiahetcho7() {
+            var dem = 0
+            var num =0;
+            var tong =0;
+            while (dem<20) {
+                if(num%7==0){
+                    dem++;
+                    tong+=num;
+
+                }
+                num++;
+            }
+            document.write(tong);
+        }
+        function fizzbuzz() {
+            for (let i = 0; i < 100; i++) {
+                if (i%3==0) {
+                    if (i%5==0) {
+                        document.write("Fizz Buzz <br/>")
+                    }else{
+                        document.write("Fizz <br/>")
+
+                    }
+                   
+                } else if (i%5==0) {
+                    if (i%3==0) {
+                        document.write("Fizz Buzz <br/>")
+                    } else {
+                        document.write("Buzz <br/>")
+                    }
+                    
+                } else {
+                    document.write(i +"<br/>")
+                }
+                
+            }
+        }
+        
+        function doan() {
+            var x = prompt("nhap vao so x", )
+            x = parseInt(x);
+            max = x+10;
+            min = x-10;
+            var ngaunhien = Math.floor(Math.random() * (max - min)) + min;
+            var n = 0;
+            
+
+            do {
+                n = prompt("nhap vao so n trong khoang x");
+                n = parseInt(n);
+            } while (n !== ngaunhien);
+            alert("chinh xac");
+            console.log(n);
+            console.log(ngaunhien);
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -10,28 +10,61 @@
     <input type="text" id="in" placeholder="nhap so">
     <button onclick="kt()"> kiem tra nguyen to</button>
     <input type="text" id="kq" >
+    <input type="text" name="" id="so_luong">
+    <button onclick="prt()"> in ra n so nguyen to</button>
     <script>
         function kt() {
             var n;
         n = document.getElementById('in').value;
         n = parseInt(n);
-        var bl = true;
+        var bl = 0;
         if (n<2) {
-            document.getElementById('kq').value = "day khong phai la so nguyen to";
+      
         }
         
         for (let i = 2; i < (n-1); i++) {
             if (n%i==0) {
-                document.getElementById('kq').value = "day khong phai la so nguyen to";
-                bl = false;
+                
+                bl ++;
                 console.log(bl);
                 break;
             }
             
         }
-        if (bl) {
+        if (bl==0) {
             document.getElementById('kq').value = " day la so nguyen to";
-        } 
+        } else{
+            document.getElementById('kq').value = " day khong phai la so nguyen to dau";
+        }
+        }
+        function prt() {
+            var num = 20;
+           num =  document.getElementById('so_luong').value;
+           num = parseInt(num);
+           
+           dem = 0;
+           tam = 2;
+           while (dem < num) {
+               if (kiemtrasonguyen(tam)) {
+                   document.writeln(tam);
+                   dem ++;
+
+               }
+               tam ++;
+           }
+           
+        }
+        function kiemtrasonguyen(n) {
+            if (n<2) {
+                return 0;
+            }
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n%i==0) {
+                    return 0;
+                }
+                
+            }
+            return 1;
         }
     </script>
 </body>

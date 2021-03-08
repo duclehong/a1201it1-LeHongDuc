@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fibo()" > fibo</button>
+    <button onclick="giaithua()" > giai thua</button>
+    <button onclick="triangle()" >  triangle</button>
+    <button onclick="interest()" >  Interest rate</button>
+    <script>
+        function fibo() {
+            var num1 =0;
+            var num2 =1;
+            var num3 =0;
+            for (let i = 0; i < 1475; i++) {
+                num3 = num2+num1;
+                num1=num2;
+                num2=num3;
+
+                document.write(num3  + "<br/>" )
+                
+            }
+        }
+        function giaithua() {
+           var tich = 1;
+           var n = parseInt(prompt("nhap so n",))
+           
+           for (let i = 2; i <(n+1) ; i++) {
+               tich= tich*i;
+
+               
+           }
+           console.log(tich);
+        document.write("giai thua cua " +n+" la: " +tich );
+        }
+        function triangle() {
+            for (let i = 1; i < 6; i++) {
+                for (let n = 0; n < i; n++) {
+                   document.write("*");
+                    
+                }
+                document.write("<br/>");
+                
+            }  
+            document.write("<br/>");
+            for (let i = 5; i > 0; i--) {
+                for (let n = 0; n < i; n++) {
+                   document.write("*");
+                    
+                }
+                document.write("<br/>");
+                
+            }
+            document.write("<br/>");
+            for (let i = 5; i > 0; i--) {
+                for (let n = 0; n < i; n++) {
+                   document.write("&ensp;");
+                    
+                }
+              
+                   for (let n = 0; n < (6-i); n++) {
+                   document.write("*");
+                    
+                }
+                
+                document.write("<br/>");
+                
+            }
+            document.write("<br/>");
+            for (let i = 1; i < 6; i++) {
+                for (let n = 0; n < i; n++) {
+                   document.write("&ensp;");
+                    
+                }
+                
+                   for (let n = 0; n < (6-i); n++) {
+                   document.write("*");
+                    
+                }
+                
+                document.write("<br/>");
+                
+            }
+        }
+        function interest() {
+            var s = parseFloat(prompt('nhap so tien ban dau',));
+            var i = parseFloat(prompt('nhap lai suat',));
+            var m = parseFloat(prompt('nhap so thang',))
+            for (let a = 1; a <= m; a++) {
+                s = s +(s*i) ;
+                console.log(s);
+                
+            }
+            document.write('Tong so tien phai tra sau ' + m +' thang la: ' + s)
+        }
+       
+    </script>
+</body>
+</html>
