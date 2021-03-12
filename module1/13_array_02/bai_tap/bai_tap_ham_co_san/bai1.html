@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button onclick="join1()">Bai1</button>
+        <p id="join1"></p>
+    </div>
+    <div>
+        <button onclick="sochan()">Bai2</button>
+        <p id="number"></p>
+    </div>
+</body>
+<script>
+    function join1() {
+        var n = parseInt(prompt('nhap so phan tu cua mang'))
+        var arr = [];
+        var x = document.getElementById("join1");
+
+        for (let i = 0; i < n; i++) {
+            var tem = prompt('nhap phan tu thu ' + (i + 1), )
+            arr[i] = tem;
+
+        }
+
+        x.innerHTML = arr.join("+");
+    }
+    function sochan() {
+        var n = parseInt(prompt('nhap so phan tu',))
+        var arr = [];
+        
+        var x = document.getElementById('number');
+        for (let i = 0; i < n; i++) {
+            var m = parseInt(prompt('nhap so thu ' + (i+1)));
+            arr[i] = m;
+            
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i]%2==0 && arr[i+1]%2==0) {
+                arr.push('-',arr[i]);
+
+            }
+            
+        }
+        
+        x.innerHTML = arr.join(" ");
+    }
+</script>
+
+</html>

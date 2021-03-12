@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="english" placeholder="Tieng Anh">
+    <button onclick="dich()"> Dich</button>
+    <input type="text" name="vietnamese" id="vietnamese" placeholder="Tieng Viet">
+</body>
+<script>
+    var arr1 = ['go', "fly"];
+    var arr2 = ['di', 'bay']
+
+    function dich() {
+        e = document.getElementById("english").value;
+        for (let i = 0; i < arr1.length; i++) {
+            if (e == arr1[i]) {
+                console.log(i);
+                document.getElementById("vietnamese").value = arr2[i];
+            }
+        }
+    }
+</script>
+
+</html>
