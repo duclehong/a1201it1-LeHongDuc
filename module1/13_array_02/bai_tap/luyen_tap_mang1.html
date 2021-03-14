@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="dem_so_phan_tu_lon_hon_10()"> Bài 1</button>
+    <button onclick="tim_phan_tu_lon_nhat()">Bài 2</button>
+    <button onclick="tinh_trung_binh_cong()">Bài 3</button>
+    <button onclick="dao_mang()">Bài 4</button>
+    <button onclick="dem_so_nguyen_am()">Bài 5</button>
+    <button onclick="kiem_tra_ton_tai()">Bài 6</button>
+    <button onclick="xoa_phan_tu()">Bài 7</button>
+    <button onclick="sap_xep()">Bài 8</button>
+    <button onclick="noi_mang()">Bài 9</button>
+    <script>
+        function dem_so_phan_tu_lon_hon_10() {
+            var arr10 = new Array(10);
+            for (let i = 0; i < arr10.length; i++) {
+                arr10[i] = parseInt(prompt('nhap phan tu thu: ' + i));
+
+            }
+            var dem = 0;
+            for (let i = 0; i < arr10.length; i++) {
+                if (arr10[i] > 10) {
+                    dem += 1;
+                }
+
+            }
+            alert('số phần tử lớn hơn 10 là: ' + dem)
+        }
+
+        function tim_phan_tu_lon_nhat() {
+            var arr10 = new Array(10);
+            for (let i = 0; i < arr10.length; i++) {
+                arr10[i] = parseInt(prompt('nhap phan tu thu: ' + i));
+
+            }
+            var max = arr10[0];
+            var vi_tri = 0;
+            for (let i = 1; i < arr10.length; i++) {
+                if (arr10[i] > max) {
+                    max = arr10[i];
+                    vi_tri = i;
+                }
+
+            }
+            alert('phan tu lon nhat la: ' + max + " duoc tim thay tai vi tri " + vi_tri + " trong mang!")
+        }
+
+        function tinh_trung_binh_cong() {
+            var n = parseInt(prompt('nhập số phần tử trong mảng:'))
+            var arr10 = new Array();
+            for (let i = 0; i < n; i++) {
+                arr10[i] = parseFloat(prompt('nhap phan tu thu: ' + i));
+
+            }
+            var max = arr10[0];
+            var vi_tri = 0;
+            for (let i = 1; i < arr10.length; i++) {
+                if (arr10[i] > max) {
+                    max = arr10[i];
+                    vi_tri = i;
+                }
+
+            }
+            var tong = 0;
+            for (let i = 0; i < arr10.length; i++) {
+                tong += arr10[i];
+
+            }
+            var tbc = tong / arr10.length;
+            alert('phan tu lon nhat la: ' + max + " duoc tim thay tai vi tri " + vi_tri + " trong mang!");
+            alert(' trung binh cong cua cac phan tu trong mang la: ' + tbc);
+        }
+
+        function dao_mang() {
+            var n = parseInt(prompt('nhap so phan tu trong mang'))
+            var arr10 = new Array;
+            for (let index = 0; index < n; index++) {
+                arr10[index] = prompt("nhập phần tử thứ " + index)
+
+            }
+            for (let index = (arr10.length - 1); index >= 0; index--) {
+                document.write(arr10[index] + "<br/>")
+
+            }
+
+        }
+
+        function dem_so_nguyen_am() {
+            var n = parseInt(prompt('nhap so phan tu trong mang'))
+            var arr10 = new Array;
+            for (let index = 0; index < n; index++) {
+                arr10[index] = prompt("nhập phần tử thứ " + index)
+
+            }
+            var dem = 0;
+            for (let i = 0; i < arr10.length; i++) {
+                if (arr10[i] < 0) {
+                    dem += 1;
+                }
+
+            }
+            alert('số phần tử nguyên âm trong mảng là: ' + dem)
+        }
+
+        function kiem_tra_ton_tai() {
+            var arr10 = new Array(10);
+            for (let index = 0; index < arr10.length; index++) {
+                arr10[index] = parseInt(prompt('nhap phan tu thu: ' + index, ));
+
+            }
+            n = parseInt(prompt('nhap so can kiem tra: '))
+            for (let index = 0; index < arr10.length; index++) {
+                if (arr10[index] === n) {
+                    alert('so n ton tai trong mang tai vi tri: ' + index)
+                }
+
+            }
+        }
+
+        function xoa_phan_tu() {
+            var arr10 = new Array(10);
+            for (let index = 0; index < arr10.length; index++) {
+                arr10[index] = parseInt(prompt('nhap phan tu thu: ' + index, ));
+
+            }
+            n = parseInt(prompt('nhap so can kiem tra: '))
+            for (let index = 0; index < arr10.length; index++) {
+                if (arr10[index] === n) {
+                    arr10.splice(index, 1);
+                    break;
+                }
+
+            }
+            for (let index = 0; index < arr10.length; index++) {
+                console.log(arr10);
+                document.write(arr10[index]);
+
+            }
+        }
+
+        function sap_xep() {
+
+            var n = parseInt(prompt('nhap so phan tu trong mang'))
+            var arr10 = new Array;
+            for (let index = 0; index < n; index++) {
+                arr10[index] = prompt("nhập phần tử thứ " + index)
+
+            }
+            document.write('mang ban dau la: ')
+            for (let index = 0; index < arr10.length; index++) {
+                document.write(arr10[index] + " ");
+
+            }
+            document.write('<br/>')
+
+            for (let i = 0; i < arr10.length; i++) {
+                for (let i = 0; i < arr10.length; i++) {
+                    if (arr10[i] < arr10[i + 1]) {
+                        var tam = arr10[i];
+                        arr10[i] = arr10[i + 1];
+                        arr10[i + 1] = tam;
+                    }
+
+                }
+
+            }
+            document.write('mang giam dan la: ')
+            for (let index = 0; index < arr10.length; index++) {
+                document.write(arr10[index] + " ");
+
+            }
+        }
+        function noi_mang() {
+            
+            var a = new Array(10);
+            for (let index = 0; index < a.length; index++) {
+                a[index] = prompt("nhập phần tử thứ " + index)
+
+            }
+            console.log(a);
+            document.write("mang a: " );
+            for (let index = 0; index < a.length; index++) {
+                document.write(a[index] + " ");
+
+            }
+            document.write("<br/>" );
+            var b = new Array(10);
+            for (let index = 0; index < b.length; index++) {
+                b[index] = prompt("nhập phần tử thứ " + index)
+
+            }
+            console.log(b);
+            document.write("mang b: " );
+            for (let index = 0; index < b.length; index++) {
+                document.write(b[index] + " ");
+
+            }
+            document.write("<br/>" );
+            var c = [];
+            c = a.concat(b);
+            console.log(c);
+            document.write("mang c: " );
+            for (let index = 0; index < c.length; index++) {
+                document.write(c[index] + " ");
+
+            }
+        }
+    </script>
+</body>
+
+</html>

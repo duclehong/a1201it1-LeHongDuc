@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="solid 2px;" style="color:black;font-size:30px;">
+
+        <script>
+            for (let j = 1; j < 10; j++) {
+                document.write("<tr>");
+                for (let i = 2; i < 10; i++) {
+
+                    document.write("<td>" + i + "x" + j + "=" + i * j + "</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("hehe");
+        </script>
+
+    </table>
+    <h3>Caro Game Simple</h3>
+    <p id="carogame">
+        <input type="button" value="Change Value" onclick="()">
+        <script>
+            let b = document.getElementById("carogame");
+
+            let board = [];
+            let data = "";
+            for (let i = 0; i < 5; i++) {
+                board[i] = new Array(".", ".", ".", ".", ".");
+            }
+
+            function pr() {
+                for (let i = 0; i < 5; i++) {
+                    data += "<br/>";
+                    for (let j = 0; j < 5; j++) {
+                        data += board[i][j] + "&nbsp;&nbsp;";
+                    }
+                }
+                
+
+            }
+            pr();
+
+
+            data += "<br/><br/><input type='button' value=' Bat dau' onclick='changeValue()'>"
+            b.innerHTML = data;
+
+            function changeValue1() {
+                let positionX = prompt("X: ");
+                let positionY = prompt("Y: ");
+                data = "";
+                board[positionX][positionY] = "x";
+                pr();
+                data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+                b.innerHTML = "<hr/>" + data;
+
+            }
+
+            function changeValue2() {
+                let positionX = prompt("X: ");
+                let positionY = prompt("Y: ");
+                data = "";
+                board[positionX][positionY] = "o";
+                pr();
+                data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+                b.innerHTML = "<hr/>" + data;
+            }
+
+            function changeValue() {
+                for (let index = 0; index < 25; index++) {
+                    changeValue1();
+
+                    changeValue2();
+
+                }
+            }
+        </script>
+</body>
+
+</html>
