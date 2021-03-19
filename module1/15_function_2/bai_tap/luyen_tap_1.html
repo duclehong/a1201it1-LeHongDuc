@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bai1()">Bài 1</button>
+    <button onclick="bai2()">Bài 2</button>
+    <button onclick="bai3()">Bài 3</button>
+    <button onclick="bai4()">Bài 4</button>
+    <button onclick="bai5()">Bài 5</button>
+    <script>
+        function bai1() {
+            alert("hello bài 1");
+        }
+
+        function tang(n) {
+            return n += 1;
+        }
+
+        function bai2() {
+            n = parseInt(prompt("Nhập số: "));
+            alert("Số sau khi tăng 1 đơn vị là: " + tang(n));
+
+        }
+
+        function tong(a, b) {
+            return a + b;
+        }
+
+        function bai3() {
+            n = parseInt(prompt("nhập số thứ nhất"));
+            m = parseInt(prompt("nhập số thứ 2"));
+            if (n > m) {
+                alert("Số thứ nhất lớn hơn số thứ 2");
+                bai3()
+            } else {
+                alert("tổng 2 số là: " + tong(m, n));
+                return;
+            }
+        }
+
+        function bai4() {
+            function addNumbers() {
+                firstNum = 4;
+                secondNum = 8;
+                result = firstNum + secondNum;
+                return result;
+            }
+            result = 0;
+            alert("Giá trị ban đầu của biến result là: " + result)
+            result = addNumbers();
+            alert("Giá trị sau của biến result là: " + result)
+        }
+
+        function check_name(n) {
+
+            arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+            arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+            for (let index = 0; index < arr1.length; index++) {
+                if (n == arr1[index]) {
+                    alert("Tìm thấy chòm sao tương ứng là: " + arr2[index] + " tại vị trí " + index)
+                    return;
+                } 
+
+            }
+
+        }
+
+        function bai5() {
+
+            n = prompt("nhập vào tên idol:")
+            check_name(n);
+
+
+        }
+    </script>
+</body>
+
+</html>

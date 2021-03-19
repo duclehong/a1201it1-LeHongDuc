@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text " id="m" placeholder="nhập số mét"> 
+    <button onclick="mtf()">Chuyển sang feet</button> 
+    <p id="feet"></p>
+    <br>
+    <br>
+    <input type="text " id="f" placeholder="nhập số mét"> 
+    <button onclick="ftm()">Chuyển sang feet</button> 
+    <p id="meter"></p>
+
+    <script>
+        function feetToMeter(feet) {
+            
+            return feet*0.305;
+        }
+
+        function meterToFeet(meter) {
+            
+            return meter*3.279;
+        }
+        function mtf() {
+           m = parseFloat(document.getElementById("m").value);
+           document.getElementById("feet").innerHTML = meterToFeet(m);
+
+        }
+        function ftm() {
+           f = parseFloat(document.getElementById("f").value);
+
+           document.getElementById("meter").innerHTML = feetToMeter(f);
+
+        }
+    </script>
+</body>
+
+</html>

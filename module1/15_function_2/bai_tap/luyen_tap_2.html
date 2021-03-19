@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bai1()">Bài 1</button>
+    <button onclick="bai2()">Bài 2</button>
+    <button onclick="bai3()">Bài 3</button>
+    <button onclick="bai4()">Bài 4</button>
+    <button onclick="bai5()">Bài 5</button>
+    <button onclick="bai6()">Bài 6</button>
+    <button onclick="bai7()">Bài 7</button>
+    <button onclick="bai8()">Bài 8</button>
+    <script>
+        function tinh_binh_phuong(a) {
+            return a * a;
+        }
+
+        function tinh_s(s) {
+            return s * s * 3.14;
+        }
+
+        function tinh_p(s) {
+            return s * 2 * 3.14;
+        }
+
+        function bai1() {
+            n = parseInt(prompt("Nhập số cần tính bình phương"));
+            alert("số sau khi tính bình phương là: " + tinh_binh_phuong(n));
+        }
+
+        function bai2() {
+            r = parseFloat(prompt("nhập vào bán kính hình tròn"));
+            console.log(r);
+            var chu_vi = tinh_p(r);
+            var dien_tich = tinh_s(r);
+            console.log(chu_vi);
+            console.log(dien_tich);
+            alert("chu vi hình tròn là: " + chu_vi + " diện tích hình tròn là: " + dien_tich)
+        }
+
+        function tinh_giai_thua(n) {
+            if (n < 0) {
+                bai3();
+
+            }
+            if (n == 0 || n == 1) {
+
+                return 1;
+            }
+
+            return n * tinh_giai_thua(n - 1);
+        }
+
+        function bai3() {
+            n = parseInt(prompt("nhap vao so n"))
+            alert("giai thừa của số " + n + " là: " + tinh_giai_thua(n))
+        }
+
+        function kiem_tra_so(n) {
+            if (n >= "0" && n <= "9") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function bai4() {
+            n = prompt("nhập kí tụ");
+            if (kiem_tra_so(n)) {
+                alert("đây là ký tự số");
+            } else {
+                alert("không phải kí tự só")
+            }
+        }
+
+        function tim_min(a, b, c) {
+            var min = a;
+
+            if (b < min) {
+                min = b;
+            }
+            if (c < min) {
+                min = c;
+            }
+            return min;
+        }
+
+        function bai5() {
+            a = parseInt(prompt("nhập vào số thứ nhất:"));
+            b = parseInt(prompt("nhập vào số thứ hai:"));
+            c = parseInt(prompt("nhập vào số thứ ba:"));
+            alert("số bé nhất là: " + tim_min(a, b, c));
+        }
+        function kiem_tra_so_nguyen_duong(n) {
+            if(n==0){
+                return;
+            }
+            if(n>0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        function bai6() {
+            n = parseInt(prompt("Nhập vào số: "));
+            if (kiem_tra_so_nguyen_duong(n)) {
+                alert("Đây là số nguyên dương")
+            }else{
+                alert("Đây không phải số nguyên dương")
+            }
+        }
+        function doi_cho(arr,arr1) {
+            var tam = arr[0];
+            arr[0] = arr1[0];
+            arr1[0] = tam
+            
+        }
+        function bai7() {
+            a = parseInt(prompt("nhâp số thứ nhất: "))
+            b = parseInt(prompt("nhập số thứ hai: "))
+            var arr1 = [a];
+            var arr2 = [b];
+            alert("so truoc khi doi la " + arr1 + " va " + arr2);
+            doi_cho(arr1,arr2);
+            alert("so sau khi doi la " + arr1 + " va " + arr2);
+
+        }
+        function dao_mang(arr) {
+            for (let i = 0; i < (arr.length/2); i++) {
+                tam = arr[i]
+                arr[i] = arr[arr.length-1-i];
+                arr[arr.length-1-i] = tam;
+                
+            }
+        }
+        function bai8() {
+            var arr =[];
+            for (let i = 0; i < 6; i++) {
+                arr[i] = prompt("nhập vào giá trị thứ "+i);
+                
+            }
+            dao_mang(arr);
+            console.log(arr);
+            alert(arr);
+        }
+    </script>
+</body>
+
+</html>

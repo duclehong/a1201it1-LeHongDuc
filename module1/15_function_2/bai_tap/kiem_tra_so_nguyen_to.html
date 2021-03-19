@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="num" placeholder="nhập số">
+    <button onclick="check()">Check</button>
+    <br>
+    <p id="kq"></p>
+    <script>
+        function check() {
+            var n = parseInt(document.getElementById("num").value);
+            var tam = true;
+
+
+            console.log(n);
+            if (n < 2) {
+
+                tam = false;
+            }
+
+            for (let index = 2; index < (n - 1); index++) {
+                if (n % index == 0) {
+
+                    tam = false;
+                    break;
+                } else {
+                    tam = true;
+                }
+
+            }
+            if (tam == false) {
+                document.getElementById("kq").innerHTML = "khong phai so nguyen to!";
+            } else {
+                document.getElementById("kq").innerHTML = "n la so nguyen to!";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

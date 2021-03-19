@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="text" name="" id="">
+<body>
+    <p>Add New Product</p>
+    <div>
+        <input type="text" id="add_name" placeholder="New Product">
+        <button onclick="add_name()">Add</button>
+    </div>
+    <p>Display All Product</p>
+    <script>
+        var arr = ["vo cuc kiem", 'ma vu song kiem', 'giay ', 'huyet kiem', 'giap thien than'];
+
+        function display_Product() {
+            document.body.innerHTML = ""
+            let display = " <p>Add New Product</p>" +
+            "<input type='text' id='add_name' placeholder='New Product'> <button onclick='add_name()'>Add</button> <table >";
+                display += "<td colspan ='3'> Tong san pham: " + arr.length + "</td>"  
+            for (let i = 0; i < arr.length; i++) {
+                display += "<tr>"
+
+                
+                display += "<td >" + arr[i] + "</td>" +
+                    "<td> <button onclick='edit_name(" + i +") ' > Edit </button> </td>" +
+                    "<td> <button onclick='del_product(" + i + ")'> Delete </button>  </td>"
+                display += "</tr>"
+
+            }
+            display += "</table>";
+            document.write(display);
+        }
+
+        function edit_name(m) {
+            console.log("hehe");
+            var n = prompt(" nhap ten moi");
+            arr[m] = n;
+            display_Product();
+        }
+
+        function del_product(m) {
+            arr.splice(m, 1);
+            display_Product();
+        }
+        function add_name() {
+            var n = document.getElementById("add_name").value;
+            arr[arr.length] = n;
+            console.log(arr);
+            display_Product();
+        }
+        display_Product()
+    </script>
+</body>
+
+</html>

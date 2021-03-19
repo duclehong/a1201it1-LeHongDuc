@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function lam_lai() {
+            n = prompt("Nhập từ cẩn kiểm tra");
+
+            kiem_tra(n);
+
+            function kiem_tra(n) {
+                if (n.length <= 1  ) {
+                    alert("Đây là chuỗi palindrome")
+                    lam_lai();
+
+                    return
+                }
+                if (n[0] === n[n.length - 1]) {
+                    var m = n.substring(1, n.length - 1);
+                    kiem_tra(m)
+                } else {
+                    alert("Đây không phải là chuỗi palindrome, nhập lại nka")
+                    lam_lai();
+                }
+
+            }
+        }
+        lam_lai();
+    </script>
+</body>
+
+</html>
