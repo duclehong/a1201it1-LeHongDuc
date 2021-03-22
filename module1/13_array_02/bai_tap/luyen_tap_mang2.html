@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="bai_1()"> Bài 1</button>
+    <button onclick="bai_2()"> Bài 2</button>
+    <button onclick="bai_3()"> Bài 3</button>
+    <button onclick="bai_4()"> Bài 4</button>
+    <button onclick="bai_5()"> Bài 5</button>
+    <button onclick="bai_6()"> Bài 6</button>
+    <script>
+        function bai_1() {
+            var show = "";
+            let a = [
+                [1, 2, 1, 24],
+                [8, 11, 9, 4],
+                [7, 0, 7, 27],
+                [7, 4, 28, 14],
+                [3, 10, 26, 7]
+            ]
+            for (let i = 0; i < a.length; i++) {
+                show += (" row  " + i + "<br>")
+                for (let j = 0; j < a[0].length; j++) {
+                    show += (a[i][j] + "<br>")
+
+                }
+
+            }
+            document.write(show);
+        }
+
+        function bai_2() {
+            n = prompt("nhap so phan tu trong mang");
+            let a = [];
+            for (let i = 0; i < n; i++) {
+                a[i] = prompt("nhap phan tu thu" + i)
+
+            }
+            let show = "";
+            for (let i = (a.length - 1); i >= 0; i--) {
+                show += (a[i] + " ");
+
+            }
+            document.write("mang dao nguoc la: " + show)
+        }
+
+        function bai_3() {
+            n = parseInt(prompt("nhập số ký tự của mảng"));
+            let a = [];
+            for (let i = 0; i < n; i++) {
+                a[i] = prompt("nhập ký tự thứ " + i)
+
+            }
+            let dem = 0;
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] <= "9" && a[i] >= "0") {
+                    dem += 1;
+
+                }
+
+            }
+            document.write("mang co " + dem + " ky tu so!")
+        }
+
+        function bai_4() {
+            n = prompt("nhập chuõi");
+            let dem = 0;
+            for (let i = 0; i < n.length; i++) {
+                if (n[i] >= "0" && n[i] <= "9") {
+                    dem += 1;
+                }
+
+            }
+            document.write("chuỗi có " + dem + " ký tự số")
+        }
+
+        function bai_5() {
+            n = prompt("nhập chuỗi thứ nhất: ");
+            m = prompt("nhập chuỗi thứ hai: ");
+            var temp = true;
+            console.log(m.length);
+            console.log(n.length);
+            if (n.length == m.length) {
+                for (let i = 0; i < n.length; i++) {
+                    if (n[i] != m[i]) {
+                        temp = false;
+                    }
+
+                }
+            } else {
+                temp = false;
+            }
+            if (temp) {
+                document.write("2 chuỗi giống nhau")
+            } else {
+                document.write("2 chuỗi khác nhau")
+            }
+        }
+        function bai_6(){
+            n = parseInt(prompt("nhập số ký tự của mảng"));
+            let a = [];
+            for (let i = 0; i < n; i++) {
+                a[i] = prompt("nhập ký tự thứ: " + i);
+                
+            }
+            for (let i = 0; i < a.length; i++) {
+                if(a[i] == "-")
+                a[i] = "_"
+            }
+            document.write(a);
+            console.log(a);
+        }
+    </script>
+</body>
+
+</html>

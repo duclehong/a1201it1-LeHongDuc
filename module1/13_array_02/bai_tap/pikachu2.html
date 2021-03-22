@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h3>Game caro phiên bản lỗi</h3>
+    <p id="win"></p>
+    <script>
+        let arr = [];
+        let check = true;
+        let dem = 0;
+        let temp = "";
+        let z = 0;
+        let t =0;
+        let diem =0;
+     
+
+        arr2 = [
+            ["<img src='duc.jpg' >", "<img src='duc.jpg' >", "<img src='dau.jpg' >", "<img src='dau.jpg' >"],
+            ["<img src='cat1.jpg' >", "<img src='cat2.jpg' >", "<img src='cat1.jpg' >", "<img src='cat2.jpg' >"],
+            ["<img src='dog1.jpg' >", "<img src='duck.jpg' >", "<img src='n.jpg' >", "<img src='dog1.jpg' >"],
+            ["<img src='dog2.jpg' >", "<img src='duck.jpg' >", "<img src='dog2.jpg' >", "<img src='n.jpg' >"]
+        ]
+        console.log(arr2);
+
+        function initArray() {
+            for (let i = 0; i < 4; i++) {
+                arr[i] = new Array();
+                for (let j = 0; j < 4; j++) {
+                    arr[i][j] = "";
+                }
+            }
+        }
+
+        function displayTable() {
+            document.body.innerHTML = "";
+            let display = "<table border='1'>";
+            for (let i = 0; i < arr.length; i++) {
+                display += "<tr>"
+                for (let j = 0; j < arr[i].length; j++) {
+                    display += "<td onclick='changeValue(" + i + "," + j +
+                        ")' style='width: 100px; height: 100px;text-align: center'>" + arr[i][j] + "</td>"
+                }
+                display += "</tr>"
+            }
+            display += "</table>"
+            // display += "<button onclick='changeValue()'>Click</button>"
+            
+            document.write(display);
+        }
+        
+
+        function changeValue(x, y) {
+            dem += 1;
+            if (dem == 1) {
+                arr[x][y] = arr2[x][y];
+                temp = arr[x][y];
+                z = x;
+                t = y;            }
+            displayTable();
+            if (dem == 2) {
+                changeValue2(x, y);
+
+            }
+        }
+
+        function changeValue2(x, y) {
+            dem = 0;
+            arr[x][y] = arr2[x][y];
+
+            console.log(arr[x][y]);
+            console.log(temp);
+
+            if (arr[x][y] == temp) {
+                diem +=1;
+                // document.getElementById("diem").value = 0;
+               
+             
+                displayTable();
+
+            } else {
+                console.log(arr[z][t]);
+
+                arr[z][t] ="";
+                arr[x][y] = "";
+                l
+             
+                // alert("sai")
+                displayTable;
+            }
+        }
+
+        initArray();
+        displayTable();
+    </script>
+</body>
+
+</html>

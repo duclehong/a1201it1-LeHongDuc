@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h3>Game pikachu</h3>
+    <p id="win"></p>
+    <script>
+        let arr = [];
+        let check = true;
+
+        function initArray() {
+            // for (let i = 0; i < 4; i++) {
+            //     arr[i] = new Array();
+            //     for (let j = 0; j < 4; j++) {
+            //         arr[i][j] = "";
+            //     }
+            // }
+            arr[0][0] = "<img src='duc.jpg' >";
+            arr[0][1] = "<img src='duc.jpg' >";
+            arr[0][2] = "<img src='dau.jpg' >";
+            arr[0][3] = "<img src='dau.jpg' >";
+
+            arr[1][0] = "<img src='cat1.jpg' >";
+            arr[1][1] = "<img src='cat2.jpg' >";
+            arr[1][2] = "<img src='cat1.jpg' >";
+            arr[1][3] = "<img src='cat2.jpg' >";
+
+            arr[2][0] = "<img src='dog1.jpg' >";
+            arr[2][1] = "<img src='duck.jpg' >";
+            arr[2][2] = "<img src='n.jpg' >";
+            arr[2][3] = "<img src='dog1.jpg' >";
+
+            arr[3][0] = "<img src='dog2.jpg' >";
+            arr[3][1] = "<img src='duck.jpg' >";
+            arr[3][2] = "<img src='dog2.jpg' >";
+            arr[3][3] = "<img src='n.jpg' >";
+          
+        }
+
+        function displayTable() {
+            document.body.innerHTML = "";
+            let display = "<table border='1'>";
+            for (let i = 0; i < arr.length; i++) {
+                display += "<tr>"
+                for (let j = 0; j < arr[i].length; j++) {
+                    display += "<td onclick='changeValue(" + i + "," + j +
+                        ")' style='width: 100px; height: 100px;text-align: center'>" + arr[i][j] + "</td>"
+                }
+                display += "</tr>"
+            }
+            display += "</table>"
+            display += "<button onclick='changeValue()'>Click</button>"
+            document.write(display)
+        }
+
+        // function changeValue(x, y) {
+        //     if (arr[x][y] === "<img src='dc1.jpg' >" || arr[x][y] === "<img src='du1.jpg' >") {
+        //         alert("O nay da duoc nguoi khac choi")
+        //     } else {
+        //         if (check) {
+        //             arr[x][y] = "<img src='dc1.jpg' >";
+        //             checkWin("<img src='dc1.jpg' >");
+        //         } else {
+        //             arr[x][y] = "<img src='du1.jpg' >";
+        //             checkWin("<img src='du1.jpg' >");
+        //         }
+        //         check = !check;
+        //         displayTable();
+        //     }
+        // }
+
+        // function checkWin(temp) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         for (let j = 0; j < 3; j++) {
+        //             if (arr[i][j] === temp && arr[i][j + 1] === temp && arr[i][j + 2] === temp) {
+        //                 alert(temp + " thang");
+        //                 initArray();
+        //                 displayTable();
+        //             }
+        //         }
+        //     }
+        //     for (let i = 0; i < 3; i++) {
+        //         for (let j = 0; j < arr[i].length; j++) {
+        //             if (arr[i][j] === temp && arr[i + 1][j] === temp && arr[i + 2][j] === temp) {
+        //                 alert(temp + " thang");
+        //                 initArray();
+        //                 displayTable();
+        //             }
+        //         }
+        //         for (let j = 0; j < 3; j++) {
+        //             if (arr[i][j] === temp && arr[i + 1][j + 1] === temp && arr[i + 2][j + 2] === temp) {
+        //                 alert(temp + " thang");
+        //                 initArray();
+        //                 displayTable();
+        //             }
+        //         }
+        //         for (let j = 2; j < 5; j++) {
+        //             if (arr[i][j] === temp & arr[i + 1][j - 1] === temp && arr[i + 2][j - 2] === temp) {
+        //                 alert(temp + " thang");
+        //                 initArray();
+        //                 displayTable();
+        //             }
+        //         }
+        //     }
+        // }
+        initArray();
+        displayTable();
+        var person = {
+            name: 'Smith'
+        };
+    </script>
+</body>
+
+</html>
