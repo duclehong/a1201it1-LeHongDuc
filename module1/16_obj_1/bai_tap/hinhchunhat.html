@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="width" placeholder="Nhập chiều rộng hình chữ nhật">
+    <input type="text" id="height" placeholder="Nhập chiều dài hình chữ nhật">
+    <button onclick="tinh()">Tính chu vi và diện tích hình tròn</button>
+    <br>
+    <script>
+        class Rectangle {
+            constructor(height, width, ) {
+                this.height = height;
+                this.width = width;
+            }
+            tinh_Chu_Vi() {
+                return (this.height + this.width) * 2;
+            }
+            tinh_Dien_Tich() {
+                return this.height * this.width;
+            }
+
+        }
+
+        function tinh() {
+            n = parseFloat(document.getElementById("width").value);
+            m = parseFloat(document.getElementById("height").value);
+            console.log(m);
+            console.log(n);
+            var rectangle = new Rectangle(n, m);
+            alert("Diện tích là: " + rectangle.tinh_Dien_Tich() + " Chu vi là: " + rectangle.tinh_Chu_Vi() )
+
+        }
+    </script>
+</body>
+
+</html>

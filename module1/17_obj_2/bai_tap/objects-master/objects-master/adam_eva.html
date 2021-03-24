@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="name" placeholder="Nhập tên">
+    <select name="" id="gender">
+        <option value="1">Nam</option>
+        <option value="2"> Nữ</option>
+    </select>
+    <input type="text" name="" id="weight" placeholder="Nhập cân nặng">
+    <button onclick="eat()">Ăn táo</button>
+    <p>Cân nặng của quả táo</p>
+    <input type="text" name="" id="ap" placeholder="Nhập cân nặng ban đầu">
+    <hr>
+    <div id="hien_thi"></div>
+    <hr>
+    <div id="apple"></div>
+    <script>
+        class Apple {
+            constructor(weight) {
+                this.weight = weight;
+            }
+            decrease() {
+                this.weight--;
+            }
+            set_weight(weight) {
+                if (weight > 0) {
+                    this.weight = weight;
+                } else {
+                    this.weight = "Táo hết rồi nhập quả khác";
+                }
+            }
+            isEmpty() {
+                if (this.weight > 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            getWeight() {
+                return this.weight;
+            }
+
+        }
+        class Human {
+            constructor(name, gender, weight, ) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+            isMale() {
+                return this.gender = 2;
+            }
+            setGender(gender) {
+                this.gender = gender;
+            }
+            getGender() {
+                if (this.gender == 1) {
+                    return "nam";
+                } else {
+                    return "nữ"
+                }
+            }
+            check_apple(Apple) {
+
+                return Apple.getWeight();
+            }
+            eat_apple(Apple) {
+                Apple.decrease();
+                if (Apple.isEmpty()) {
+                    this.weight++;
+
+                } else {
+                    Apple.set_weight(0)
+                }
+
+
+            }
+            say(string) {
+                alert(string);
+            }
+            get_name() {
+                return this.name;
+            }
+            set_name(name) {
+                this.name = name;
+            }
+            get_weight() {
+                return this.weight;
+            }
+            set_weight(weight) {
+                this.weight = weight;
+            }
+        }
+
+        function eat() {
+            n = document.getElementById("name").value;
+            w = document.getElementById("weight").value;
+            g = document.getElementById("gender").value;
+            var adam = new Human(n, g, w);
+            a = document.getElementById("ap").value;
+            var a = new Apple(a);
+            adam.eat_apple(a);
+
+            document.getElementById("hien_thi").innerHTML = "Tên: " + adam.get_name() + "<br> Giới tính: " + adam
+                .getGender() + "<br> Cân nặng: " + adam.get_weight();
+            document.getElementById("weight").value = adam.get_weight();
+            document.getElementById("ap").value = a.getWeight();
+            document.getElementById("apple").innerHTML = "Cân nặng quả táo: " + a.getWeight();
+            console.log(a.isEmpty());
+        }
+    </script>
+</body>
+
+</html>
