@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        /* table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        .tinh_tien{
+            
+            border-collapse: collapse;
+            border: 1px solid black;
+            width: 500px;
+
+        } */
+        /* .table_display {
+            width: 50%;
+            border-collapse: collapse;
+            border: 1px solid black;
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>Quản lý khách hàng</h2>
+    </header>
+    <section>
+        <nav>
+            <div class="div1">
+
+                <table style="border-collapse: collapse;">
+                    <tr>
+                        <td>
+                            <p>Họ Và Tên</p>
+                        </td>
+                        <td>
+                            <input type="text" name="" id="name" placeholder="Your Name"> <br>
+                        </td>
+                        <td class="tinh_tien">
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Số CMND</p>
+                        </td>
+                        <td>
+                            <input type="text" name="" id="id" placeholder="Identity Card" onchange="check_cmnd()"
+                                onclick="check_cmnd2()"> <br>
+                        </td>
+                        <td>
+                            <p></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Ngày Sinh</p>
+                        </td>
+                        <td>
+                            <input type="text" name="" id="birth" placeholder="Date of birth" onkeypress="check_ns()">
+                            <br>
+                        </td>
+                        <td rowspan="9">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Email</p>
+                        </td>
+                        <td>
+
+                            <input type="email" name="" id="email" placeholder="Your Email" onchange="check_email()"
+                                onclick="check_email2()"> <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Địa Chỉ</p>
+                        </td>
+                        <td>
+                            <input type="text" name="" id="address" placeholder="Your Address"> <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>
+                            <select name="" id="type_customer">
+                                <option value="1"> Diamond</option>
+                                <option value="2"> Plantinum</option>
+                                <option value="3"> Gold</option>
+                                <option value="4"> Silver</option>
+                                <option value="5"> Member</option>
+
+                            </select><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Sale Off</p>
+                        </td>
+                        <td>
+                            <input type="text" name="" id="sale_off" placeholder="Sale Off" onchange="check_sale()"
+                                onclick="check_sale2()"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Số người đi kèm</p>
+                        </td>
+                        <td>
+                            <input type="text" name="" id="ctm" onchange="check_so_nguoi()" onclick="check_so_nguoi2()">
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p> Số ngày thuê</p>
+                        </td>
+                        <td>
+                            <input type="text" name="" id="sn" onchange="check_so_ngay_thue()"
+                                onclick="check_so_ngay_thue2()"><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="" id="type_service">
+                                <option value="500">Villa</option>
+                                <option value="300"> House</option>
+                                <option value="100"> Rom</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="" id="type_room">
+                                <option value="1">Vjp Pro</option>
+                                <option value="2"> Business</option>
+                                <option value="3">Normal</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Villa: 500$/day</li>
+                                <li>House: 300$/day</li>
+                                <li>Room: 100/day</li>
+                            </ul>
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                </table>
+                <p id="sua"></p>
+
+
+
+
+                <!-- <p>Số tiền phải trả là: </p> -->
+            </div>
+        </nav>
+        <article>
+            <div class="div2" id="div2">
+        </article>
+
+        </div>
+    </section>
+    <footer>
+        <button onclick="add()" class="btn"> Thêm </button>
+        <button onclick="display()" class="btn">Chọn khách hàng cần hiển thị</button>
+        <button onclick="edit()" class="btn">Chỉnh sửa thông tin khách hàng</button>
+        <button onclick="del()" class="btn">Xóa khách hàng</button>
+        <button onclick="displayTable()" class="btn">Hiển thị toàn bộ danh sách người dùng</button> <br>
+    </footer>
+    <script src="jst6.js"></script>
+</body>
+
+</html>

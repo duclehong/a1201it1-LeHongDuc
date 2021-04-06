@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        /* table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+        .tinh_tien{
+            
+            border-collapse: collapse;
+            border: 1px solid black;
+            width: 500px;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <h3>Quản lý khách hàng</h3>
+    <div class="div1">
+        <table style="border-collapse: collapse;">
+            <tr>
+                <td>
+                    <p>Họ Và Tên</p>
+                </td>
+                <td>
+                    <input type="text" name="" id="name" placeholder="Your Name"> <br>
+                </td>
+                <td class="tinh_tien" >
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Số CMND</p>
+                </td>
+                <td>
+                    <input type="text" name="" id="id" placeholder="Identity Card"> <br>
+                </td>
+                <td>
+                    <p></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Ngày Sinh</p>
+                </td>
+                <td>
+                    <input type="text" name="" id="birth" placeholder="Date of birth"> <br>
+                </td>
+                <td rowspan="9">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Email</p>
+                </td>
+                <td>
+
+                    <input type="email" name="" id="email" placeholder="Your Email"> <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Địa Chỉ</p>
+                </td>
+                <td>
+                    <input type="text" name="" id="address" placeholder="Your Address"> <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                    <select name="" id="type_customer">
+                        <option value="1"> Diamond</option>
+                        <option value="2"> Plantinum</option>
+                        <option value="3"> Gold</option>
+                        <option value="4"> Silver</option>
+                        <option value="5"> Member</option>
+
+                    </select><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Sale Off</p>
+                </td>
+                <td>
+                    <input type="text" name="" id="sale_off" placeholder="Sale Off"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Số người đi kèm</p>
+                </td>
+                <td>
+                    <input type="text" name="" id="ctm"> <br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p> Số ngày thuê</p>
+                </td>
+                <td>
+                    <input type="text" name="" id="sn"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="" id="type_service">
+                        <option value="500">Villa</option>
+                        <option value="300"> House</option>
+                        <option value="100"> Rom</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="" id="type_room">
+                        <option value="1">Vjp Pro</option>
+                        <option value="2"> Business</option>
+                        <option value="3">Normal</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li>Villa: 500$/day</li>
+                        <li>House: 300$/day</li>
+                        <li>Room: 100/day</li>
+                    </ul>
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        </table>
+
+        <button onclick="display_all()" class="btn">Tính số tiền phải trả</button> <br>
+        <p id="tong"></p>
+        <!-- <button onclick="display()" class="btn">Chọn khách hàng cần hiển thị</button> <br>
+        <button onclick="edit()" class="btn">Chỉnh sửa thông tin khách hàng</button><br>
+        <button onclick="del()" class="btn">Xóa khách hàng</button> -->
+
+        <!-- <p>Số tiền phải trả là: </p> -->
+    </div>
+    <div class="div2">
+
+        <!-- <table>
+            <tr>
+                <td>
+                    1
+                </td>
+                <td>
+                    2
+                </td>
+                <td>
+                    3
+                </td>
+            </tr>
+        </table> -->
+    </div>
+    <script>
+        class Customer {
+            constructor(name, cmnd, ngay_sinh, email, dia_chi, loai_customer, giam_gia, so_ngay, loai_phong,
+                loai_dich_vu) {
+                this.name = name;
+                this.cmnd = cmnd;
+                this.ngay_sinh = ngay_sinh;
+                this.email = email;
+                this.dia_chi = dia_chi;
+                this.loai_customer = loai_customer;
+                this.giam_gia = giam_gia;
+                this.so_ngay = so_ngay;
+                this.loai_phong = loai_phong;
+                this.loai_dich_vu = loai_dich_vu;
+            }
+
+
+        }
+
+        function display_all() {
+            var name = document.getElementById("name").value;
+            var cmnd = document.getElementById("id").value;
+            var ngay_sinh = document.getElementById("")
+            var email = document.getElementById("email").value;
+            var dia_chi = document.getElementById("address").value;
+            var loai_customer = document.getElementById("type_customer").value;
+            var sale = parseFloat(document.getElementById("sale_off").value);
+
+            var so_ngay_thue = parseFloat(document.getElementById("sn").value)
+            var so_nguoi = parseFloat(document.getElementById("ctm").value)
+            var loai_phong = parseFloat(document.getElementById("type_room").value);
+            var loai_dich_vu = parseFloat(document.getElementById("type_service").value);
+            // var a = new Customer(name, cmnd, )
+            console.log(loai_dich_vu * so_ngay_thue * (1-sale));
+            document.getElementById("tong").innerHTML` = loai_dich_vu * so_ngay_thue * (1-sale);
+            // ( Số tiền phải trả  = giá loại dịch vụ X số ngày X ( 1 – giảm giá/100 ) 
+
+        }
+
+    </script>
+</body>
+
+</html>

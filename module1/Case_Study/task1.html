@@ -9,6 +9,15 @@
 </head>
 
 <body>
+    <table style="border-color: black;">
+        <tr >
+            <td rowspan="2">hihi1</td>
+        </tr>
+        <tr>
+            <td>haha2</td>
+            <td>hehe3</td>
+        </tr>
+    </table>
     <p>Nhap Ten</p>
     <input type="text" name="" id="name" placeholder="Your Name"> <br>
     <p>Nhap so CMND</p>
@@ -29,22 +38,37 @@
     <p>Customer Number</p>
     <input type="text" name="" id="ctm"> <br>
     <p> Number of rental days</p>
-    <input type="text" name="" id=""><br>
+    <input type="text" name="" id="sn"><br>
     <select name="" id="type_service">
-        <option value="1">Villa</option>
-        <option value="2"> House</option>
-        <option value="3"> Rom</option>
+        <option value="500">Villa</option>
+        <option value="300"> House</option>
+        <option value="100"> Rom</option>
     </select>
-    <select name="" id="type-room">
+    <select name="" id="type_room">
         <option value="1">Vjp Pro</option>
         <option value="2"> Business</option>
         <option value="3">Normal</option>
     </select>
-    <ul style=";">
+    <ul>
         <li>Villa: 500$/day</li>
         <li>House: 300$/day</li>
         <li>Room: 100/day</li>
     </ul>
+    <button onclick="tinh()"> Tính tiền</button>
+    <!-- <p>Số tiền phải trả là: </p> -->
+    <p id="tong"></p>
+    <script>
+        function tinh() {
+            var n = document.getElementById("name").value;
+            var g = parseFloat(document.getElementById("type_service").value);
+            var sn = parseFloat(document.getElementById("sn").value)
+            var s = parseFloat(document.getElementById("sale_off").value);
+            var so_nguoi = parseFloat(document.getElementById("ctm").value)
+            var t = g * sn *so_nguoi* (1 - (s / 100));
+            document.getElementById("tong").innerHTML = " Số tiền " + n + " phải trả là: " + t;
+        }
+        
+    </script>
 </body>
 
 </html>
