@@ -319,7 +319,6 @@ function sua(id) {
 
 }
 function check_name() {
-    console.log("1ne");
     var em = document.getElementById("name").value;
     if (em == "") {
         document.getElementById("name").style.borderColor = "red";
@@ -331,7 +330,6 @@ function check_name() {
 }
 
 function check_name2() {
-    console.log("2ne");
     if (document.getElementById("email").value == "Không được bỏ trống ô này!") {
         document.getElementById("name").value = "";
     } else {
@@ -340,6 +338,7 @@ function check_name2() {
 }
 function check_ns() {
     var b = document.getElementById("birth").value;
+    
 
     if (b.length == 2) {
         document.getElementById("birth").value += "/";
@@ -369,15 +368,33 @@ function check_ns3() {
         document.getElementById("birth").value = "Không được bỏ trống ô này!";
         return false;
     }
+
+    if (b.length <10) {
+        document.getElementById("birth").value = "Không hợp lệ";
+    }
+    if (b.length >10 ) {
+        document.getElementById("birth").value = "Không hợp lệ";
+    }
+    if (b.length == 10) {
+        console.log(b.length);
+
+        document.getElementById("birth").style.borderColor = "#777";
+        return true;
+
+    } 
+   
 }
 
 function check_ns2() {
-    if (document.getElementById("birth").value == "Không được bỏ trống ô này!") {
+    
+    if (document.getElementById("birth").value == "Không được bỏ trống ô này!" || document.getElementById("birth").value == "Không hợp lệ") {
         document.getElementById("birth").value = "";
 
     } else {
 
     }
+   
+
 }
 
 function check_cmnd() {
@@ -394,10 +411,14 @@ function check_cmnd() {
         return false;
 
     } else {
-        cmnd = parseInt(cmnd)
         if (cmnd > 0) {
-            document.getElementById("id").style.borderColor = "#777";
+            if (cmnd.length==8) {
+                document.getElementById("id").style.borderColor = "#777";
             return true;
+            }else{
+                document.getElementById("id").value = "Phải gồm 8 kí tự số!";
+            }
+            
         } else {
             document.getElementById("id").value = "Số cmnd phải lớn hơn 0";
             return false;
@@ -408,7 +429,7 @@ function check_cmnd() {
 
 
 function check_cmnd2() {
-    if (document.getElementById("id").value == "Sai định dạng" || document.getElementById("id").value == "Không được bỏ trống ô này!") {
+    if (document.getElementById("id").value == "Sai định dạng" || document.getElementById("id").value == "Không được bỏ trống ô này!" ||  document.getElementById("id").value == "Phải gồm 8 kí tự số!") {
         document.getElementById("id").value = "";
 
     } else {
@@ -580,10 +601,11 @@ function add() {
     if (temp) {
         console.log(check_cmnd());
         console.log(check_email());
-        console.log(check_ns());
+        console.log(check_ns3());
         console.log(check_sale());
         console.log(check_so_ngay_thue());
         console.log(check_so_nguoi());
+        console.log(check_name());
         if (check_cmnd() && check_email() && check_ns() && check_sale() && check_so_ngay_thue() && check_so_nguoi()) {
             arr.push(a);
         } else {
