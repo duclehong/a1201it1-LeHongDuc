@@ -149,15 +149,65 @@ function displayTable() {
 
     d = "<hr>";
     d += "<table>";
-    d += "<tr><th> Tên </th><th> Số CMND </th><th> Ngày Sinh </th><th> Email </th><th> Địa Chỉ </th><th> Loại Customer </th><th> Sale OFF </th><th> Số Ngày Thuê </th><th> Số Người </th><th> Loại Phòng </th><th> Loại dịch vụ </th><th>Tính tiền</th>"
+    d += "<tr><th> Tên </th><th> Số CMND </th><th> Ngày Sinh </th><th> Email </th><th> Địa Chỉ </th><th> Loại Customer </th><th> Sale OFF </th><th> Số Ngày Thuê </th><th> Số Người </th><th> Loại Phòng </th><th> Loại dịch vụ </th><th></th>"
     for (let i = 0; i < arr.length; i++) {
+        let dc = arr[i].dia_chi;
+        dc = parseInt(dc);
+        switch (dc) {
+            case 1:
+                dc = "Đà Nẵng"
+                break;
+            case 2:
+                dc = "Quảng Nam"
+                break;
+            case 3:
+                dc = "Huế"
+                break;
+            default:
+                break;
+        }
+        let tpc = arr[i].loai_customer;
+        tpc = parseInt(tpc);
+        switch (tpc) {
+            case 1:
+                tpc = "Diamond"
+                break;
+            case 2:
+                tpc = "Plantinum"
+                break;
+            case 3:
+                tpc = "Gold"
+                break;
+            case 4:
+                tpc = "Silver"
+                break;
+            case 5:
+                tpc = "Member"
+                break;
+            default:
+                break;
+        }
+        let tr = arr[i].loai_phong;
+        tr = parseInt(tr);
+        switch (tr) {
+            case 500:
+                tr = "Villa"
+                break;
+            case 300:
+                tr = "House"
+                break;
+            case 100:
+                tr = "Room"
+                break;
+            default:
+                break;
+        }
         d += "<tr>";
         d += "<td>" + arr[i].name + "</td> <td>" + arr[i].cmnd + "</td> <td>" + arr[i].ngay_sinh + "</td><td>" +
             arr[
-                i].email + "</td><td>" + arr[i].dia_chi + "</td><td>" + arr[i].loai_customer + "</td><td>" +
+                i].email + "</td><td>" + dc + "</td><td>" + tpc + "</td><td>" +
             arr[i].sale +
-            "</td><td>" + arr[i].so_ngay_thue + "</td><td>" + arr[i].so_nguoi + "</td><td>" + arr[i]
-            .loai_phong + "</td><td>" + arr[i]
+            "%</td><td>" + arr[i].so_ngay_thue + "</td><td>" + arr[i].so_nguoi + "</td><td>" + tr + "</td><td>" + arr[i]
             .loai_dich_vu + "</td>" + "<td> <button onclick='tinhtien2(" + i + ")'> Tính tiền</button></td>";
         d += "</tr>";
 
@@ -207,13 +257,66 @@ function display_id() {
 
     for (let i = 0; i < arr.length; i++) {
         if (id == arr[i].cmnd) {
+            let dc = arr[i].dia_chi;
+            dc = parseInt(dc);
+            switch (dc) {
+                case 1:
+                    dc = "Đà Nẵng"
+                    break;
+                case 2:
+                    dc = "Quảng Nam"
+                    break;
+                case 3:
+                    dc = "Huế"
+                    break;
+                default:
+                    break;
+            }
+            
+            
+            let tpc = arr[i].loai_customer;
+            tpc = parseInt(tpc);
+            switch (tpc) {
+                case 1:
+                    tpc = "Diamond"
+                    break;
+                case 2:
+                    tpc = "Plantinum"
+                    break;
+                case 3:
+                    tpc = "Gold"
+                    break;
+                case 4:
+                    tpc = "Silver"
+                    break;
+                case 5:
+                    tpc = "Member"
+                    break;
+                default:
+                    break;
+            }
+            
+            let tr = arr[i].loai_phong;
+            tr = parseInt(tr);
+            switch (tr) {
+                case 500:
+                    tr = "Villa"
+                    break;
+                case 300:
+                    tr = "House"
+                    break;
+                case 100:
+                    tr = "Room"
+                    break;
+                default:
+                    break;
+            }
             d += "<tr>"
             d += "<td>" + arr[i].name + "</td> <td>" + arr[i].cmnd + "</td> <td>" + arr[i].ngay_sinh + "</td><td>" +
                 arr[
-                    i].email + "</td><td>" + arr[i].dia_chi + "</td><td>" + arr[i].loai_customer + "</td><td>" +
+                    i].email + "</td><td>" + dc + "</td><td>" + tpc + "</td><td>" +
                 arr[i].sale +
-                "</td><td>" + arr[i].so_ngay_thue + "</td><td>" + arr[i].so_nguoi + "</td><td>" + arr[i]
-                .loai_phong + "</td><td>" + arr[i]
+                "</td><td>" + arr[i].so_ngay_thue + "</td><td>" + arr[i].so_nguoi + "</td><td>" + tr + "</td><td>" + arr[i]
                 .loai_dich_vu + "</td> </tr>";
 
         }
@@ -299,6 +402,7 @@ function sua(id) {
     function sua_mang(id) {
         for (let i = 0; i < arr.length; i++) {
             if (arr[i].getCmnd() == id) {
+                name = removeAccents(name);
                 arr[i].setName(name);
                 arr[i].setDiaChi(dia_chi);
                 arr[i].setEmail(email);
@@ -318,13 +422,15 @@ function sua(id) {
     }
 
 }
+
 function check_name() {
     var em = document.getElementById("name").value;
     if (em == "") {
         document.getElementById("name").style.borderColor = "red";
         document.getElementById("name").value = "Không được bỏ trống ô này!";
         return false;
-    }else{
+    } else {
+        
         return true;
     }
 }
@@ -336,9 +442,10 @@ function check_name2() {
 
     }
 }
+
 function check_ns() {
     var b = document.getElementById("birth").value;
-    
+
 
     if (b.length == 2) {
         document.getElementById("birth").value += "/";
@@ -363,16 +470,49 @@ function check_ns() {
 
 function check_ns3() {
     var b = document.getElementById("birth").value;
+    if (isNaN(b[0]) || isNaN(b[1]) || isNaN(b[3]) || isNaN(b[4]) || isNaN(b[6]) || isNaN(b[7]) || isNaN(b[8]) || isNaN(b[9])) {
+        document.getElementById("birth").value = "Phải là dạng số!";
+    }
+    if (b[0] > 3) {
+
+        document.getElementById("birth").value = "Ngày phải bé hơn 31";
+    }
+    if (b[0] == 3) {
+        if (b[1] > 1) {
+            document.getElementById("birth").value = "Ngày phải bé hơn 31";
+        }
+    }
+    if (b[3] > 1) {
+        document.getElementById("birth").value = "Tháng phải bé hơn 12";
+    }
+    if (b[3] == 1 && b[4] > 2) {
+        document.getElementById("birth").value = "Tháng phải bé hơn 12";
+    }
+    c = parseInt(b[6] + b[7] + b[8] + b[9]);
+    if (c < 1975) {
+        document.getElementById("birth").value = "Chỉ nhập từ 1975";
+    }
+    y = new Date();
+    if (c < Date.y) {
+        document.getElementById("birth").value = "Chỉ nhập từ 1975";
+    }
+    console.log(c > y.getFullYear());
+    if (c > y.getFullYear()) {
+        document.getElementById("birth").value = "Người của tương lai!";
+    }
+    console.log(c);
+
+
     if (b == "") {
         document.getElementById("birth").style.borderColor = "red";
         document.getElementById("birth").value = "Không được bỏ trống ô này!";
         return false;
     }
 
-    if (b.length <10) {
+    if (b.length < 10) {
         document.getElementById("birth").value = "Không hợp lệ";
     }
-    if (b.length >10 ) {
+    if (b.length > 10) {
         document.getElementById("birth").value = "Không hợp lệ";
     }
     if (b.length == 10) {
@@ -381,19 +521,20 @@ function check_ns3() {
         document.getElementById("birth").style.borderColor = "#777";
         return true;
 
-    } 
-   
+    }
+
 }
 
 function check_ns2() {
-    
-    if (document.getElementById("birth").value == "Không được bỏ trống ô này!" || document.getElementById("birth").value == "Không hợp lệ") {
+
+    if (document.getElementById("birth").value == "Không được bỏ trống ô này!" || document.getElementById("birth").value == "Không hợp lệ" || document.getElementById("birth").value == "Phải là dạng số!" || document.getElementById("birth").value == "Ngày phải bé hơn 31" || document.getElementById("birth").value == "Tháng phải bé hơn 12" || document.getElementById("birth").value == "Chỉ nhập từ 1975" || document.getElementById("birth").value == "Người của tương lai!") {
         document.getElementById("birth").value = "";
+        return false;
 
     } else {
 
     }
-   
+
 
 }
 
@@ -412,13 +553,13 @@ function check_cmnd() {
 
     } else {
         if (cmnd > 0) {
-            if (cmnd.length==8) {
+            if (cmnd.length == 8) {
                 document.getElementById("id").style.borderColor = "#777";
-            return true;
-            }else{
+                return true;
+            } else {
                 document.getElementById("id").value = "Phải gồm 8 kí tự số!";
             }
-            
+
         } else {
             document.getElementById("id").value = "Số cmnd phải lớn hơn 0";
             return false;
@@ -429,7 +570,7 @@ function check_cmnd() {
 
 
 function check_cmnd2() {
-    if (document.getElementById("id").value == "Sai định dạng" || document.getElementById("id").value == "Không được bỏ trống ô này!" ||  document.getElementById("id").value == "Phải gồm 8 kí tự số!") {
+    if (document.getElementById("id").value == "Sai định dạng" || document.getElementById("id").value == "Không được bỏ trống ô này!" || document.getElementById("id").value == "Phải gồm 8 kí tự số!") {
         document.getElementById("id").value = "";
 
     } else {
@@ -574,6 +715,30 @@ function check_so_nguoi2() {
     }
 }
 
+function removeAccents(str) {
+    var AccentsMap = [
+      "aàảãáạăằẳẵắặâầẩẫấậ",
+      "AÀẢÃÁẠĂẰẲẴẮẶÂẦẨẪẤẬ",
+      "dđ", "DĐ",
+      "eèẻẽéẹêềểễếệ",
+      "EÈẺẼÉẸÊỀỂỄẾỆ",
+      "iìỉĩíị",
+      "IÌỈĨÍỊ",
+      "oòỏõóọôồổỗốộơờởỡớợ",
+      "OÒỎÕÓỌÔỒỔỖỐỘƠỜỞỠỚỢ",
+      "uùủũúụưừửữứự",
+      "UÙỦŨÚỤƯỪỬỮỨỰ",
+      "yỳỷỹýỵ",
+      "YỲỶỸÝỴ"    
+    ];
+    for (var i=0; i<AccentsMap.length; i++) {
+      var re = new RegExp('[' + AccentsMap[i].substr(1) + ']', 'g');
+      var char = AccentsMap[i][0];
+      str = str.replace(re, char);
+    }
+    return str;
+  }
+
 function add() {
     var name = document.getElementById("name").value;
     var cmnd = document.getElementById("id").value;
@@ -608,6 +773,8 @@ function add() {
         console.log(check_name());
         if (check_cmnd() && check_email() && check_ns() && check_sale() && check_so_ngay_thue() && check_so_nguoi()) {
             arr.push(a);
+            name = removeAccents(name);
+            a.setName(name);
         } else {
             alert("sai ở đâu đó");
         }
