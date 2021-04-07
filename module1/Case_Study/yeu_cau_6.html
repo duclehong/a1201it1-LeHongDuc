@@ -30,7 +30,7 @@
 
 <body>
     <header>
-        <h2>Quản lý khách hàng</h2>
+
     </header>
     <section>
         <nav>
@@ -42,7 +42,7 @@
                             <p>Họ Và Tên</p>
                         </td>
                         <td>
-                            <input type="text" name="" id="name" placeholder="Your Name"> <br>
+                            <input type="text" name="" id="name" placeholder="Your Name" onchange="check_name()" onclick="check_name2()"> <br>
                         </td>
                         <td class="tinh_tien">
                             <p></p>
@@ -65,7 +65,8 @@
                             <p>Ngày Sinh</p>
                         </td>
                         <td>
-                            <input type="text" name="" id="birth" placeholder="Date of birth" onkeypress="check_ns()">
+                            <input type="text" name="" id="birth" placeholder="Date of birth" onkeypress="check_ns()"
+                                onclick="check_ns2()" onchange="check_ns3()">
                             <br>
                         </td>
                         <td rowspan="9">
@@ -87,12 +88,17 @@
                             <p>Địa Chỉ</p>
                         </td>
                         <td>
-                            <input type="text" name="" id="address" placeholder="Your Address"> <br>
+                            
+                            <select name="" id="address">
+                                <option value="1"> Đà Nẵng</option>
+                                <option value="2"> Quảng Nam</option>
+                                <option value="3"> Huế</option>
+                            </select><br> <br>
                         </td>
                     </tr>
                     <tr>
-                        <td>
-
+                        <td style="width: 140px;">
+                            <p > Loại khách hàng</p>
                         </td>
                         <td>
                             <select name="" id="type_customer">
@@ -134,11 +140,19 @@
                     </tr>
                     <tr>
                         <td>
+                            <p>Loại dịch vụ</p>
+                        </td>
+                        <td>
                             <select name="" id="type_service">
-                                <option value="500">Villa</option>
-                                <option value="300"> House</option>
-                                <option value="100"> Rom</option>
+                                <option value="500">Villa: 500$/day</option>
+                                <option value="300"> House: 300$/day</option>
+                                <option value="100"> Room: 100/day</option>
                             </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
                         </td>
                         <td>
                             <select name="" id="type_room">
@@ -146,18 +160,6 @@
                                 <option value="2"> Business</option>
                                 <option value="3">Normal</option>
                             </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>Villa: 500$/day</li>
-                                <li>House: 300$/day</li>
-                                <li>Room: 100/day</li>
-                            </ul>
-                        </td>
-                        <td>
-
                         </td>
                     </tr>
                 </table>
@@ -170,18 +172,31 @@
             </div>
         </nav>
         <article>
+            <img src="logo.png" alt="">
+            <h2>Quản lý khách hàng</h2>
+            <div class="btn">
+                <button onclick="add()" class="btn"> Thêm </button>
+                <button onclick="display()" class="btn">Chọn khách hàng cần hiển thị</button>
+                <button onclick="edit()" class="btn">Chỉnh sửa thông tin khách hàng</button>
+                <br>
+                <button onclick="del()" class="btn">Xóa khách hàng</button>
+                <button onclick="displayTable()" class="btn">Hiển thị toàn bộ danh sách người dùng</button> <br>
+            </div>
             <div class="div2" id="div2">
         </article>
 
         </div>
     </section>
-    <footer>
-        <button onclick="add()" class="btn"> Thêm </button>
-        <button onclick="display()" class="btn">Chọn khách hàng cần hiển thị</button>
-        <button onclick="edit()" class="btn">Chỉnh sửa thông tin khách hàng</button>
-        <button onclick="del()" class="btn">Xóa khách hàng</button>
-        <button onclick="displayTable()" class="btn">Hiển thị toàn bộ danh sách người dùng</button> <br>
-    </footer>
+    <!-- <footer>
+        <div class="btn">
+            <button onclick="add()" class="btn"> Thêm </button>
+            <button onclick="display()" class="btn">Chọn khách hàng cần hiển thị</button>
+            <button onclick="edit()" class="btn">Chỉnh sửa thông tin khách hàng</button>
+            <button onclick="del()" class="btn">Xóa khách hàng</button>
+            <button onclick="displayTable()" class="btn">Hiển thị toàn bộ danh sách người dùng</button> <br>
+        </div>
+       
+    </footer> -->
     <script src="jst6.js"></script>
 </body>
 

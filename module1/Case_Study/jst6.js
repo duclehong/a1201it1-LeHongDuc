@@ -87,14 +87,13 @@ class Customer {
         console.log(this.getLoaiDichVu());
         console.log(this.getSale());
         console.log(this.tinhSale());
-        let tong = (this.getSoNgayThue() * this.getLoaiDichVu() * (1 - this.getSale * 100))-this.tinhSale();
-        console.log(typeof(this.getSoNgayThue()));
-        console.log(typeof(this.getLoaiDichVu()));
-        console.log(typeof(this.getSale()));
-        console.log(typeof(this.tinhSale()));
+        let tong = (this.getSoNgayThue() * this.getLoaiDichVu() * (1 - this.getSale * 100)) - this.tinhSale();
+        console.log(typeof (this.getSoNgayThue()));
+        console.log(typeof (this.getLoaiDichVu()));
+        console.log(typeof (this.getSale()));
+        console.log(typeof (this.tinhSale()));
 
-        // ( Số tiền phải trả  = giá loại dịch vụ X số ngày X ( 1 – giảm giá/100 ) 
-        return tong ;
+        return tong;
     }
     tinhSale() {
         let i = 0;
@@ -139,7 +138,7 @@ class Customer {
             default:
                 break;
         }
-        
+
         return i;
     }
 
@@ -148,7 +147,7 @@ class Customer {
 
 function displayTable() {
 
-    d = "";
+    d = "<hr>";
     d += "<table>";
     d += "<tr><th> Tên </th><th> Số CMND </th><th> Ngày Sinh </th><th> Email </th><th> Địa Chỉ </th><th> Loại Customer </th><th> Sale OFF </th><th> Số Ngày Thuê </th><th> Số Người </th><th> Loại Phòng </th><th> Loại dịch vụ </th><th>Tính tiền</th>"
     for (let i = 0; i < arr.length; i++) {
@@ -173,9 +172,16 @@ function tinhtien2(t) {
     console.log(t);
     for (let i = 0; i < arr.length; i++) {
         if (t == i) {
-            console.log(arr[i]);
-            console.log(arr[i].tinhTien());
-            document.getElementById("show_money").innerHTML = arr[i].tinhTien();
+
+            n = arr[i].getName();
+            a = parseFloat(arr[i].getSoNgayThue())
+            b = parseFloat(arr[i].getLoaiDichVu())
+            c = parseFloat(arr[i].getSale())
+            d = parseFloat(arr[i].tinhSale())
+            let tong = (a * b * (1 - c / 100)) - d;
+            console.log(tong);
+            document.getElementById("show_money").innerHTML = " <hr> Tổng tiền khách hàng " + n + " phải trả là: " + tong + "$";
+            document.getElementById("show_money").innerHTML += " ( Thuê " + a + " Ngày * Loại dịch vu: " + b + " * (Sale " + c + "%) - Ưu đãi " + d + ")"
         }
 
     }
@@ -214,7 +220,7 @@ function display_id() {
 
     }
     d += "</tr>";
-    d += "</table>"
+    d += "</table> "
     document.getElementById("div2").innerHTML = d;
 
 }
@@ -287,19 +293,12 @@ function sua(id) {
     var loai_dich_vu = parseFloat(document.getElementById("type_service").value);
     var a = new Customer(name, cmnd, ngay_sinh, email, dia_chi, loai_customer, sale, so_ngay_thue, so_nguoi,
         loai_phong, loai_dich_vu);
-    // for (let i = 0; i < arr.length; i++) {
-    //     if (cmnd == arr[i].cmnd) {
-    //         alert("Đã tồn tại số CMND này, yêu cầu nhập lại")
-    //     } else {
-    //         arr.push(a);
-    //     }
 
-    // }
-    sua_mang(cmnd);
+    sua_mang(id);
 
-    function sua_mang(cmnd) {
+    function sua_mang(id) {
         for (let i = 0; i < arr.length; i++) {
-            if (arr[i].getCmnd() == cmnd) {
+            if (arr[i].getCmnd() == id) {
                 arr[i].setName(name);
                 arr[i].setDiaChi(dia_chi);
                 arr[i].setEmail(email);
@@ -319,9 +318,29 @@ function sua(id) {
     }
 
 }
+function check_name() {
+    console.log("1ne");
+    var em = document.getElementById("name").value;
+    if (em == "") {
+        document.getElementById("name").style.borderColor = "red";
+        document.getElementById("name").value = "Không được bỏ trống ô này!";
+        return false;
+    }else{
+        return true;
+    }
+}
 
+function check_name2() {
+    console.log("2ne");
+    if (document.getElementById("email").value == "Không được bỏ trống ô này!") {
+        document.getElementById("name").value = "";
+    } else {
+
+    }
+}
 function check_ns() {
     var b = document.getElementById("birth").value;
+
     if (b.length == 2) {
         document.getElementById("birth").value += "/";
     }
@@ -340,10 +359,34 @@ function check_ns() {
     }
 
 
+
+}
+
+function check_ns3() {
+    var b = document.getElementById("birth").value;
+    if (b == "") {
+        document.getElementById("birth").style.borderColor = "red";
+        document.getElementById("birth").value = "Không được bỏ trống ô này!";
+        return false;
+    }
+}
+
+function check_ns2() {
+    if (document.getElementById("birth").value == "Không được bỏ trống ô này!") {
+        document.getElementById("birth").value = "";
+
+    } else {
+
+    }
 }
 
 function check_cmnd() {
     cmnd = document.getElementById("id").value;
+    if (cmnd == "") {
+        document.getElementById("id").style.borderColor = "red";
+        document.getElementById("id").value = "Không được bỏ trống ô này!";
+        return false;
+    }
     if (isNaN(cmnd)) {
         document.getElementById("id").style.borderColor = "red";
         // document.getElementById("id"). ;
@@ -363,8 +406,9 @@ function check_cmnd() {
 
 }
 
+
 function check_cmnd2() {
-    if (document.getElementById("id").value == "Sai định dạng") {
+    if (document.getElementById("id").value == "Sai định dạng" || document.getElementById("id").value == "Không được bỏ trống ô này!") {
         document.getElementById("id").value = "";
 
     } else {
@@ -374,7 +418,11 @@ function check_cmnd2() {
 
 function check_email() {
     var em = document.getElementById("email").value;
-
+    if (em == "") {
+        document.getElementById("email").style.borderColor = "red";
+        document.getElementById("email").value = "Không được bỏ trống ô này!";
+        return false;
+    }
     var temp1 = 0;
     var temp2 = 0;
     for (let i = 0; i < em.length; i++) {
@@ -402,7 +450,7 @@ function check_email() {
 }
 
 function check_email2() {
-    if (document.getElementById("email").value == "Sai định dạng") {
+    if (document.getElementById("email").value == "Sai định dạng" || document.getElementById("email").value == "Không được bỏ trống ô này!") {
         document.getElementById("email").value = "";
     } else {
 
@@ -413,6 +461,11 @@ function check_email2() {
 
 function check_sale() {
     var sale = document.getElementById("sale_off").value;
+    if (sale == "") {
+        document.getElementById("sale_off").style.borderColor = "red";
+        document.getElementById("sale_off").value = "Không được bỏ trống ô này!";
+        return false;
+    }
     if (isNaN(sale)) {
         document.getElementById("sale_off").style.borderColor = "red";
         document.getElementById("sale_off").value = "Sale phải là dạng số";
@@ -430,7 +483,7 @@ function check_sale() {
 }
 
 function check_sale2() {
-    if (document.getElementById("sale_off").value == "Sale phải là dạng số" || document.getElementById("sale_off").value == "100<n<0!! Nhập lại!") {
+    if (document.getElementById("sale_off").value == "Sale phải là dạng số" || document.getElementById("sale_off").value == "100<n<0!! Nhập lại!" || document.getElementById("sale_off").value == "Không được bỏ trống ô này!") {
         document.getElementById("sale_off").value = "";
 
     } else {}
@@ -439,6 +492,11 @@ function check_sale2() {
 
 function check_so_ngay_thue() {
     var sn = document.getElementById("sn").value;
+    if (sn == "") {
+        document.getElementById("sn").style.borderColor = "red";
+        document.getElementById("sn").value = "Không được bỏ trống ô này!";
+        return false;
+    }
     if (isNaN(sn)) {
         document.getElementById("sn").style.borderColor = "red";
         document.getElementById("sn").value = "số ngày phải là dạng số!";
@@ -456,7 +514,7 @@ function check_so_ngay_thue() {
 }
 
 function check_so_ngay_thue2() {
-    if (document.getElementById("sn").value == "số ngày phải là dạng số!" || document.getElementById("sn").value == "Phải thuê ít nhất 1 ngày!") {
+    if (document.getElementById("sn").value == "số ngày phải là dạng số!" || document.getElementById("sn").value == "Phải thuê ít nhất 1 ngày!" || document.getElementById("sn").value == "Không được bỏ trống ô này!") {
         document.getElementById("sn").value = "";
 
     } else {
@@ -466,6 +524,11 @@ function check_so_ngay_thue2() {
 
 function check_so_nguoi() {
     var so_ng = document.getElementById("ctm").value;
+    if (so_ng == "") {
+        document.getElementById("ctm").style.borderColor = "red";
+        document.getElementById("ctm").value = "Không được bỏ trống ô này!";
+        return false;
+    }
     if (isNaN(so_ng)) {
         document.getElementById("ctm").style.borderColor = "red";
         document.getElementById("ctm").value = "Số người phải là dạng số";
@@ -483,7 +546,7 @@ function check_so_nguoi() {
 }
 
 function check_so_nguoi2() {
-    if (document.getElementById("ctm").value == "Số người phải là dạng số" || document.getElementById("ctm").value == "người âm") {
+    if (document.getElementById("ctm").value == "Số người phải là dạng số" || document.getElementById("ctm").value == "người âm" || document.getElementById("ctm").value == "Không được bỏ trống ô này!") {
         document.getElementById("ctm").value = "";
     } else {
 
