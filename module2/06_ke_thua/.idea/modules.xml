@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/06_ke_thua.iml" filepath="$PROJECT_DIR$/.idea/06_ke_thua.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Circle/Circle.iml" filepath="$PROJECT_DIR$/Circle/Circle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MoveablePoint/MoveablePoint.iml" filepath="$PROJECT_DIR$/MoveablePoint/MoveablePoint.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Triangle/Triangle.iml" filepath="$PROJECT_DIR$/Triangle/Triangle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/point2d_3d/point2d_3d.iml" filepath="$PROJECT_DIR$/point2d_3d/point2d_3d.iml" />
+    </modules>
+  </component>
+</project>
