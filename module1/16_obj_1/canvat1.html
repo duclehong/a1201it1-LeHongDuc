@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML canvas tag.</canvas>
+<canvas id="myCanvas2" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML canvas tag.</canvas>
+<canvas id="myCanvas3" width="200" height="100" style="border:1px solid #d3d3d3;">
+
+<canvas id="myCanvas4" width="300" height="150" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML5 canvas tag.</canvas>
+
+    <p>Click the button to draw on the canvas.</p>
+
+    <button onclick="myFunction()">Try it</button>
+    Your browser does not support the HTML canvas tag.
+</canvas>
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0, 0);
+    ctx.lineTo(200, 100);
+    ctx.stroke();
+
+    var d = document.getElementById("myCanvas2");
+    var e = d.getContext("2d");
+    e.beginPath();
+    e.arc(95, 50, 40, 0, 2 * Math.PI);
+    e.stroke();
+
+    var f = document.getElementById("myCanvas3");
+    var g = f.getContext("2d");
+    g.font = "30px Arial";
+    g.fillText("Hello World", 10, 50);
+
+    function myFunction() {
+        var c = document.getElementById("myCanvas4");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(20, 20, 150, 100);
+    }
+</script>
+<!-- Sau đó phần Javascript ta có thể khai báo như sau:
+
+<script type="text/javascript">
+    var canvas = document.getElementById('myCanvas'),
+    ctx = canvas.getContext('2d');
+</script>
+Việc khai báo biến canvas chúng ta có thể hiểu rõ ràng rồi. Dòng tiếp theo chính là việc lấy các thuộc tính của Canvas. Ở đây ta dùng hàm getContext(contextType, contextAttributes);. Trong đó
+
+contextType: là DOMString để xác định loại của canvas. Ở đây có thể nhập các giá trị sau: 2d, webgl, webgl2, bitmaprenderer.
+contextAttributes: là thuộc tính tương ứng với contextType. Với contextType là 2d thì có thuộc tính là alpha, willReadFrequently, storage (mặc định). Còn với các contextType còn lại thì có: alpha, depth, stencil, antialias, premultipliedAlpha,preserveDrawingBuffer, failIfMajorPerformanceCaveat. Để hiểu rõ hơn thì các bạn có thể vào đây. Sau khi xong ta có thể bắt tay vào vẽ được hoàn toàn trên Canvas bằng javascript. Sau đây tôi chia sẻ 1 vài các lệnh vẽ cơ bản.
+Vẽ chữ nhật
+<script type="text/javascript">
+    var canvas = document.getElementById('myCanvas'),
+    ctx = canvas.getContext('2d');
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(0,0,150,75);
+</script>
+Vẽ đường thẳng
+<script type="text/javascript">
+    var canvas = document.getElementById('myCanvas'),
+    ctx = canvas.getContext('2d');
+    ctx.strokeStyle = "#FF0000";
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+</script>
+Vẽ đường tròn
+<script type="text/javascript">
+    var canvas = document.getElementById('myCanvas'),
+    ctx = canvas.getContext('2d');
+    ctx.strokeStyle = "#FF0000";
+    ctx.beginPath();
+    ctx.arc(95,50,40,0,2*Math.PI);
+    ctx.stroke();
+</script>
+Thêm text
+<script type="text/javascript">
+    var canvas = document.getElementById('myCanvas');
+    var text = "Demo canvas";
+    ctx = canvas.getContext('2d');
+    ctx.fillStyle = "#FF0000";
+    ctx.font = "30px Arial";
+    ctx.fillText(text, 10, 50);
+</script>
+Thêm ảnh
+Đầu tiên ta cần thêm 1 thẻ img và thẻ a để click vào thêm ảnh vào canvas
+
+<img src="http://framgia.com/jp/images/logo_common_framgia.png" id="demoImage">
+<a href="javascript:;" onclick="addImage()">Thêm ảnh</a>
+Sau đó phần javascript ta viết hàm để thêm ảnh
+
+<script type="text/javascript">
+    var canvas = document.getElementById('myCanvas');
+    ctx = canvas.getContext('2d');
+    function addImage() {
+        var img = document.getElementById("demoImage");
+        ctx.drawImage(img,10,10);
+    }
+</script>
+Kết quả của từng ví dụ trên cho kết quả như sau: -->
+</html>

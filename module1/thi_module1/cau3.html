@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                Mã Sổ
+            </td>
+            <td>
+                <input type="text" id="ma_so" onchange="kiem_tra_ma_so()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Loại tiết kiệm
+            </td>
+            <td>
+                <input type="text" id="loai" onchange="kiem_loai_tiet_kiem()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Họ Tên
+            </td>
+            <td>
+                <input type="text" id="ho_ten" onchange="kiem_tra_ho_ten()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Chứng Minh Nhân Dân
+            </td>
+            <td>
+                <input type="text" id="cmnd" onchange="kiem_tra_cmd()">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ngày mở
+            </td>
+            <td>
+                <input type="text" id="ngay_mo" onchange="kiem_tra_ngay_mo()"  onkeypress="kiem_tra_nam_2()" >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Số tiền gửi
+            </td>
+            <td>
+                <input type="text" id="so_tien" onchange="kiem_tra_so_tien_gui()">
+            </td>
+        </tr>
+    </table>
+    <button onclick="them()">Thêm</button>
+    <button onclick="xoa()">Xóa</button>
+    <button onclick="hien_thi()">Hiển thị bảng</button>
+    <div id="hien_thi"></div>
+    <script>
+        var arr = [];
+        class Sotietkiem {
+            constructor(ma_so, loai_tiet_kiem, ho_ten_khach_hang, cmnd, ngay_mo, so_tien) {
+                this.ma_so = ma_so;
+                this.loai_tiet_kiem = loai_tiet_kiem;
+                this.ho_ten_khach_hang = ho_ten_khach_hang;
+                this.cmnd = cmnd;
+                this.ngay_mo = ngay_mo;
+                this.so_tien = so_tien
+
+            }
+            getMaSo() {
+                return this.ma_so;
+            }
+            setMaSo(ma_so) {
+                this.ma_so = ma_so;
+            }
+            getLoaiTietKiem() {
+                return this.loai_tiet_kiem;
+            }
+            setMaSo(loai_tiet_kiem) {
+                this.loai_tiet_kiem = loai_tiet_kiem;
+            }
+            getHoTen() {
+                return this.ho_ten;
+            }
+            setHoTen(ho_ten) {
+                this.ho_ten = ho_ten;
+            }
+            getCmnd() {
+                return this.ma_so;
+            }
+            setCmnd(cmnd) {
+                this.cmnd = cmnd;
+            }
+            getNgayMo() {
+                return this.ma_so;
+            }
+            setNgayMo(ngay_mo) {
+                this.ngay_mo = ngay_mo;
+            }
+            getSoTien() {
+                return this.so_tien;
+            }
+            setSoTien(so_tien) {
+                this.so_tien = so_tien;
+            }
+        }
+
+        function them() {
+            var ma_so = document.getElementById("ma_so").value;
+            var loai = document.getElementById("loai").value;
+            var ten = document.getElementById("ho_ten").value;
+            var cmnd = document.getElementById("cmnd").value;
+            var ngay_mo = document.getElementById("ngay_mo").value;
+            var so_tien = document.getElementById("so_tien").value;
+            var a = new Sotietkiem(ma_so, loai, ten, cmnd, ngay_mo, so_tien);
+            if (kiem_tra_ma_so() && kiem_tra_ho_ten() && kiem_loai_tiet_kiem() && kiem_tra_cmd() &&
+                kiem_tra_ngay_mo() && kiem_tra_so_tien_gui()) {
+                arr.push(a);
+            } else {
+                alert("sai ở đâu đó")
+            }
+
+
+            console.log(a);
+            hien_thi();
+
+        }
+
+        function hien_thi() {
+            d = "<table>";
+            d += "<tr><th> Mã Sổ </th><th> Loại tiết kiệm </th><th> Họ tên </th><th> Cmnd </th><th> Ngày Mở </th><th> Số tiền</th></tr> "
+            for (let i = 0; i < arr.length; i++) {
+                d += "<td>" + arr[i].ma_so + "</td> <td>" + arr[i].loai_tiet_kiem + "</td> <td>" + arr[i]
+                    .ho_ten_khach_hang + "</td><td>" +
+                    arr[
+                        i].cmnd + "</td><td>" + arr[i].ngay_mo + "</td><td>" + arr[i].so_tien;
+                d += "</tr>";
+
+
+            }
+            document.getElementById("hien_thi").innerHTML = d;
+        }
+
+        function xoa() {
+            d = "";
+            d += "<p> Nhập mã sổ cần xóa </p>";
+            d += "<input id='id_del' placeholder='ma so'> </input>";
+            d += "<button onclick='del_id()'> Xóa </button>"
+            document.getElementById('hien_thi').innerHTML = d;
+        }
+
+
+        function del_id() {
+            let id = parseFloat(document.getElementById("id_del").value);
+            for (let i = 0; i < arr.length; i++) {
+                if (id == arr[i].ma_so) {
+                    if (confirm("Bạn có chắc chắn không")) {
+                        arr.splice(i, 1);
+                    }
+
+                }
+
+            }
+            hien_thi();
+
+        }
+
+        function kiem_tra_ma_so() {
+            console.log("hehe");
+            var em = document.getElementById("ma_so").value;
+            for (let i = 0; i < arr.length; i++) {
+                if (em == arr[i].getMaSo()) {
+                    document.getElementById("ma_so").value = "Đã tồn tại!";
+                    return false;
+                }
+
+            }
+
+            if (em == "") {
+                document.getElementById("ma_so").style.borderColor = "red";
+                document.getElementById("ma_so").value = "Không được bỏ trống ô này!";
+                return false;
+            } else {
+                if (em.length > 5) {
+                    document.getElementById("ma_so").value = "độ dài < 5";
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        function kiem_tra_ho_ten() {
+            console.log("ho_ten");
+            var em = document.getElementById("ho_ten").value;
+            if (em == "") {
+                document.getElementById("ho_ten").style.borderColor = "red";
+                document.getElementById("ho_ten").value = "Không được bỏ trống ô này!";
+                return false;
+            } else {
+                if (em.length > 30) {
+                    document.getElementById("ho_ten").value = "độ dài < 5";
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        function kiem_loai_tiet_kiem() {
+            console.log("hehe");
+            var em = document.getElementById("loai").value;
+            if (em == "") {
+                document.getElementById("loai").style.borderColor = "red";
+                document.getElementById("loai").value = "Không được bỏ trống ô này!";
+                return false;
+            } else {
+                if (em.length > 10) {
+                    document.getElementById("loai").value = "độ dài < 10";
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        function kiem_tra_cmd() {
+            console.log("hehe");
+            var em = document.getElementById("cmnd").value;
+            if (em == "") {
+                document.getElementById("cmnd").style.borderColor = "red";
+                document.getElementById("cmnd").value = "Không được bỏ trống ô này!";
+                return false;
+            } else {
+                if (isNaN(em)) {
+                    document.getElementById("so_tien").value = "phải là số";
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        function kiem_tra_ngay_mo() {
+            console.log("hehe");
+            var em = document.getElementById("ngay_mo").value;
+            if (em == "") {
+                document.getElementById("ngay_mo").style.borderColor = "red";
+                document.getElementById("ngay_mo").value = "Không được bỏ trống ô này!";
+                return false;
+            } else {
+                if (em.length > 150) {
+                    document.getElementById("ngay_mo").value = "độ dài < 5";
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        function kiem_tra_so_tien_gui() {
+            console.log("hehe");
+            var em = document.getElementById("so_tien").value;
+            if (em == "") {
+                document.getElementById("so_tien").style.borderColor = "red";
+                document.getElementById("so_tien").value = "Không được bỏ trống ô này!";
+                return false;
+            } else {
+                if (isNaN(em)) {
+                    document.getElementById("so_tien").value = "phải là số";
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        function kiem_tra_nam_2() {
+            var b = document.getElementById("ngay_mo").value;
+
+
+            if (b.length == 2) {
+                document.getElementById("ngay_mo").value += "/";
+            }
+            if (b.length == 5) {
+                document.getElementById("ngay_mo").value += "/";
+            }
+            if (b.length == 10) {
+                console.log(b.length);
+
+                document.getElementById("ngay_mo").style.borderColor = "#777";
+                return true;
+
+            } else {
+                document.getElementById("ngay_mo").style.borderColor = "red";
+                return false;
+            }
+
+
+
+        }
+
+        function main() {
+            var d = new Sotietkiem("1", "vjp", "lehongduc", 14554, "11/01/2021", 5000000);
+            var e = new Sotietkiem("2", "pro", "lehong", 256465, "11/02/2021", 200000);
+            arr.push(d);
+            arr.push(e);
+        }
+
+        main();
+    </script>
+</body>
+
+</html>

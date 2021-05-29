@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Nhập Số phần tử của mảng</p>
+    <input type="text" id="so_phan_tu" placeholder="Nhập số phần tử của mảng">
+    <button onclick="nhap_mang()">Nhập</button>
+    <p id="ket_qua"></p>
+    <script>
+        function kiem_tra_so_nguyen_to(n) {
+            let kiem_tra = true
+
+            if (n < 2) {
+
+                kiem_tra =  false
+            }
+
+            for (let index = 2; index < (n - 1); index++) {
+                if (n % index == 0) {
+                    kiem_tra =  false;
+                    break;
+                } 
+
+            }
+            return kiem_tra;
+
+        }
+
+        function nhap_mang() {
+            console.log(kiem_tra_so_nguyen_to(3));
+            var arr = [];
+            var arr2 = [];
+            var n = document.getElementById("so_phan_tu").value;
+
+            console.log(n);
+            
+            for (let i = 0; i < n; i++) {
+                var c = parseInt(prompt("Nhập phần tử thứ " + i));
+                arr.push(c);
+                console.log("hehe");
+
+            }
+            for (let i = 0; i < arr.length; i++) {
+                if (kiem_tra_so_nguyen_to(arr[i])) {
+                    arr2.push(arr[i]);
+                }
+
+            }
+            console.log(arr2);
+            document.getElementById("ket_qua").innerHTML = "Mảng gồm các số nguyên tố là: "
+            for (let index = 0; index < arr2.length; index++) {
+                document.getElementById("ket_qua").innerHTML += arr2[index]  ;
+                document.getElementById("ket_qua").innerHTML += " ";
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

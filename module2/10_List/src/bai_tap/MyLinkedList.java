@@ -86,7 +86,8 @@ public class MyLinkedList<E> {
 
         Node temp = head;
         for (int i = 0; i < numNodes; i++) {
-            clone.addLast((E) temp.getData());
+            clone.addLast( temp.getData());
+            temp = temp.next;
         }
 
         return clone;
@@ -157,24 +158,7 @@ public class MyLinkedList<E> {
         numNodes = 0;
     }
 
-    public boolean compareTo(MyLinkedList<E> list){
-        if (size() != list.size()){
-            return false;
-        }else{
-            Node traver1 = head;
-            Node traver2 = list.head;
 
-            while (traver1 != null){
-                if (!traver1.compareNode(traver2)){
-                    return false;
-                }
-                traver1 = traver1.next;
-                traver2 = traver2.next;
-            }
-        }
-
-        return true;
-    }
 
     public String toString() {
         StringBuilder str = new StringBuilder("List (size: " + numNodes + "){");

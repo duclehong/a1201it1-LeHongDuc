@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="tu_so_1" placeholder="Tủ số thứ nhất">
+    <input type="text" id="mau_so_1" placeholder="Mẫu số thứ nhất">
+    <input type="text" id="tu_so_2" placeholder="Tủ số thứ hai">
+    <input type="text" id="mau_so_2" placeholder="Mẫu số thứ hai">
+    <button onclick="kiem_tra_phan_so()">Kiểm Tra</button>
+    <p id="ket_qua"></p>
+    <script>
+        class Phan_so {
+            constructor(tu_so, mau_so) {
+                this.mau_so = mau_so;
+                this.tu_so = tu_so;
+            }
+            getTuSo() {
+                return this.tu_so;
+            }
+            setTuSo(tu_so) {
+                this.tu_so = tu_so;
+            }
+            getMauSo() {
+                return this.mau_so;
+            }
+            setMauSo(tu_so) {
+                this.mau_so = mau_so;
+            }
+            kiem_tra_phan_so(a, b) {
+                let n = this.getTuSo()/a;
+                let m = this.getMauSo()/b;
+                if (m == n) {
+                    return true;
+                }
+
+            }
+        }
+        function kiem_tra_phan_so() {
+            var tu_so_1 = document.getElementById("tu_so_1").value;
+            tu_so_1 = parseInt(tu_so_1);
+            console.log(tu_so_1);
+            var mau_so_1 = document.getElementById("mau_so_1").value;
+            mau_so_1 = parseInt(mau_so_1);
+            var tu_so_2 = document.getElementById("tu_so_2").value;
+            tu_so_2 = parseInt(tu_so_2);
+            var mau_so_2 = document.getElementById("mau_so_2").value;
+            mau_so_2 = parseInt(mau_so_2);
+            let phan_so_1 = new Phan_so(tu_so_1,mau_so_1);
+            let phan_so_2 = new Phan_so(tu_so_2,mau_so_2);
+            
+            console.log(phan_so_1.kiem_tra_phan_so(phan_so_2.getTuSo(),phan_so_2.getMauSo()));
+            if (phan_so_1.kiem_tra_phan_so(phan_so_2.getTuSo(),phan_so_2.getMauSo())) {
+                document.getElementById("ket_qua").innerHTML = "dung";
+            }else{
+                document.getElementById("ket_qua").innerHTML = "sai";
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

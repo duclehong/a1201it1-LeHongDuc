@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+    var arr1 = ["a","b","c","k"];
+    var arr2 = ["a","b","c","d","a","e","k","o","k"];
+    var arr3 = []
+    //cho vòng lặp chạy từng phần tử của mảng 2
+    for (let i = 0; i < arr2.length; i++) {
+        //nếu thấy phần tử này đã tồn tại trong mảng 1 tức là trùng lặp thì sang vòng lặp mới
+        if (check2(arr2[i])) {
+            //dùng function check(2) để kiểm tra nó có tồn tại ở mangr không(return true nếu chưa xuất hiện lần nào)
+            //nếu nó chưa xuất hiện lần nào thì push nó vào
+            arr3.push(arr2[i]);
+           
+        }
+    }
+    //funtion kiểm tra n có không tồn tại trong mảng không
+    function check2(n) {
+        
+        for( i of arr1){
+            if (n==i) {
+                return  false;
+            }
+        }
+        return true;
+    }
+    //mảng arr3 chứa phần tử tồn tại ở arr2 mà k có ở arr1
+    alert(arr3);
+    console.log(arr3)
+    </script>
+</body>
+</html>

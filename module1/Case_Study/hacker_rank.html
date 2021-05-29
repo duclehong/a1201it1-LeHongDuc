@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function timeConversion(s) {
+   if(s[8]=="P"){
+       var a = parseInt(s[0]+s[1]);
+       a = a+12;
+       var b = a.toString();
+       var arr = [b[0],b[1]]
+       for(let i=2;i<8;i++){
+           arr.push(s[i])
+       }
+       var c = "";
+       for(let i =0; i<8;i++){
+           c+=arr[i];
+       }
+       return c
+   }
+     if(s[8]=="A"){
+       if(s[0]==1 && s[1]==2){
+       let c="00";
+            for(let i =2; i<8;i++){
+                console.log(s[i]);
+           c+=s[i];
+           
+       }
+       return c
+       }else{
+        let c="";
+            for(let i =0; i<8;i++){
+           c+=s[i];
+       }
+       return c
+       }
+           
+       }
+       
+   }
+   alert(timeConversion("06:40:22AM"));
+    </script>
+</body>
+</html>

@@ -209,7 +209,7 @@ function displayTable() {
             arr[i].sale +
             "%</td><td>" + arr[i].so_ngay_thue + "</td><td>" + arr[i].so_nguoi + "</td><td>" + tr + "</td><td>" + arr[i]
             .loai_dich_vu + "</td>" + "<td> <button onclick='tinhtien2(" + i + ")'> Tính tiền</button></td>";
-        d += "</tr>";
+        d += "</tr><tr><td colspan='2'></td></tr>";
 
 
     }
