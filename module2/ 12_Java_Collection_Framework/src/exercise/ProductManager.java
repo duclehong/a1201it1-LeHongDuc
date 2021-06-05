@@ -130,6 +130,7 @@ public class ProductManager {
                 }
                 break;
             case 2:
+                scanner.skip("\\R");
                 System.out.println("Enter name: ");
                 String name = scanner.nextLine();
                 for (Product product :
