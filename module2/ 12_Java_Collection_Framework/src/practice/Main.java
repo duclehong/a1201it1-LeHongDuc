@@ -1,9 +1,6 @@
 package practice;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,6 +23,21 @@ public class Main {
         for (Student student: studentSet
              ) {
             System.out.println(student.toString());
+        }
+        ////////////////////////////////////
+        List<Student> lists = new ArrayList<Student>();
+        lists.add(student1);
+        lists.add(student2);
+        lists.add(student3);
+        Collections.sort(lists);
+        for(Student st : lists){
+            System.out.println(st.toString());
+        }
+        AgeComparator ageComparator = new AgeComparator();
+        Collections.sort(lists,ageComparator);
+        System.out.println("So sanh theo tuoi:");
+        for(Student st : lists){
+            System.out.println(st.toString());
         }
     }
 }
