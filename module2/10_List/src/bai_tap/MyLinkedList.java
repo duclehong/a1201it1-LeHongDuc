@@ -86,7 +86,7 @@ public class MyLinkedList<E> {
 
         Node temp = head;
         for (int i = 0; i < numNodes; i++) {
-            clone.addLast( temp.getData());
+            clone.addLast((E) temp.getData());
             temp = temp.next;
         }
 
