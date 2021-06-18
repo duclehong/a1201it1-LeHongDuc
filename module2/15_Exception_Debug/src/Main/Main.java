@@ -24,6 +24,7 @@ public class Main {
         } catch (IllegalTriangleException e) {
             e.printStackTrace();
         }
+        System.out.println("hehe");
     }
 
     public static boolean checkSide(double side1, double side2, double side3) throws IllegalTriangleException {
