@@ -1,6 +1,6 @@
 package models;
 
-public abstract class Services {
+public abstract class Services implements Comparable<Services> {
     private String id;
     private String name;
     private double acreage;
@@ -81,4 +81,10 @@ public abstract class Services {
     }
 
     public abstract void showInfor();
+
+    @Override
+    public int compareTo(Services o) {
+        int result = this.getName().toLowerCase().compareTo(o.getName().toLowerCase());
+        return result;
+    }
 }

@@ -29,7 +29,7 @@ public class FileUtils {
             while ((line = bufferReader.readLine()) != null) {
                 arrayContent.add(line);
             }
-            ;
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

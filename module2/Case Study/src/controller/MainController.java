@@ -1,8 +1,13 @@
 package controller;
 
+import commons.ConvertString;
 import commons.FileUtils;
 import commons.StringUtils;
 import commons.Validators;
+import exceptions.BirthdayException;
+import exceptions.EmailException;
+import exceptions.GenderException;
+import exceptions.IdCardException;
 import models.*;
 
 import java.util.*;
@@ -13,6 +18,9 @@ public class MainController {
     private static String VILLA = "villa";
     private static String HOUSE = "house";
     private static String ROOM = "room";
+    private static String CUSTOMER = "customer";
+    private static String BOOKING = "booking";
+    private static String EMPLOYEE = "employee";
     private static boolean isBackMenu;
 
     public static void main(String[] args) {
@@ -21,9 +29,6 @@ public class MainController {
 
     public static void displayMainMenu() {
         int numSelect = -1;
-//        for (int i= 0; i<1000; i++){
-//            System.out.println("Anh iu em nhìu lắm Đậu Thanh Lươn!!!");
-//        }
         do {
             System.out.println("Select function\n" +
                     "1.\tAdd New Services\n" +
@@ -43,18 +48,18 @@ public class MainController {
                 case 2:
                     showServices();
                     break;
-//                case 3:
-//                    addNewCustomer();
-//                    break;
-//                case 4:
-//                    showInformationOfCustomer();
-//                    break;
-//                case 5:
-//                    addNewBooking();
-//                    break;
-//                case 6:
-//                    showInfomationOfEmployee();
-//                    break;
+                case 3:
+                    addNewCustomer(CUSTOMER);
+                    break;
+                case 4:
+                    showInformationOfCustomer(CUSTOMER);
+                    break;
+                case 5:
+                    addNewBooking();
+                    break;
+                case 6:
+                    showInfomationOfEmployee();
+                    break;
                 case 7:
                     isExit = true;
                     break;
@@ -63,6 +68,159 @@ public class MainController {
                 return;
             }
         } while (numSelect >= 1 && numSelect < 7);
+    }
+
+    private static void showInformationOfCustomer(String fileName) {
+        System.out.println("Lis of customer");
+        System.out.println("--------------------------");
+        List<Customer> customerList = readALlCustomer(fileName);
+        Customer customer = null;
+        for (int i = 0; i < customerList.size(); i++) {
+            customer = customerList.get(i);
+            System.out.print((i + 1) + ". ");
+            customer.showInfor();
+        }
+    }
+
+    private static Map<String,Employee> readAllEmployee(String fileName) {
+        FileUtils.setFullPathFile(fileName);
+        List<String> propertiesEmployee = FileUtils.readFile();
+        Map<String,Employee> employeeMap = new HashMap<>();
+        String[] arrPropertyEmployee = null;
+        Employee employee = null;
+        for (String property : propertiesEmployee
+             ) {
+            arrPropertyEmployee = property.split(StringUtils.COMMA);
+            employee = new Employee();
+            employee.setId(arrPropertyEmployee[0]);
+            employee.setName(arrPropertyEmployee[1]);
+            employee.setAge(arrPropertyEmployee[2]);
+            employee.setAddress(arrPropertyEmployee[3]);
+            employeeMap.put(employee.getId(),employee);
+        }
+        return employeeMap;
+    }
+    private static void showInfomationOfEmployee(){
+        Map<String,Employee> employeeMap = readAllEmployee(EMPLOYEE);
+        System.out.println("List employee");
+        System.out.println("----------------------");
+        for (Map.Entry<String, Employee> employee: employeeMap.entrySet()
+             ) {
+            System.out.println(employee.getKey() + " " + employee.getValue().toString());
+        }
+
+    }
+
+    private static void addNewBooking() {
+        List<Customer> customerList = readALlCustomer(CUSTOMER);
+        showInformationOfCustomer(CUSTOMER);
+        System.out.println("Select customer:");
+        int choiceCustomer = sc.nextInt();
+        System.out.println("Select service\n" +
+                "1.\tVilla\n" +
+                "2.\tHouse\n" +
+                "3.\tRoom\n");
+        int choiceService = sc.nextInt();
+        sc.nextLine();
+        List<Services> servicesList = null;
+        switch (choiceService) {
+            case 1:
+                servicesList = readAllService(VILLA);
+                showAllService(VILLA);
+                System.out.println("Select villa");
+                break;
+            case 2:
+                servicesList = readAllService(HOUSE);
+                showAllService(HOUSE);
+                System.out.println("Select villa");
+                break;
+            case 3:
+                servicesList = readAllService(ROOM);
+                showAllService(ROOM);
+                System.out.println("Select villa");
+                break;
+            default:
+                break;
+        }
+        Customer customer = customerList.get(choiceCustomer - 1);
+        int chooseService = sc.nextInt();
+        sc.nextLine();
+        customer.setServices(servicesList.get(chooseService - 1));
+        FileUtils.setFullPathFile(BOOKING);
+        FileUtils.writeFile(new String[]{customer.toString()});
+        System.out.println("Okey");
+    }
+
+    private static void addNewCustomer(String fileName) {
+        String name;
+        String dateBirth;
+        String gender;
+        String idCard;
+        String phoneNumber;
+        String email;
+        String typeOfCustomer;
+        String address;
+        Services services;
+        boolean flag = false;
+        System.out.println("Input name customer");
+        name = sc.nextLine();
+        do {
+            flag = true;
+            System.out.println("Input date birth");
+            dateBirth = sc.nextLine();
+            try {
+                Validators.checkDayBirthCustomer(dateBirth);
+            } catch (BirthdayException e) {
+                flag = false;
+                e.printStackTrace();
+            }
+        } while (!flag);
+
+        do {
+            flag = true;
+            System.out.println("Input name gender");
+            gender = sc.nextLine();
+            try {
+                Validators.checkGenderCustomer(gender);
+            } catch (GenderException e) {
+                flag = false;
+                e.printStackTrace();
+            }
+
+        } while (!flag);
+        gender = ConvertString.covertFirstCharToUp(gender);
+        do {
+            flag = true;
+            System.out.println("Input name id card");
+            idCard = sc.nextLine();
+            try {
+                Validators.checkIdCustomer(idCard);
+            } catch (IdCardException e) {
+                flag = false;
+                e.printStackTrace();
+            }
+        } while (!flag);
+        System.out.println("Input date phoneNumber");
+        phoneNumber = sc.nextLine();
+        do {
+            flag = true;
+            System.out.println("Input email");
+            email = sc.nextLine();
+            try {
+                Validators.checkEmailCustomer(email);
+            } catch (EmailException e) {
+                flag = false;
+                e.printStackTrace();
+            }
+        } while (!flag);
+
+        System.out.println("Input date typeOfCustomer");
+        typeOfCustomer = sc.nextLine();
+        System.out.println("Input name address");
+        address = sc.nextLine();
+
+        FileUtils.setFullPathFile(fileName);
+        FileUtils.writeFile(new String[]{name, dateBirth, gender, idCard, phoneNumber, email, typeOfCustomer, address});
     }
 
     private static void showServices() {
@@ -123,8 +281,9 @@ public class MainController {
 
     private static void showAllServiceNotDup(String fileName) {
         System.out.println("---------------------------------");
-        System.out.println("List Of Service Not Duplicatr: ");
-        Set<String> setOfService = new TreeSet<>();
+        System.out.println("List Of Service Not Duplicate: ");
+        Set<String> setOfService = new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
+
         for (Services service : readAllService(fileName)
         ) {
             setOfService.add(service.getName());
@@ -139,9 +298,13 @@ public class MainController {
     private static void showAllService(String fileName) {
         System.out.println("---------------------------------");
         System.out.println("List Of Service: ");
-        for (Services service : readAllService(fileName)
-        ) {
-            service.showInfor();
+        List<Services> servicesList = readAllService(fileName);
+        Collections.sort(servicesList);
+        Services services = null;
+        for (int i = 0; i < servicesList.size(); i++) {
+            services = servicesList.get(i);
+            System.out.print((i + 1) + ". ");
+            services.showInfor();
         }
     }
 
@@ -171,7 +334,7 @@ public class MainController {
             } else if (fileName.equals(ROOM)) {
                 extraService = new ExtraService(propertiesElement[6], propertiesElement[7], Double.parseDouble(propertiesElement[8]));
                 services = new Room();
-                ((Room)services).setExtraService(extraService);
+                ((Room) services).setExtraService(extraService);
             }
             services.setId(propertiesElement[0]);
             services.setName(propertiesElement[1]);
@@ -183,7 +346,31 @@ public class MainController {
             listOfServices.add(services);
 
         }
+
         return listOfServices;
+    }
+
+    public static List<Customer> readALlCustomer(String fileName) {
+        FileUtils.setFullPathFile(fileName);
+        List<String> propertiesCustomer = FileUtils.readFile();
+        String[] propertiesElement;
+        List<Customer> customerList = new ArrayList<>();
+        for (String providerElement :
+                propertiesCustomer) {
+            Customer customer = new Customer();
+            propertiesElement = providerElement.split(StringUtils.COMMA);
+            customer.setName(propertiesElement[0]);
+            customer.setDateBirth(propertiesElement[1]);
+            customer.setGender(propertiesElement[2]);
+            customer.setIdCard(propertiesElement[3]);
+            customer.setPhoneNumber(propertiesElement[4]);
+            customer.setEmail(propertiesElement[5]);
+            customer.setTypeOfCustomer(propertiesElement[6]);
+            customer.setAddress(propertiesElement[7]);
+            customerList.add(customer);
+        }
+        Collections.sort(customerList);
+        return customerList;
     }
 
     public static void addNewServices() {
@@ -247,11 +434,11 @@ public class MainController {
         do {
             System.out.println("rent cost");
             rentCost = sc.nextDouble();
-        }while(!Validators.isMoreThan(rentCost, 0));
+        } while (!Validators.isMoreThan(rentCost, 0));
         do {
             System.out.println("number people");
             numPeople = sc.nextInt();
-        }while(!Validators.isMoreThan(numPeople,0,20));
+        } while (!Validators.isMoreThan(numPeople, 0, 20));
         sc.nextLine();
         System.out.println("type rent");
         String typeRent = sc.nextLine();
@@ -263,18 +450,18 @@ public class MainController {
             do {
                 System.out.println("standard room");
                 standardRoom = sc.nextLine();
-            }while(!Validators.isValidators(standardRoom,Validators.SERVICE_NAME_REGEX));
+            } while (!Validators.isValidators(standardRoom, Validators.SERVICE_NAME_REGEX));
 
             System.out.println("description");
             String description = sc.nextLine();
             do {
                 System.out.println("area pool");
                 areaPool = sc.nextDouble();
-            }while(!Validators.isMoreThan(areaPool,30));
+            } while (!Validators.isMoreThan(areaPool, 30));
             do {
                 System.out.println("numer of floors");
                 numberOfFloor = sc.nextInt();
-            }while (!Validators.isMoreThan(numberOfFloor,0));
+            } while (!Validators.isMoreThan(numberOfFloor, 0));
 
             sc.nextLine();
             FileUtils.writeFile(new String[]{id, serviceName, String.valueOf(area), String.valueOf(rentCost), String.valueOf(numPeople), typeRent, standardRoom, description, String.valueOf(areaPool), String.valueOf(numberOfFloor)});
@@ -285,25 +472,25 @@ public class MainController {
             do {
                 System.out.println("standard room");
                 standardRoom = sc.nextLine();
-            }while(!Validators.isValidators(standardRoom,Validators.SERVICE_NAME_REGEX));
+            } while (!Validators.isValidators(standardRoom, Validators.SERVICE_NAME_REGEX));
 
             System.out.println("description");
             String description = sc.nextLine();
             do {
                 System.out.println("numer of floors");
                 numberOfFloor = sc.nextInt();
-            }while (!Validators.isMoreThan(numberOfFloor,0));
+            } while (!Validators.isMoreThan(numberOfFloor, 0));
 
             sc.nextLine();
             FileUtils.writeFile(new String[]{id, serviceName, String.valueOf(area), String.valueOf(rentCost), String.valueOf(numPeople), typeRent, standardRoom, description, String.valueOf(numberOfFloor)});
-        } else if(name.equals(ROOM)){
+        } else if (name.equals(ROOM)) {
             String extraServiceName;
             String unit;
             double money;
             do {
                 System.out.println("Extra Service Name");
                 extraServiceName = sc.nextLine();
-            }while(!Validators.isValiExtraServiceName(extraServiceName));
+            } while (!Validators.isValiExtraServiceName(extraServiceName));
             System.out.println("Extra Unit");
             unit = sc.nextLine();
             System.out.println("Extra Money");
