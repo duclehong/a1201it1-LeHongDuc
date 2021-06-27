@@ -21,6 +21,15 @@ public class FileUtils {
         }
     }
 
+    public static void writeFileEdit() {
+        try {
+            bufferWriter = new BufferedWriter(new FileWriter(path, false));
+            bufferWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static List<String> readFile() {
         List<String> arrayContent = new ArrayList<String>();
         try {
@@ -35,6 +44,26 @@ public class FileUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return arrayContent;
+    }
+    public static List<String> readFileDeleteElement() {
+        List<String> arrayContent = new ArrayList<String>();
+        try {
+            bufferReader = new BufferedReader(new FileReader(path));
+            String line = null;
+            int checkElement = 0;
+            while ((line = bufferReader.readLine()) != null) {
+
+                arrayContent.add(line);
+               checkElement ++;
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(arrayContent);
         return arrayContent;
     }
 

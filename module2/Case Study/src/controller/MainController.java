@@ -31,13 +31,17 @@ public class MainController {
         int numSelect = -1;
         do {
             System.out.println("Select function\n" +
-                    "1.\tAdd New Services\n" +
-                    "2.\tShow Services\n" +
-                    "3.\tAdd New Customer\n" +
-                    "4.\tShow Information of Customer\n" +
-                    "5.\tAdd New Booking\n" +
-                    "6.\tShow Information of Employee\n" +
-                    "7.\tExit\n");
+                    " 1.\tAdd New Services\n" +
+                    " 2.\tShow Services\n" +
+                    " 3.\tAdd New Customer\n" +
+                    " 4.\tShow Information of Customer\n" +
+                    " 5.\tAdd New Booking\n" +
+                    " 6.\tShow Information of Employee\n" +
+                    " 7.\tEdit Service\n" +
+                    " 8.\tDelete Service\n" +
+                    " 9.\tEdit Customer\n" +
+                    "10.\tDelete Customer\n" +
+                    "11.\tExit\n");
 
             numSelect = sc.nextInt();
             sc.nextLine();
@@ -61,13 +65,380 @@ public class MainController {
                     showInfomationOfEmployee();
                     break;
                 case 7:
+                    editServices();
+                    break;
+                case 8:
+                    deleteServices();
+                    break;
+                case 9:
+                    editCustomer();
+                    break;
+                case 10:
+                    deleteCustomer();
+                    break;
+                case 11:
                     isExit = true;
                     break;
             }
             if (isBackMenu || isExit) {
                 return;
             }
-        } while (numSelect >= 1 && numSelect < 7);
+        } while (numSelect >= 1 && numSelect < 11);
+    }
+
+    private static void editCustomer() {
+        String name = null;
+        String dateBirth = null;
+        String gender = null;
+        String idCard = null;
+        String phoneNumber = null;
+        String email = null;
+        String typeOfCustomer = null;
+        String address = null;
+        Services services = null;
+        Boolean flag = false;
+        showInformationOfCustomer(CUSTOMER);
+        System.out.println("Select Customer");
+        int chooseCustomer = sc.nextInt();
+
+        List<Customer> customerList = readCustomer(CUSTOMER);
+//        customerList.remove(chooseCustomer-1);
+        System.out.println("Select function\n" +
+                " 1.\tName\n" +
+                " 2.\tBirth\n" +
+                " 3.\tGender\n" +
+                " 4.\tId\n" +
+                " 5.\tPhone\n" +
+                " 6.\tEmail\n" +
+                " 7.\tType Of Customer\n" +
+                " 8.\tAddress\n" +
+                " 9.\tService\n" +
+                "11.\tExit\n");
+        FileUtils.setFullPathFile(CUSTOMER);
+        FileUtils.writeFileEdit();
+        List<String[]> customersStringList = new ArrayList<>();
+        String String_Array[] = null;
+        int numSelect = sc.nextInt();
+        sc.nextLine();
+        switch (numSelect) {
+            case 1:
+                System.out.println("Input name customer");
+                name = sc.nextLine();
+                break;
+            case 2:
+                do {
+                    flag = true;
+                    System.out.println("Input date birth");
+                    dateBirth = sc.nextLine();
+                    try {
+                        Validators.checkDayBirthCustomer(dateBirth);
+                    } catch (BirthdayException e) {
+                        flag = false;
+                        e.printStackTrace();
+                    }
+                } while (!flag);
+                break;
+            case 3:
+                do {
+                    flag = true;
+                    System.out.println("Input name gender");
+                    gender = sc.nextLine();
+                    try {
+                        Validators.checkGenderCustomer(gender);
+                    } catch (GenderException e) {
+                        flag = false;
+                        e.printStackTrace();
+                    }
+
+                } while (!flag);
+                break;
+            case 4:
+                do {
+                    flag = true;
+                    System.out.println("Input name id card");
+                    idCard = sc.nextLine();
+                    try {
+                        Validators.checkIdCustomer(idCard);
+                    } catch (IdCardException e) {
+                        flag = false;
+                        e.printStackTrace();
+                    }
+                } while (!flag);
+                break;
+            case 5:
+                System.out.println("Input date phoneNumber");
+                phoneNumber = sc.nextLine();
+                break;
+            case 6:
+                do {
+                    flag = true;
+                    System.out.println("Input email");
+                    email = sc.nextLine();
+                    try {
+                        Validators.checkEmailCustomer(email);
+                    } catch (EmailException e) {
+                        flag = false;
+                        e.printStackTrace();
+                    }
+                } while (!flag);
+                break;
+            case 7:
+                System.out.println("Input date typeOfCustomer");
+                typeOfCustomer = sc.nextLine();
+                break;
+            case 8:
+                System.out.println("Input name address");
+                address = sc.nextLine();
+                break;
+            case 9:
+                break;
+            case 10:
+                return;
+        }
+        for (int i = 0; i < customerList.size(); i++) {
+
+            String_Array = new String[9];
+            String_Array[0] = customerList.get(i).getName();
+            String_Array[1] = customerList.get(i).getDateBirth();
+            String_Array[2] = customerList.get(i).getGender();
+            String_Array[3] = customerList.get(i).getIdCard();
+            String_Array[4] = customerList.get(i).getPhoneNumber();
+            String_Array[5] = customerList.get(i).getEmail();
+            String_Array[6] = customerList.get(i).getTypeOfCustomer();
+            String_Array[7] = customerList.get(i).getAddress();
+            String_Array[8] = null;
+            if (i == chooseCustomer - 1) {
+                System.out.println("find");
+                switch (numSelect) {
+                    case 1:
+                        String_Array[0] = name;
+                        break;
+                    case 2:
+                        String_Array[1] = dateBirth;
+                        break;
+                    case 3:
+                        gender = ConvertString.covertFirstCharToUp(gender);
+                        String_Array[2] = gender;
+                        break;
+                    case 4:
+                        String_Array[4] = idCard;
+                        break;
+                    case 5:
+                        String_Array[5] = phoneNumber;
+                        break;
+                    case 6:
+                        String_Array[6] = email;
+                        break;
+                    case 7:
+                        String_Array[7] = typeOfCustomer;
+                        break;
+                    case 8:
+                        String_Array[8] = address;
+                        break;
+                    case 9:
+                        break;
+                    case 10:
+                        return;
+                }
+            }
+            FileUtils.writeFile(new String[]{String_Array[0], String_Array[1], String_Array[2], String_Array[3], String_Array[4], String_Array[5], String_Array[6], String_Array[7], String_Array[8]});
+            System.out.println();
+        }
+        System.out.println(customersStringList);
+        showInformationOfCustomer(CUSTOMER);
+        System.out.println("Okey");
+    }
+
+    private static void deleteServices() {
+        System.out.println("Select Service\n" +
+                " 1.\tVilla\n" +
+                " 2.\tHouse\n" +
+                " 3.\tRoom\n" +
+                " 4.\tExit\n");
+        int numService = sc.nextInt();
+        List<String> serviceList = null;
+        String name = null;
+        switch (numService) {
+            case 1:
+                name = VILLA;
+                break;
+            case 2:
+                name = HOUSE;
+                break;
+            case 3:
+                name = ROOM;
+                break;
+        }
+        showAllService(name);
+        FileUtils.setFullPathFile(name);
+        serviceList = FileUtils.readFile();
+        System.out.println("Select Service");
+        int chooseCustomer = sc.nextInt();
+        System.out.println("Are you sure?");
+        System.out.println("1. YES      2. NO");
+        FileUtils.writeFileEdit();
+        int yN = sc.nextInt();
+        if (yN == 2) {
+            deleteServices();
+            return;
+        }
+        serviceList.remove(chooseCustomer - 1);
+        System.out.println("remove" + serviceList);
+        FileUtils.writeFileEdit();
+            for (String service :
+                    serviceList) {
+                String[] propertiesElement = service.split(StringUtils.COMMA);
+                FileUtils.writeFile(new String[]{propertiesElement[0], propertiesElement[1], propertiesElement[2], propertiesElement[3], propertiesElement[4], propertiesElement[5], propertiesElement[6], propertiesElement[7], propertiesElement[8],propertiesElement[9]});
+                System.out.println();
+            }
+        System.out.println("Okey");
+        showAllService(name);
+    }
+
+    private static void editServices() {
+        System.out.println("Select Service\n" +
+                " 1.\tVilla\n" +
+                " 2.\tHouse\n" +
+                " 3.\tRoom\n" +
+                " 4.\tExit\n");
+        int numService = sc.nextInt();
+        List<String> serviceList = null;
+        String name = null;
+        switch (numService) {
+            case 1:
+                name = VILLA;
+                break;
+            case 2:
+                name = HOUSE;
+                break;
+            case 3:
+                name = ROOM;
+                break;
+        }
+        showAllService(name);
+        FileUtils.setFullPathFile(name);
+        serviceList = FileUtils.readFile();
+        System.out.println("Select Service");
+        int chooseCustomer = sc.nextInt();
+//        serviceList.remove(chooseCustomer - 1);
+        System.out.println("remove" + serviceList);
+        FileUtils.writeFileEdit();
+        System.out.println("Select function\n" +
+                " 1.\tId\n" +
+                " 2.\tName\n" +
+                " 3.\tacreage\n" +
+                " 4.\trentalCosts\n" +
+                " 5.\tmaxNumOfPeople\n" +
+                " 6.\trentalType\n" +
+                "11.\tExit\n");
+        int numSelect = sc.nextInt();
+        sc.nextLine();
+        String id = null;
+        String serviceName;
+        double area;
+        double rentCost;
+        int numPeople;
+        String typeRent;
+        String editElement = null;
+        switch (numSelect) {
+            case 1:
+                do {
+                    System.out.println("Input id ");
+                    id = sc.nextLine();
+                } while (!Validators.isValidators(id, Validators.SERVICES_CODE_REGEX));
+                editElement = id;
+                break;
+            case 2:
+                do {
+                    System.out.println("Input name");
+                    serviceName = sc.nextLine();
+                } while (!Validators.isValidators(serviceName, Validators.SERVICE_NAME_REGEX));
+                editElement = serviceName;
+                break;
+            case 3:
+                do {
+                    System.out.println("Area");
+                    area = sc.nextDouble();
+                } while (!Validators.isMoreThan(area, 30));
+                editElement = String.valueOf(area);
+                break;
+            case 4:
+                do {
+                    System.out.println("rent cost");
+                    rentCost = sc.nextDouble();
+                } while (!Validators.isMoreThan(rentCost, 0));
+                editElement = String.valueOf(rentCost);
+                break;
+            case 5:
+                do {
+                    System.out.println("number people");
+                    numPeople = sc.nextInt();
+                } while (!Validators.isMoreThan(numPeople, 0, 20));
+                editElement = String.valueOf(numPeople);
+                break;
+            case 6:
+                System.out.println("type rent");
+                editElement = sc.nextLine();
+                break;
+
+            case 9:
+                break;
+            case 10:
+                return;
+        }
+        int i =0;
+        for (String service :
+                serviceList) {
+
+            String[] propertiesElement = service.split(StringUtils.COMMA);
+            if(i==numSelect-1){
+                propertiesElement[i] = editElement;
+            }
+            FileUtils.writeFile(new String[]{propertiesElement[0], propertiesElement[1], propertiesElement[2], propertiesElement[3], propertiesElement[4], propertiesElement[5], propertiesElement[6], propertiesElement[7], propertiesElement[8],propertiesElement[9]});
+            System.out.println();
+            i++;
+        }
+        System.out.println("Okey");
+        showAllService(name);
+    }
+
+    private static void deleteCustomer() {
+
+        showInformationOfCustomer(CUSTOMER);
+        System.out.println("Select Customer");
+        int chooseCustomer = sc.nextInt();
+        System.out.println("Are you sure?");
+        System.out.println("1. YES      2. NO");
+        int yN = sc.nextInt();
+        if (yN == 2) {
+            deleteCustomer();
+            return;
+        }
+        List<Customer> customerList = readCustomer(CUSTOMER);
+        customerList.remove(chooseCustomer - 1);
+        System.out.println("remove" + customerList);
+        FileUtils.setFullPathFile(CUSTOMER);
+        FileUtils.writeFileEdit();
+        List<String[]> customersStringList = new ArrayList<>();
+        String String_Array[] = null;
+        for (Customer customer :
+                customerList) {
+            String_Array = new String[9];
+            String_Array[0] = customer.getName();
+            String_Array[1] = customer.getDateBirth();
+            String_Array[2] = customer.getGender();
+            String_Array[3] = customer.getIdCard();
+            String_Array[4] = customer.getPhoneNumber();
+            String_Array[5] = customer.getEmail();
+            String_Array[6] = customer.getTypeOfCustomer();
+            String_Array[7] = customer.getAddress();
+            String_Array[8] = null;
+            FileUtils.writeFile(new String[]{String_Array[0], String_Array[1], String_Array[2], String_Array[3], String_Array[4], String_Array[5], String_Array[6], String_Array[7], String_Array[8]});
+            System.out.println();
+        }
+        System.out.println(customersStringList);
+        showInformationOfCustomer(CUSTOMER);
+        System.out.println("Okey");
     }
 
     private static void showInformationOfCustomer(String fileName) {
@@ -82,30 +453,31 @@ public class MainController {
         }
     }
 
-    private static Map<String,Employee> readAllEmployee(String fileName) {
+    private static Map<String, Employee> readAllEmployee(String fileName) {
         FileUtils.setFullPathFile(fileName);
         List<String> propertiesEmployee = FileUtils.readFile();
-        Map<String,Employee> employeeMap = new HashMap<>();
+        Map<String, Employee> employeeMap = new HashMap<>();
         String[] arrPropertyEmployee = null;
         Employee employee = null;
         for (String property : propertiesEmployee
-             ) {
+        ) {
             arrPropertyEmployee = property.split(StringUtils.COMMA);
             employee = new Employee();
             employee.setId(arrPropertyEmployee[0]);
             employee.setName(arrPropertyEmployee[1]);
             employee.setAge(arrPropertyEmployee[2]);
             employee.setAddress(arrPropertyEmployee[3]);
-            employeeMap.put(employee.getId(),employee);
+            employeeMap.put(employee.getId(), employee);
         }
         return employeeMap;
     }
-    private static void showInfomationOfEmployee(){
-        Map<String,Employee> employeeMap = readAllEmployee(EMPLOYEE);
+
+    private static void showInfomationOfEmployee() {
+        Map<String, Employee> employeeMap = readAllEmployee(EMPLOYEE);
         System.out.println("List employee");
         System.out.println("----------------------");
-        for (Map.Entry<String, Employee> employee: employeeMap.entrySet()
-             ) {
+        for (Map.Entry<String, Employee> employee : employeeMap.entrySet()
+        ) {
             System.out.println(employee.getKey() + " " + employee.getValue().toString());
         }
 
@@ -349,7 +721,46 @@ public class MainController {
 
         return listOfServices;
     }
+    public static List<Services> readService(String fileName) {
+        FileUtils.setFullPathFile(fileName);
+        List<String> propertiesServices = FileUtils.readFileDeleteElement();
+        List<Services> listOfServices = new ArrayList<>();
+        String[] propertiesElement = null;
 
+        Services services = null;
+        ExtraService extraService = null;
+        for (String properties : propertiesServices) {
+            propertiesElement = properties.split(StringUtils.COMMA);
+            if (fileName.equals(VILLA)) {
+                services = new Villa();
+                ((Villa) services).setRoomStanadard(propertiesElement[6]);
+                ((Villa) services).setOtherDescription(propertiesElement[7]);
+                ((Villa) services).setSwimingPoolArea(Double.parseDouble(propertiesElement[8]));
+                ((Villa) services).setNumOfFloors(Integer.parseInt(propertiesElement[9]));
+
+            } else if (fileName.equals(HOUSE)) {
+                services = new House();
+                ((House) services).setRoomStanadard(propertiesElement[6]);
+                ((House) services).setOtherDescription(propertiesElement[7]);
+                ((House) services).setNumOfFloors(Integer.parseInt(propertiesElement[8]));
+            } else if (fileName.equals(ROOM)) {
+                extraService = new ExtraService(propertiesElement[6], propertiesElement[7], Double.parseDouble(propertiesElement[8]));
+                services = new Room();
+                ((Room) services).setExtraService(extraService);
+            }
+            services.setId(propertiesElement[0]);
+            services.setName(propertiesElement[1]);
+            services.setAcreage(Double.parseDouble(propertiesElement[2]));
+            services.setRentalCosts(Double.parseDouble(propertiesElement[3]));
+            services.setMaxNumOfPeople(Integer.parseInt(propertiesElement[4]));
+            services.setRentalType(propertiesElement[5]);
+
+            listOfServices.add(services);
+
+        }
+
+        return listOfServices;
+    }
     public static List<Customer> readALlCustomer(String fileName) {
         FileUtils.setFullPathFile(fileName);
         List<String> propertiesCustomer = FileUtils.readFile();
@@ -372,6 +783,30 @@ public class MainController {
         Collections.sort(customerList);
         return customerList;
     }
+
+    public static List<Customer> readCustomer(String fileName) {
+        FileUtils.setFullPathFile(fileName);
+        List<String> propertiesCustomer = FileUtils.readFileDeleteElement();
+        String[] propertiesElement;
+        List<Customer> customerList = new ArrayList<>();
+        for (String providerElement :
+                propertiesCustomer) {
+            Customer customer = new Customer();
+            propertiesElement = providerElement.split(StringUtils.COMMA);
+            customer.setName(propertiesElement[0]);
+            customer.setDateBirth(propertiesElement[1]);
+            customer.setGender(propertiesElement[2]);
+            customer.setIdCard(propertiesElement[3]);
+            customer.setPhoneNumber(propertiesElement[4]);
+            customer.setEmail(propertiesElement[5]);
+            customer.setTypeOfCustomer(propertiesElement[6]);
+            customer.setAddress(propertiesElement[7]);
+            customerList.add(customer);
+        }
+        Collections.sort(customerList);
+        return customerList;
+    }
+
 
     public static void addNewServices() {
         int numSelect = -1;
