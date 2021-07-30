@@ -58,13 +58,18 @@ font-size : 50px
 }
 .left{
     width: 25%;
+    height: 100vh;
     float: left;
     margin-top:  90px;
+    overflow: scroll;
+    position: static;
 }
 .right{
     width: 25%;
+    height: 100vh;
     float: right;
     margin-top:  90px;
+    overflow: scroll;
 }
 .center{
     width: 50%;
@@ -143,4 +148,18 @@ font-size : 50px
 .list-group{
     max-width: 350px;
     background-color: rgb(238, 238, 238);
+}
+.lileft{
+    list-style-type: none;
+}
+.btnlileft{
+    width: 250px;
+    text-align: left;
+    border: none;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.btnlileft:hover{
+    background-color:rgb(212, 224, 235)
 }
