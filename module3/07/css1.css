@@ -1,0 +1,22 @@
+
+
+header, footer {
+    border: 1px solid;
+}
+
+section {
+    border: 1px solid;
+}
+
+article {
+    border: 1px solid;
+}
+
+nav ul {
+    border: 1px solid;
+}
+
+nav ul li {
+    display: inline;
+    margin: 5px;
+}

@@ -1,0 +1,72 @@
+body{
+    
+}
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: blanchedalmond;
+    position: fixed;
+}
+.logo{
+    float: left;
+    width: 25%;
+    font-size: 50px;
+    margin-top: 20px;
+   
+
+}
+.menutop{
+    margin-top: 30px;
+    float: left;
+    list-style-type: none;
+    margin-left: 50px;
+}
+.btnlogin{
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+.left{
+    float: left;
+    width: 25%;
+    margin-top: 100px;
+    text-align: center;
+    
+}
+li{
+    list-style-type: none;
+}
+.center{
+    float: left;
+    width: 50%;
+    margin-top: 100px;
+}
+.right{
+    float: right;
+    width: 25%;
+    margin-top: 100px;
+}
+.btnright{
+    width: 200px;
+    margin-left: 90px;
+    margin-right: 20px;
+    margin-top: 20px;
+    height: 50px;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+@media only screen and (max-width: 600px) {
+    .menutop,.btnlogin, .left, .right {
+        display: none;
+    }
+
+     .center,nav, footer{
+        width: 100%;
+    }
+}

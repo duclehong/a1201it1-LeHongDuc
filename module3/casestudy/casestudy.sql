@@ -181,9 +181,15 @@ select dichvu.IDDichVu,dichvu.TenDichVu, dichvu.DienTich, dichvu.ChiPhiThue, dic
 from dichvu inner join hopdong on dichvu.IDDichVu = hopdong.IDDichVu
 where hopdong.NgayLamHopDong between "2019-01-01" and CURRENT_TIMESTAMP ;
 -- 7.	Hiển thị thông tin IDDichVu, TenDichVu, DienTich, SoNguoiToiDa, ChiPhiThue, TenLoaiDichVu của tất cả các loại dịch vụ đã từng được Khách hàng đặt phòng trong năm 2018 nhưng chưa từng được Khách hàng đặt phòng  trong năm 2019.
+select *
+from dichvudikem join hopdongchitiet on dichvudikem.IDDichVuDiKem = hopdongchitiet.IDDichVuDiKem join hopdong on hopdongchitiet.IDHopDong = hopdong.IDHopDong
+where year(hopdong.NgayLamHopDong) = 2018 and dichvudikem.IDDichVuDiKem in (
+select dichvudikem.IDDichVuDiKem
+from dichvudikem join hopdongchitiet on dichvudikem.IDDichVuDiKem = hopdongchitiet.IDDichVuDiKem join hopdong on hopdongchitiet.IDHopDong = hopdong.IDHopDong
+where year(hopdong.NgayLamHopDong) != 2019
+)
 
 -- 8.	Hiển thị thông tin HoTenKhachHang có trong hệ thống, với yêu cầu HoThenKhachHang không trùng nhau.
-
 -- Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên
 select distinct HoTen
 from khachhang;
@@ -199,18 +205,35 @@ from khachhang
 group by HoTen;
 
 -- 9.	Thực hiện thống kê doanh thu theo tháng, nghĩa là tương ứng với mỗi tháng trong năm 2019 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.
-
+select hopdong.IDKhachHang, dichvu.TenDichVu, count(hopdong.IDDichVu) as solanthue
+from hopdong join dichvu
+on hopdong.IDDichVu = dichvu.IDDichVu
+where year(hopdong.NgayLamHopDong) = 2019
+group by IDKhachHang;
 -- 10.	Hiển thị thông tin tương ứng với từng Hợp đồng thì đã sử dụng bao nhiêu Dịch vụ đi kèm. Kết quả hiển thị bao gồm IDHopDong, NgayLamHopDong, NgayKetthuc, TienDatCoc, SoLuongDichVuDiKem (được tính dựa trên việc count các IDHopDongChiTiet).
-
+select hopdong.IDHopDong, hopdong.NgayLamHopDong, hopdong.NgayKetThuc,hopdong.TienDatCoc, count(dichvudikem.IDDichVuDiKem) as SoLuongDichVuDiKem
+from hopdong join hopdongchitiet on hopdong.IDHopDong = hopdongchitiet.IDHopDong join dichvudikem on hopdongchitiet.IDDichVuDiKem = dichvudikem.IDDichVuDiKem
+group by dichvudikem.IDDichVuDiKem;
 -- 11.	Hiển thị thông tin các Dịch vụ đi kèm đã được sử dụng bởi những Khách hàng có TenLoaiKhachHang là “Diamond” và có địa chỉ là “Vinh” hoặc “Quảng Ngãi”.
-
+select dichvudikem.IDDichVuDiKem, dichvudikem.TenDichVuDiKem, dichvudikem.Gia, dichvudikem.DonVi, dichvudikem.TrangThaiKhaDung
+from dichvudikem inner join hopdongchitiet on dichvudikem.IDDichVuDiKem = hopdongchitiet.IDDichVuDiKem join hopdong on hopdong.IDHopDong = hopdongchitiet.IDHopDong join khachhang on khachhang.IDKhachHang = hopdong.IDKhachHang join loaikhach on khachhang.IDLoaiKhach = loaikhach.IDLoaiKhach
+where loaikhach.TenLoaiKhach = "Diamond" and khachhang.DiaChi in ("DaNang", "Vinh");
 -- 12.	Hiển thị thông tin IDHopDong, TenNhanVien, TenKhachHang, SoDienThoaiKhachHang, TenDichVu, SoLuongDichVuDikem (được tính dựa trên tổng Hợp đồng chi tiết), TienDatCoc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2019 nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2019.
 
 -- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
+select dichvudikem.IDDichVuDiKem, dichvudikem.TenDichVuDiKem, dichvudikem.Gia, dichvudikem.DonVi, dichvudikem.TrangThaiKhaDung, count(dichvudikem.IDDichVuDiKem) as SoLuongDichVuDiKem
+from hopdong join hopdongchitiet on hopdong.IDHopDong = hopdongchitiet.IDHopDong join dichvudikem on hopdongchitiet.IDDichVuDiKem = dichvudikem.IDDichVuDiKem
+group by dichvudikem.IDDichVuDiKem
+having SoLuongDichVuDiKem  = ( select max
+
+)
 
 
 -- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung.
-
+select dichvudikem.IDDichVuDiKem, dichvudikem.TenDichVuDiKem, dichvudikem.Gia, dichvudikem.TrangThaiKhaDung, dichvudikem.DonVi, count(dichvudikem.IDDichVuDiKem) as dem
+from hopdongchitiet join dichvudikem on hopdongchitiet.IDDichVuDiKem = dichvudikem.IDDichVuDiKem0
+group by dichvudikem.IDDichVuDiKem
+having dem =1
 -- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm IDNhanVien, HoTen, TrinhDo, TenBoPhan, SoDienThoai, DiaChi mới chỉ lập được tối đa 3 hợp đồng từ năm 2018 đến 2019.
 
 -- 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2017 đến năm 2019.

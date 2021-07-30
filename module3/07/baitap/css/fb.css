@@ -1,0 +1,146 @@
+body{
+    font-family: "Segoe UI","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    background-color: rgb(238, 238, 238);
+}
+.navbar{
+background-color: white;
+}
+.logonav{
+color :rgb(43, 110, 202);
+font-size : 50px
+}
+.searhfb{
+    border-radius: 15px;
+    background-color:rgb(239, 239, 240)
+}
+.nav-link{
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 30px;
+    
+}
+.avtbtn{
+    background-image: url(https://www.facebook.com/photo/?fbid=1243100416123748&set=a.119220685178399);
+    width: 100px;
+    height: 40px;   
+    margin-right:  40px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 0px;
+    font-weight: bolder;
+    color: rgb(43, 110, 202);
+}
+.avtbtn:hover{
+    background-color:rgb(217, 225, 236);
+    border-radius: 15px;
+}
+
+.icon2{
+    font-size: 20px;
+}
+.imgavt{
+    max-width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.btnop,.btn-secondary{
+    width: 40px;
+    height: 40px;
+    background-color:rgb(217, 225, 236);
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 30px;
+    border: none;
+}
+.btnop:hover,.btn-secondary{
+    background-color:rgb(187, 188, 189);
+    border-radius: 50%;
+}
+.left{
+    width: 25%;
+    float: left;
+    margin-top:  90px;
+}
+.right{
+    width: 25%;
+    float: right;
+    margin-top:  90px;
+}
+.center{
+    width: 50%;
+    float: left;
+    margin-top:  90px;
+}
+.card-img-top{
+    height: 200px;
+}
+.imgstory{
+    max-width: 100px
+}
+.btnstory{
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+.row{
+    margin-left: 0px;
+    margin-top: 10px;
+    
+}
+.addstt{
+    margin-top: 20px;
+    width: 700px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px
+}
+.form-control{
+    float: right;
+    width: 580px;
+    margin-right: 30px;
+    border-radius: 20px;
+    background-color:rgb(243, 244, 245);
+}
+.imgavt2{
+    max-width: 35px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 30px;
+    border: 1px;
+    border-color: darkgrey;
+}
+.btnstt{
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+    width: 220px;
+    height: 40px;
+}
+.btnstt:hover{
+    background-color:rgb(243, 244, 245)
+}
+.stt{
+    max-width: 700px;
+}
+.iconstt{
+    margin-right: 10px;
+}
+.navbar{
+    position:fixed;
+}
+.mid{
+    
+}
+.mt-4{
+    max-width: 700px;
+}
+.imgstt2{
+    max-width: 700px;
+}
+.card-body{
+    background-color: white;
+}
+.list-group{
+    max-width: 350px;
+    background-color: rgb(238, 238, 238);
+}

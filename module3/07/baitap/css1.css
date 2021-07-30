@@ -1,0 +1,38 @@
+header, section, article, aside, footer {
+    border: 1px solid orange;
+    padding: 20px;
+    border-color: antiquewhite;
+    text-align: center;
+}
+header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  
+}
+div{
+    margin-top :60px;
+    width: 66%;
+    float: left;
+}
+section,article{
+    height: 250px;
+}
+aside{
+    margin-top :60px;
+    float: right;
+    width: 30%;
+    height: 500px;
+}
+footer{
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
