@@ -285,6 +285,18 @@ UNLOCK TABLES;
 SELECT orderNumber, sum(quantityOrdered * priceEach) as TotalPrice
 FROM classicmodels.orderdetails
 GROUP BY orderNumber
-ORDER BY TotalPrice DESC
+ORDER BY TotalPrice DESC;
 
+SELECT orderNumber,sum(quantityOrdered * priceEach) as totalAmount
+from orderdetails
+GROUP BY orderNumber
+HAVING (totalAmount > (SELECT avg(total)
+             FROM (SELECT sum(quantityOrdered*priceEach) as total
+                    FROM orderdetails
+                    GROUP BY orderNumber) as temp))
+ORDER BY totalAmount;
+
+SELECT customerNumber,customerName,phone,addressLine1,city, if(country = 'USA', 'Yes', 'No') as inUSA
+FROM classicmodels.customers;
+Select CustomerNumber, CustomerName, phone, addressLine1, city, case when country = 'USA' then 'Yes' else 'No' End as inUSA from classicmodels.customers;
 
