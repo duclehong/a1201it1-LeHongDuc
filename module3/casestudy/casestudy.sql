@@ -187,7 +187,7 @@ where year(hopdong.NgayLamHopDong) = 2018 and dichvudikem.IDDichVuDiKem in (
 select dichvudikem.IDDichVuDiKem
 from dichvudikem join hopdongchitiet on dichvudikem.IDDichVuDiKem = hopdongchitiet.IDDichVuDiKem join hopdong on hopdongchitiet.IDHopDong = hopdong.IDHopDong
 where year(hopdong.NgayLamHopDong) != 2019
-)
+);
 
 -- 8.	Hiển thị thông tin HoTenKhachHang có trong hệ thống, với yêu cầu HoThenKhachHang không trùng nhau.
 -- Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên
@@ -219,38 +219,96 @@ select dichvudikem.IDDichVuDiKem, dichvudikem.TenDichVuDiKem, dichvudikem.Gia, d
 from dichvudikem inner join hopdongchitiet on dichvudikem.IDDichVuDiKem = hopdongchitiet.IDDichVuDiKem join hopdong on hopdong.IDHopDong = hopdongchitiet.IDHopDong join khachhang on khachhang.IDKhachHang = hopdong.IDKhachHang join loaikhach on khachhang.IDLoaiKhach = loaikhach.IDLoaiKhach
 where loaikhach.TenLoaiKhach = "Diamond" and khachhang.DiaChi in ("DaNang", "Vinh");
 -- 12.	Hiển thị thông tin IDHopDong, TenNhanVien, TenKhachHang, SoDienThoaiKhachHang, TenDichVu, SoLuongDichVuDikem (được tính dựa trên tổng Hợp đồng chi tiết), TienDatCoc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2019 nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2019.
-
+select *
+from hopdong join nhanvien on hopdong.IDNhanVien = nhanvien.IDNhanVien
+join khachhang on khachhang.IDKhachHang = hopdong.IDKhachHang
+join dichvu on dichvu.IDDichVu = hopdong.IDDichVu
+join hopdongchitiet on hopdongchitiet.IDHopDong = hopdong.IDHopDong
+where hopdong.IDHopDong
+not in ((month(NgayLamHopDong) = 01 or month(NgayLamHopDong) = 02 or
+month(NgayLamHopDong) = 03) or month(NgayLamHopDong) = 04 or
+month(NgayLamHopDong) = 05 or month(NgayLamHopDong) = 06 
+and year(NgayLamHopDong) = 2019) and
+((month(NgayLamHopDong) = 10 or month(NgayLamHopDong) = 10 or
+month(NgayLamHopDong) = 10) and year(NgayLamHopDong) = 2019);
 -- 13.	Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng. (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).
 select dichvudikem.IDDichVuDiKem, dichvudikem.TenDichVuDiKem, dichvudikem.Gia, dichvudikem.DonVi, dichvudikem.TrangThaiKhaDung, count(dichvudikem.IDDichVuDiKem) as SoLuongDichVuDiKem
 from hopdong join hopdongchitiet on hopdong.IDHopDong = hopdongchitiet.IDHopDong join dichvudikem on hopdongchitiet.IDDichVuDiKem = dichvudikem.IDDichVuDiKem
 group by dichvudikem.IDDichVuDiKem
-having SoLuongDichVuDiKem  = ( select max
-
-)
+having SoLuongDichVuDiKem in (
+select  dichvudikem.TenDichVuDiKem,count(dichvudikem.IDDichVuDiKem) as SoLuongDichVuDiKem
+from hopdong join hopdongchitiet on hopdong.IDHopDong = hopdongchitiet.IDHopDong join dichvudikem on hopdongchitiet.IDDichVuDiKem = dichvudikem.IDDichVuDiKem
+group by dichvudikem.IDDichVuDiKem 
+having SoLuongDichVuDiKem = max(SoLuongDichVuDiKem)
+);
 
 
 -- 14.	Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung.
 select dichvudikem.IDDichVuDiKem, dichvudikem.TenDichVuDiKem, dichvudikem.Gia, dichvudikem.TrangThaiKhaDung, dichvudikem.DonVi, count(dichvudikem.IDDichVuDiKem) as dem
 from hopdongchitiet join dichvudikem on hopdongchitiet.IDDichVuDiKem = dichvudikem.IDDichVuDiKem0
 group by dichvudikem.IDDichVuDiKem
-having dem =1
+having dem =1; 
 -- 15.	Hiển thi thông tin của tất cả nhân viên bao gồm IDNhanVien, HoTen, TrinhDo, TenBoPhan, SoDienThoai, DiaChi mới chỉ lập được tối đa 3 hợp đồng từ năm 2018 đến 2019.
-
+select nhanvien.IDNhanVien, HoTen, trinhdo, TenBoPhan, SDT, DiaChi, count(hopdong.IDHopDong) as soluonghd
+from hopdong join nhanvien on nhanvien.IDNhanVien = hopdong.IDNhanVien
+join trinhdo on trinhdo.IDTrinhDo = nhanvien.IDTrinhDo
+join bophan on bophan.IDBoPhan = nhanvien.IDBoPhan
+group by IDNhanVien
+having count(hopdong.IDHopDong) = 3 and (year(NgayLamHopDong) = 2018 or year(NgayLamHopDong) = 2019);
 -- 16.	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2017 đến năm 2019.
+delete IDNhanVien from nhanvien
+where IDNhanVien not in (select IDNhanVien from hopdong where year(NgayLamHopDong) between 2017 and 2019);
 -- 17.	Cập nhật thông tin những khách hàng có TenLoaiKhachHang từ  Platinium lên Diamond, chỉ cập nhật những khách hàng đã từng đặt phòng với tổng Tiền thanh toán trong năm 2019 là lớn hơn 10.000.000 VNĐ.
-
+update loaikhach
+set TenLoaiKhachHang = 'Platinum'
+where IDKhachHang in (select * from (select khachhang.IDKhachHang from hopdong
+inner join khachhang on hopdong.IDKhachHang = khachhang.IDKhachHang
+inner join loaikhach on khachhang.IDLoaiKhach = loaikhach.IDLoaiKhach
+where hopdong.TongTien > 100000000 and year(hopdong.NgayLamHopDong) = 2019 and
+TenLoaiKhach = 'Diamond'
+));
 -- 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràngbuộc giữa các bảng).
-
+delete IDKhachHang from khachhang
+where IDKhachHang not in (select IDKhachHang from hopdong where year(NgayLamHopDong) < 2016);
 -- 19.	Cập nhật giá cho các Dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2019 lên gấp đôi.
-
+update dichvudikem
+set Gia = Gia * 10
+where IDDichVuDiKem in (select hopdongchitiet.IDDichVuDiKem from hopdong join hopdongchitiet
+on hopdongchitiet.IDHopDong = hopdong.IDHopDong
+where year(hopdong.NgayLamHopDong) = 2019
+group by hopdongchitiet.IDDichVuDiKem
+having count(IDHopDongChiTiet) > 10);
 -- 20.	Hiển thị thông tin của tất cả các Nhân viên và Khách hàng có trong hệ thống, thông tin hiển thị bao gồm ID (IDNhanVien, IDKhachHang), HoTen, Email, SoDienThoai, NgaySinh, DiaChi.
+select IDNhanVien as ID, HoTen, Email, SDT, NgaySinh, DiaChi
+from nhanvien
+union all
+select IDKhachHang as ID, HoTen, Email, SDT, Ngaysinh, DiaChi
+from khachhang;
 -- 21.	Tạo khung nhìn có tên là V_NHANVIEN để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Hải Châu” và đã từng lập hợp đồng cho 1 hoặc nhiều Khách hàng bất kỳ  với ngày lập hợp đồng là “12/12/2019”
+create view V_NHANVIEN
+as 
+select *
+from nhanvien join hopdong on nhanvien.IDNhanVien = hopdong.IDNhanVien
+where nhanvien.DiaChi = 'HaiChau'
+group by hopdong.IDHopDong
+having count(hopdong.IDNhanVien) >= 1 and NgayLamHopDong = '2019-12-12';
 -- 22.	Thông qua khung nhìn V_NHANVIEN thực hiện cập nhật địa chỉ thành “Liên Chiểu” đối với tất cả các Nhân viên được nhìn thấy bởi khung nhìn này.
+update V_NHANVIEN
+set nhanvien.DiaChi = 'LienChieu'
+where nhanvien.DiaChi = 'HaiChau';
 -- 23.	Tạo Clustered Index có tên là IX_KHACHHANG trên bảng Khách hàng.
 -- Giải thích lý do và thực hiện kiểm tra tính hiệu quả của việc sử dụng INDEX
+create unique index IX_KHACHHANG
+on khachhang(IDKhachHang);
+-- Người sử dụng không thể thấy các chỉ mục này, chúng chỉ được sử dụng để tăng tốc các truy vấn và sẽ được sử dụng bởi Database Search Engine để định vị các bản ghi một cách cực kỳ nhanh.
+-- Các lệnh INSERT và UPDATE tốn nhiều thời gian hơn trên các bảng có chỉ mục
+-- trong khi các lệnh SELECT trở nên nhanh hơn trên các bảng này. Lý do là vì,
+-- trong khi chèn và cập nhật, cơ sở dữ liệu cũng phải cần chèn hoặc cập nhật các giá trị chỉ mục.
 -- 24.	Tạo Non-Clustered Index có tên là IX_SoDT_DiaChi trên các cột SODIENTHOAI và DIACHI trên bảng KHACH HANG và kiểm tra tính hiệu quả tìm kiếm sau khi tạo Index.
+create index IX_SoDT_DiaChi
+on khachhang(SDT, DiaChi);
 -- 25.	Tạo Store procedure Sp_1 Dùng để xóa thông tin của một Khách hàng nào đó với Id Khách hàng được truyền vào như là 1 tham số của Sp_1
--- 26.	Tạo Store procedure Sp_2 Dùng để thêm mới vào bảng HopDong với yêu cầu Sp_2 phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.
+-- 26.	Tạo Store procedure Sp_2 Dùng để thêm mới vào bảng HopDong với yêu scầu Sp_2 phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khóa chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.
 -- 27.	Tạo triggers có tên Tr_1 Xóa bản ghi trong bảng HopDong thì hiển thị tổng số lượng bản ghi còn lại có trong bảng HopDong ra giao diện console của database
 -- 28.	Tạo triggers có tên Tr_2 Khi cập nhật Ngày kết thúc hợp đồng, cần kiểm tra xem thời gian cập nhật có phù hợp hay không, với quy tắc sau: Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày. Nếu dữ liệu hợp lệ thì cho phép cập nhật, nếu dữ liệu không hợp lệ thì in ra thông báo “Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày” trên console của database
 -- 29.	Tạo user function thực hiện yêu cầu sau:
