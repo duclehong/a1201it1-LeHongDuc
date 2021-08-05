@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">    <link href="css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-lightmt mt-3 ">
+    <div class="collapse navbar-collapse w-100 order-1 order-lg-0" id="navbarNav">
+        <button type="button" class=" btn_left_nav ml-5" ><i class="fas fa-globe pr-2 nav_icon_left"></i></i>English</button>
+        <button type="button" class="btn_left_nav" type="button" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas  pr-2  fa-user-circle"></i>Log In</button>
+        <a href='cart.html'><button type="button" class="btn_left_nav" ><i class="fa fa-shopping-cart" aria-hidden="true"></i></button></a>
+        <button type="button" class="btn_left_nav "><i class="fas fa-search"></i></button>
+    </div>
+    <div class="d-flex w-50 order-0">
+        <div class="w-100">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <img class="avt_nav  brand-centered" src="img/logo.png" alt="" style="width: 120px" >
+        <span class="w-100"></span>
+    </div>
+    <div class="collapse navbar-collapse w-100 order-1 order-lg-0" id="navbarNav">
+        <ul class="nav">
+            <li class="nav-item active">
+                <a class="nav-link text-dark nav_li" href="#">Design your own </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark nav_li" href="#">Collection</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark nav_li" href="bags.html">Bags</a>
+                <li class="nav-item">
+                  <a class="nav-link text-dark nav_li" href="#">Our story</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark nav_li" href="#">News</a>
+                  <li class="nav-item">
+                      <a class="nav-link text-dark nav_li" href="contact.html">Contact</a>
+                    </li>
+              </li>
+          </ul>
+    </div>
+</nav>
+<div class="modal fade bd-example-modal-lg" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <p class="modal_login">LOG IN</p>
+          <p class="modal_hello">Hello there, welcome back!</p>
+          <label class="label_email" for="">EMAIL</label>  
+          <input class="inp1" type="text" name="" id="" placeholder="Email">
+          <label class="label_email" for="">PASSWORD</label>  
+          <input class="inp1" type="password" name="" id="" placeholder="Password">
+          <a class="forgot  text-dark" type="button" data-toggle="modal" data-target="#forgot" data-dismiss="modal">Forgot password</a>
+          <button class="btnlogin align-self-center">LOG IN</button>
+          <p  class="textlogin align-self-center">OR LOG IN WITH</p>
+          <div class="d-flex justify-content-center mb-3">
+            <button class="p-2 p-22"><i class="fab fa-facebook-f align-self-center"></i></button>
+            <button class="p-2 p-22"><i class="fab fa-google align-self-center"></i></button>
+            <button class="p-2 p-22"><i class="fab fa-instagram align-self-center"></i></button>
+          </div>
+          <p class="align-self-center">DON’T HAVE AN ACCOUNT, <a class="text-dark " type="button" data-toggle="modal" data-target="#sign_up_modal" data-dismiss="modal">SIGN UP HERE</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- modal forgot pass -->
+  <div class="modal fade bd-example-modal-lg" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <p class="modal_login">FORGOT PASSWORD</p>
+          <p class="modal_forgot_text2 align-self-center">Input your email, we will send you an instruction to reset your password.</p>
+          <label class="label_email" for="">EMAIL
+          
+          </label>  
+          <input class="inp1" type="text" name="" id="" placeholder="Email">
+          <button class="btnlogin align-self-center "  data-toggle="modal" data-target="#check_your_ib" data-dismiss="modal">SUBMIT</button>
+         
+          <p class="align-self-center p-4">BACK TO <a class="text-dark " type="button" data-toggle="modal" data-target="#login_modal" data-dismiss="modal">LOG IN</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- CHECK YOUR INBOX -->
+  <div class="modal fade bd-example-modal-lg" id="check_your_ib" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <p class="modal_login">FORGOT PASSWORD</p>
+          <p class="modal_forgot_text2 align-self-center">Input your email, we will send you an instruction to reset your password.</p>
+          <i class="fas fa-envelope-square align-self-center" style="font-size: 100px; color:#C6B67E;"></i>
+         
+          <p class="align-self-center p-4">BACK TO <a class="text-dark " type="button" data-toggle="modal" data-target="#login_modal" data-dismiss="modal">LOG IN</a></p>
+      </div>
+    </div>
+  </div>
+<!-- sign_up -->
+  <div class="modal fade bd-example-modal-lg" id="sign_up_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <p class="modal_login">LOG IN</p>
+          <p class="modal_hello">Hello there, welcome back!</p>
+          <label class="label_email" for="">NAME</label>  
+          <input class="inp1" type="text" name="" id="" placeholder="Name">
+          <label class="label_email" for="">EMAIL</label>  
+          <input class="inp1" type="" name="" id="" placeholder="Email">
+          <label class="label_email" for="">PASSWORD</label>  
+          <input class="inp1" type="password" name="" id="" placeholder="Password">
+          <label class="label_email" for="">CONFIRM PASSWORD</label>  
+          <input class="inp1" type="password" name="" id="" placeholder="Confirm Password">
+          <button class="btnlogin align-self-center">SIGN UP</button>
+          <p  class="textlogin align-self-center">OR LOG IN WITH</p>
+          <p class="align-self-center">HAD AN ACCOUNT,  <a class="text-dark " type="button" data-toggle="modal" data-target="#login_modal" data-dismiss="modal">LOG IN HERE</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal1 fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+        <div class="modal-body">
+          <p class="modal_login">LOG IN</p>
+          <p class="modal_hello">Hello there, welcome back!</p>
+          <label class="label_email" for="">EMAIL</label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- endnav -->
+    <p class="text1">YOUR CART</p>
+    <p class="text2">View your items and check out</p>
+    <div class="item1">
+        <div class="border_item1"></div>
+        <img class="img_item1" src="img/cart/bag1.png" alt="">
+        <p class="name_item">Convertible Mini Merinal</p>
+        <p class="price_item">$1,000.00</p>
+
+        <button class="sub_btn" onclick="add()" ><i class="fas fa-plus"></i></button>
+        <input type="text" id="inp" class="input_cart" value="1">
+        <button class="plus_btn" onclick="minus()" ><i class="fas fa-minus"></i></button>
+        <script>
+           
+            </script>
+
+        <p class="delete">DELETE</p>
+        <div class="brdel"></div>
+        <button class="magic"><i class="fas fa-magic"></i> BACK TO CUSTOMIZE</button>
+        <div class="hr"></div>
+    </div>
+    <div class="item2">
+      <div class="border_item1"></div>
+      <img class="img_item1" src="img/cart/bag2.png" alt="">
+      <p class="name_item">Convertible Mini Merinal</p>
+      <p class="price_item">$1,000.00</p>
+      <button class="sub_btn" onclick="add2()" ><i class="fas fa-plus"></i></button>
+      <input type="text" id="inp2" class="input_cart" value="1">
+      <button class="plus_btn" onclick="minus2()" ><i class="fas fa-minus"></i></button>
+    
+      <p class="delete">DELETE</p>
+      <div class="brdel"></div>
+      <button class="magic"><i class="fas fa-magic"></i> BACK TO CUSTOMIZE</button>
+      <div class="hr"></div>
+  </div>
+
+
+  <div class="border41">
+    <p class="text41">NEWSLETTER</p>
+    <p class="text42">Subscribe now & get 15% off</p>
+    <div class="cover">
+      <form  class="flex-form">
+        <label for="from">
+          <i class="ion-location"></i>
+        </label>
+        <input type="email" placeholder="Your email">
+        <input type="submit" value="SUBSCRIBE">
+      </form>
+    </div>
+  
+
+</div>
+<div class="total">
+<p class="total_text1">TOTAL</p>
+<p class="price_total" id="total">$3,000.00</p>
+<p class="cout">2 items</p>
+<button class="checkout">PROCEED TO CHECKOUT</button>
+</div>
+<footer>
+  <img class="img_footer" src="img/logobot.png" alt="">
+  <p class="footer_text_1">Be Unique, Be Extraordinary, Be Sexy, Be Strong, Be TOI</p>
+  <p class="footer_text_2">NAVIGATION</p>
+  <ul class="list-unstyled mb-0 footer_ul_1">
+    <li>
+      <a href="#!" class="text-muted">Home</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Design your own</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Collection</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Bags</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted"> Our Story</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Blog</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Contact</a>
+    </li>
+  </ul>
+  <p class="footer_text_3">SUPPORT</p>
+  <ul class="list-unstyled mb-0 footer_ul_2">
+    <li>
+      <a href="#!" class="text-muted">Store location</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Terms & Conditions</a>
+    </li>
+  </ul>
+  <p class="footer_text_5">SOCIAL</p>
+  <ul class="list-unstyled mb-0 footer_ul_3">
+    <li>
+      <a class="btn btn-outline-secondary btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-facebook"></i
+    ></a>
+    </li>
+    <li>
+      <a class="btn btn-outline-secondary btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-twitter"></i
+      ></a>
+    </li>
+    <li>
+      <a class="btn btn-outline-secondary btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-google"></i
+  ></a>
+    </li>
+  </ul>
+  <a class=" cpr" href="">All rights reserved — 2020 © TOI Atelier</a>
+</footer>
+</body>
+<script>
+  function add() {
+       document.getElementById("inp").value =  parseInt(document.getElementById("inp").value) +1  ;
+       total();
+     }
+     function minus() {
+         if (parseInt(document.getElementById("inp").value)>0) {
+             document.getElementById("inp").value =  parseInt(document.getElementById("inp").value) -1  ;
+         }
+         total();
+     }
+   function add2() {
+     document.getElementById("inp2").value =  parseInt(document.getElementById("inp2").value) +1  ;
+     total();
+   }
+   function minus2() {
+       if (parseInt(document.getElementById("inp2").value)>0) {
+           document.getElementById("inp2").value =  parseInt(document.getElementById("inp2").value) -1  ;
+       }
+       total();
+   }
+   function total(){
+     var a = parseInt(document.getElementById("inp").value);
+     var b = parseInt(document.getElementById("inp2").value);
+     var c = a + b;
+     document.getElementById("total").innerHTML = "$"+c+",000.00"
+   }
+   </script>
+</html>

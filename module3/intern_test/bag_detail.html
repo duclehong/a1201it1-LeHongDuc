@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <link href="css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bag_detail.css">
+    <script defer src="js/all.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class="ul_nav_1">
+            <li class="nav-item active">
+                <button class=nav_btn_left><i class="fas fa-globe nav_icon_left"></i><p class="nav_text_left">English </p></button>
+            </li>
+            <li class="nav-item">
+                <button class=nav_btn_left><i class="fas fa-user-circle"></i><p class="nav_text_left">Login </p></button>
+            </li>
+            <li class="nav-item">
+                <button class=nav_btn_left_1><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            </li>
+            <li class="nav-item">
+                <button class=nav_btn_left_1><i class="fas fa-search"></i></button>
+            </li>
+          </ul>
+          <img class="avt_nav" src="img/logo.png" alt="">
+          <ul class="ul_nav_2 ">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Design your own </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">Bags</a>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our story</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="#">News</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+            </li>
+          </ul>
+    </nav>
+    <p class="text1">HOME  -  BAGS  -  ANCOTEMEE DELA  -  </p>
+    <p class="text2">CONVERTIBLE MINI MERINAL</p>
+    <button class="div_img1" type="button"  data-toggle="modal" data-target="#myModal"><img class="img1" src="img/img1.png" alt=""         ></button>
+    <button class="div_img2" data-toggle="modal" data-target="#myModal"><img class="img1" src="img/img1.png" alt=""></button>
+    <button class="div_img3" data-toggle="modal" data-target="#myModal"><img class="img1" src="img/img1.png" alt=""></button>
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+        
+  
+          <div class="modal-body">
+            <img class="img_modal"  src="img/img1.png" alt="">
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="text3"><p class="text3_1">Convertible Mini Merinal</p></div>
+    <p class="price1">$ 900.00</p>
+    <p class="price2">$ 1,000.00</p>
+    <p class="text4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.</p>
+    <p class="text5">COLORS</p>
+    <button class="btn1"><div class="border_1"></div></button>
+    <button class="btn2"><div class="border_1"></div></button>
+    <button class="btn3"><div class="border_1"></div></button>
+    <p class="text6">QUANTITY</p>
+    <button class="sub_btn" onclick="add()" ><i class="fas fa-plus"></i></button>
+    <input type="text" id="inp" class="input_cart" value="1">
+    <button class="plus_btn" onclick="minus()" ><i class="fas fa-minus"></i></button>
+    <script>
+        function add() {
+          document.getElementById("inp").value =  parseInt(document.getElementById("inp").value) +1  ;
+        }
+        function minus() {
+            if (parseInt(document.getElementById("inp").value)>0) {
+                document.getElementById("inp").value =  parseInt(document.getElementById("inp").value) -1  ;
+            }
+          
+        }
+        </script>
+    <button class="magic"><i class="fas fa-magic"></i> CUSTOMIZE THIS</button>
+    <button class="card_btn" onclick="alert_cart()" ><i class="fas fa-shopping-cart"></i> ADD TO CART</button>
+    
+                       
+    <div class="de_re">
+  <details>
+    <summary>PRODUCT DETAILS <i class="fas fa-angle-down"></i></summary>
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.
+
+  </details>
+    
+<button class="btn_review" type="button"  data-toggle="modal" data-target="#C6B67E">REVIEWS (16) <i class="fas fa-angle-down"></i></button>
+<div class="modal modal2 fade" id="myModal2">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+    <p class="modal_rvt1">Reviews (16)</p>
+    <div class="review1"><p class="modal_rvt2">JB</p></div>
+    
+      
+    </div>
+  </div>
+</div>
+</div>
+    
+       
+
+    <div class="div_bg2">
+        <img class="bg2" src="img/bags_detail/imgbg2.png" alt="">
+    </div>
+    
+    <p class="text_bg1">Fall Winter 2020 Collection</p>
+    <button class="btn_bg1">DISCOVER MORE</button>
+    <p class="midtext1">RELATED PRODUCTS</p>
+    <p class="midtext2">There’s more that is waiting for you </p>
+
+    <div class="bags12">
+        <img class="img1" src="img/img1.png" alt="">
+        <p class="text_img1">Convertible Mini Merinal</p>
+        <p class="price_img1">$1,450.00</p>
+     </div>
+     <div class="bags13">
+        <img class="img1" src="img/img1.png" alt="">
+        <p class="text_img1">Convertible Mini Merinal</p>
+        <p class="price_img1">$1,450.00</p>
+     </div>
+     <div class="bags14">
+        <img class="img1" src="img/img1.png" alt="">
+        <p class="text_img1">Convertible Mini Merinal</p>
+        <p class="price_img1">$1,450.00</p>
+     </div>
+     <div class="bags15">
+        <img class="img1" src="img/img1.png" alt="">
+        <p class="text_img1">Convertible Mini Merinal</p>
+        <p class="price_img1">$1,450.00</p>
+     </div>
+
+
+    <div class="border41">
+        <p class="text41">NEWSLETTER</p>
+        <p class="text42">Subscribe now & get 15% off</p>
+        <div class="cover">
+          <form  class="flex-form">
+            <label for="from">
+              <i class="ion-location"></i>
+            </label>
+            <input type="email" placeholder="Your email">
+            <input type="submit" value="SUBSCRIBE">
+          </form>
+        </div>
+      
+    
+    </div>
+    
+    <footer>
+      <img class="img_footer" src="img/logobot.png" alt="">
+      <p class="footer_text_1">Be Unique, Be Extraordinary, Be Sexy, Be Strong, Be TOI</p>
+      <p class="footer_text_2">NAVIGATION</p>
+      <ul class="list-unstyled mb-0 footer_ul_1">
+        <li>
+          <a href="#!" class="text-muted">Home</a>
+        </li>
+        <li>
+          <a href="#!" class="text-muted">Design your own</a>
+        </li>
+        <li>
+          <a href="#!" class="text-muted">Collection</a>
+        </li>
+        <li>
+          <a href="#!" class="text-muted">Bags</a>
+        </li>
+        <li>
+          <a href="#!" class="text-muted"> Our Story</a>
+        </li>
+        <li>
+          <a href="#!" class="text-muted">Blog</a>
+        </li>
+        <li>
+          <a href="#!" class="text-muted">Contact</a>
+        </li>
+      </ul>
+      <p class="footer_text_3">SUPPORT</p>
+      <ul class="list-unstyled mb-0 footer_ul_2">
+        <li>
+          <a href="#!" class="text-muted">Store location</a>
+        </li>
+        <li>
+          <a href="#!" class="text-muted">Terms & Conditions</a>
+        </li>
+      </ul>
+      <p class="footer_text_5">SOCIAL</p>
+      <ul class="list-unstyled mb-0 footer_ul_3">
+        <li>
+          <a class="btn btn-outline-secondary btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        </li>
+        <li>
+          <a class="btn btn-outline-secondary btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i
+          ></a>
+        </li>
+        <li>
+          <a class="btn btn-outline-secondary btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+      ></a>
+        </li> 
+      </ul>
+      <a class=" cpr" href="">All rights reserved — 2020 © TOI Atelier</a>
+    </footer>
+</body>
+<script>
+  function alert_cart() {
+    alert("Successfully added to cart. View cart and check out.");
+  }
+  </script>
+</html>

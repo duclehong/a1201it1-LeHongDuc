@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">    <link href="css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/hompage.css">
+    <script defer src="js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</head>
+<body>
+ <!-- <nav>
+    <div class="nav_left">
+        <button class=nav_btn_left><i class="fas fa-globe nav_icon_left"></i><p class="nav_text_left">English </p></button>
+        <button class=nav_btn_left><i class="fas fa-globe nav_icon_left"></i><p class="nav_text_left">English </p></button>
+        <button class=nav_btn_left><i class="fas fa-globe nav_icon_left"></i><p class="nav_text_left">English </p></button>
+        <button class=nav_btn_left><i class="fas fa-globe nav_icon_left"></i><p class="nav_text_left">English </p></button>
+        <img src="img/logo1.jpg" alt="" class="avt_nav">
+    </div>
+    
+ </nav> -->
+ <img class="imgbgtop" src="img/bgimgtop.jpg" alt="">
+ <!-- <div class="bgg"></div> -->
+ <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-none">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+            <button class=nav_btn_left><i class="fas fa-globe nav_icon_left"></i><p class="nav_text_left">English </p></button>
+        </li>
+        <li class="nav-item">
+            <button class=nav_btn_left type="button" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-user-circle"></i><p class="nav_text_left">Login </p></button>
+        </li>
+        <li class="nav-item">
+            <button class=nav_btn_left_1><i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+        </li>
+        <li class="nav-item">
+            <button class=nav_btn_left_1><i class="fas fa-search"></i></button>
+        </li>
+      </ul>
+      <img src="img/logo.png" alt="" class="avt_nav">
+      <ul class="navbar-nav my-4 my-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Design your own </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Collection</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="#">Bags</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Our story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">News</a>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+        </li>
+      </ul>
+    </div>
+   
+  </nav>
+  <div class="modal fade bd-example-modal-lg" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <p class="modal_login">LOG IN</p>
+          <p class="modal_hello">Hello there, welcome back!</p>
+          <label class="label_email" for="">EMAIL</label>  
+          <input class="inp1" type="text" name="" id="" placeholder="Email">
+          <label class="label_email" for="">PASSWORD</label>  
+          <input class="inp1" type="password" name="" id="" placeholder="Password">
+          <a class="forgot  text-dark" type="button" data-toggle="modal" data-target="#forgot" data-dismiss="modal">Forgot password</a>
+          <button class="btnlogin align-self-center">LOG IN</button>
+          <p  class="textlogin align-self-center">OR LOG IN WITH</p>
+          <div class="d-flex justify-content-center mb-3">
+            <button class="p-2 p-22"><i class="fab fa-facebook-f align-self-center"></i></button>
+            <button class="p-2 p-22"><i class="fab fa-google align-self-center"></i></button>
+            <button class="p-2 p-22"><i class="fab fa-instagram align-self-center"></i></button>
+          </div>
+          <p class="align-self-center">DON’T HAVE AN ACCOUNT, <a class="text-dark " type="button" data-toggle="modal" data-target="#sign_up_modal" data-dismiss="modal">SIGN UP HERE</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- modal forgot pass -->
+  <div class="modal fade bd-example-modal-lg" id="forgot" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <p class="modal_login">FORGOT PASSWORD</p>
+          <p class="modal_forgot_text2 align-self-center">Input your email, we will send you an instruction to reset your password.</p>
+          <label class="label_email" for="">EMAIL
+          
+          </label>  
+          <input class="inp1" type="text" name="" id="" placeholder="Email">
+          <button class="btnlogin align-self-center "  data-toggle="modal" data-target="#check_your_ib" data-dismiss="modal">SUBMIT</button>
+         
+          <p class="align-self-center p-4">BACK TO <a class="text-dark " type="button" data-toggle="modal" data-target="#login_modal" data-dismiss="modal">LOG IN</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- CHECK YOUR INBOX -->
+  <div class="modal fade bd-example-modal-lg" id="check_your_ib" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <p class="modal_login">FORGOT PASSWORD</p>
+          <p class="modal_forgot_text2 align-self-center">Input your email, we will send you an instruction to reset your password.</p>
+          <i class="fas fa-envelope-square align-self-center" style="font-size: 100px; color:#C6B67E;"></i>
+         
+          <p class="align-self-center p-4">BACK TO <a class="text-dark " type="button" data-toggle="modal" data-target="#login_modal" data-dismiss="modal">LOG IN</a></p>
+      </div>
+    </div>
+  </div>
+<!-- sign_up -->
+  <div class="modal fade bd-example-modal-lg" id="sign_up_modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <p class="modal_login">LOG IN</p>
+          <p class="modal_hello">Hello there, welcome back!</p>
+          <label class="label_email" for="">NAME</label>  
+          <input class="inp1" type="text" name="" id="" placeholder="Name">
+          <label class="label_email" for="">EMAIL</label>  
+          <input class="inp1" type="" name="" id="" placeholder="Email">
+          <label class="label_email" for="">PASSWORD</label>  
+          <input class="inp1" type="password" name="" id="" placeholder="Password">
+          <label class="label_email" for="">CONFIRM PASSWORD</label>  
+          <input class="inp1" type="password" name="" id="" placeholder="Confirm Password">
+          <button class="btnlogin align-self-center">SIGN UP</button>
+          <p  class="textlogin align-self-center">OR LOG IN WITH</p>
+          <p class="align-self-center">HAD AN ACCOUNT,  <a class="text-dark " type="button" data-toggle="modal" data-target="#login_modal" data-dismiss="modal">LOG IN HERE</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal1 fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+        <div class="modal-body">
+          <p class="modal_login">LOG IN</p>
+          <p class="modal_hello">Hello there, welcome back!</p>
+          <label class="label_email" for="">EMAIL</label>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text_nav">The New Fragrance Girl Collection 
+    <!-- <div class="nav_box"><div class="text_nav_box">DISCOVER MORE</div></div> -->
+   
+  </div>
+  <div class="bottom_nav"></div>
+  <button class="nav_btn">DISCOVER MORE</button>
+
+<img class="text_img1" src="img/text1.png" alt="">
+<p class="text2">Luxury Fashion Accessories By You and For You</p>
+<p class="text3">NEW ARRIVALS</p>
+<p class="text4">New Trends - New Styles</p>
+<div class="img1"><img class="img_img1" src="img/img1.png" alt=""></div>
+<p class="text5">Crepe Open Back Gown</p>
+<div class="text6">$1,000.00 </div>
+<div class="text7">SHOP NOW<div class="border1"></div></div>
+<div class="img2"><img class="img_img2" src="img/img1.png" alt=""></div>
+<div class="img3"><img class="img_img3" src="img/img1.png" alt=""></div>
+<div class="img4"><img class="img_img4" src="img/img1.png" alt=""> </div>
+
+<!-- <div class="border2"><div class="text8">ALL BAGS</div> </div> -->
+<button class="btn_mid">ALL BAGS</button>
+<img class="img5" src="img/img5.png" alt="">
+<p class="text9">Handbags & accessories</p>
+<p class="text10">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly</p>
+<img class="img6" src="img/img5.png" alt="">
+<p class="text11">Customize yourself</p>
+<p class="text12">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum</p>
+<p class="text13">DESIGN YOUR OWN</p>
+<p class="text14">Best Seller</p>
+ <img class="img7" src="img/img7.png" alt="">
+ <div class="div_img8"><img class="img8" src="img/img8.png" alt="">
+  <p class="text15">Letraset sheets containing Lorem Ipsum passages</p>
+  <p class="text16">$1,450.00</p>
+</div>
+<div class="div_img9"><img class="img8" src="img/img8.png" alt="">
+  <p class="text15">Letraset sheets containing Lorem Ipsum passages</p>
+  <p class="text16">$1,450.00</p>
+</div>
+<div class="div_img10"><img class="img8" src="img/img8.png" alt="">
+  <p class="text15">Letraset sheets containing Lorem Ipsum passages</p>
+  <p class="text16">$1,450.00</p>
+</div>
+ 
+<p class="text17">DESIGN YOUR OWN</p>
+<p class="text18">Play With Your Style</p>
+<div class="div_img11"><img class="img11" src="img/img8.png" alt="">
+<p class="text19">KeriKit Lennox Black Crossover Leather </p>
+<button class="btn4">GO DESIGN</button>
+</div>
+<div class="div_img12"><img class="img12" src="img/img9.png" alt="">
+  <p class="text121">KeriKit Lennox Black Crossover Leather </p>
+  <button class="btn5">GO DESIGN</button>
+  <button class="btn7">ALL BAGS</button>
+</div>
+<div class="div_img13">
+<img class="img13" src="img/img10.png" alt="">
+<p class="text20">KeriKit Lennox Crossover Leather </p>
+<button class="btn6">GO DESIGN</button>
+</div>
+<div class="div_img14"><img class="img14" src="img/img11.png" alt="">
+<p class="text21">LATEST COLLECTION</p>
+<p class="text22">Fall Winter 2020 Collection</p>
+<p class="text23">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and</p>
+<button class="btn8">DISCOVER MORE</button>
+<p class="text24">OUR COMMITMENT</p>
+<p class="text25">Handcrafted Italian Bags</p>
+</div>
+<div class="div_img15"> <img class="img15" src="img/img12.png" alt="">
+<img  class="img16" src="img/img13.png" alt="">
+<img class="img17" src="img/img14.png" alt="">
+
+</div>
+<div class="border18"></div>
+<div class="border19"></div>
+<div class="border20"></div>
+<p class="text26">Design</p>
+<p class="text27">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop.</p>
+<p class="text28">Materials</p>
+<p class="text29">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum.</p>
+<p class="text30">Craft</p>
+<p class="text31">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+  It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop.</p>
+
+<div class="div_img_32">
+  <img class="img32" src="img/img15.png" alt="">
+  <p class="text32">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum. You need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+  <img class="img33" src="img/img16.png" alt="">
+  <p class="text34">LOLIANA NGUYEN</p>
+  <p class="text35">OCT 14, 2020</p>
+</div>
+<p class="text36"> IN DIARY</p>
+<p class="text37">Stay Tune With News</p>
+
+<div class="div_img_38">
+  <img class="img38" src="img/img17.png" alt="">
+  <p class="text38">It is a long established fact that a reader will be distracted</p>
+  <i class="fa fa-calendar" aria-hidden="true"></i>
+  <p class="text382"> <i class="fa fa-calendar" aria-hidden="true"></i>OCT 15, 2020</p>
+</div>
+<div class="div_img_39">
+  <img class="img38" src="img/img18.png" alt="">
+  <p class="text38">It is a long established fact that a reader will be distracted</p>
+ 
+  <p class="text382"> <i class="fa fa-calendar" aria-hidden="true"></i>OCT 15, 2020</p>
+</div>
+<div class="div_img_40">
+  <img class="img38" src="img/img19.png" alt="">
+  <p class="text38">It is a long established fact that a reader will be distracted</p>
+  
+  <p class="text382"><i class="fa fa-calendar" aria-hidden="true"></i>OCT 15, 2020</p>
+</div> 
+
+<div class="border41">
+  <p class="text41">NEWSLETTER</p>
+  <p class="text42">Subscribe now & get 15% off</p>
+  <div class="cover">
+    <form  class="flex-form">
+      <label for="from">
+        <i class="ion-location"></i>
+      </label>
+      <input type="email" placeholder="Your email">
+      <input type="submit" value="SUBSCRIBE">
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  <img class="img_footer" src="img/logobot.png" alt="">
+  <p class="footer_text_1">Be Unique, Be Extraordinary, Be Sexy, Be Strong, Be TOI</p>
+  <p class="footer_text_2">NAVIGATION</p>
+  <ul class="list-unstyled mb-0 footer_ul_1">
+    <li>
+      <a href="#!" class="text-muted">Home</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Design your own</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Collection</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Bags</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted"> Our Story</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Blog</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Contact</a>
+    </li>
+  </ul>
+  <p class="footer_text_3">SUPPORT</p>
+  <ul class="list-unstyled mb-0 footer_ul_2">
+    <li>
+      <a href="#!" class="text-muted">Store location</a>
+    </li>
+    <li>
+      <a href="#!" class="text-muted">Terms & Conditions</a>
+    </li>
+  </ul>
+  <p class="footer_text_5">SOCIAL</p>
+  <ul class="list-unstyled mb-0 footer_ul_3">
+    <li>
+      <a class="btn btn-outline-secondary btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-facebook"></i
+    ></a>
+    </li>
+    <li>
+      <a class="btn btn-outline-secondary btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-twitter"></i
+      ></a>
+    </li>
+    <li>
+      <a class="btn btn-outline-secondary btn-floating m-1" href="#!" role="button"
+      ><i class="fab fa-google"></i
+  ></a>
+    </li>
+  </ul>
+  <a class=" cpr" href="">All rights reserved — 2020 © TOI Atelier</a>
+</footer>
+<script>
+  // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+      document.getElementById("navbar").style.backgroundColor = "white";
+      document.getElementById("navbar").style.marginTop = "-20px";
+      // document.getElementById("logo").style.fontSize = "25px";
+    } 
+    else {
+      document.getElementById("navbar").style.backgroundColor = "transparent";
+    }
+  }
+  </script>
+</body>
+</html>
