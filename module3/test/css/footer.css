@@ -1,0 +1,152 @@
+.detail{
+    margin-top: 200px;
+}
+.border_yl{
+    width: 88px;
+height: 1px;
+
+/* Hover */
+
+border: 1px dashed #BDAA66;
+}
+.bordericon_us{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #BDAA66;
+    color:white;
+    text-align: center;
+    border: none;
+}
+.icon_us{
+    top: 10;
+}
+.border_yl2{
+    width: 88px;
+    height: 1px;
+    border: 1px dashed #BDAA66;
+}
+.bordericon_usd{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #BDAA66;
+    color:white;
+    text-align: center;
+    border: none;   
+}
+.inp_form{
+    /* margin-left: 109px;
+    width: 75%;
+    left:0;
+    top:36px; */
+    border-width: 0 0 2px;
+    outline: 0;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.btn_visa{
+    width: 106px;
+height: 80px;
+border: 1px solid #E7E7E7;
+}
+.btn_visa:hover{
+    border: 1px solid #BDAA66;
+box-sizing: border-box;
+box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+}
+.img_visa{
+    width:60px;
+    /* margin: 29px 17px; */
+}
+.bg_top{
+    background: #FAFAFA;
+}
+.name_bags{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.text_count{
+    color: #BDAA66;
+}
+
+.center-block {
+    display: table;  /* Instead of display:block */
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+ .div_f_email{
+    width: 447px;
+    border: 1px solid black;    
+    border-radius: none;
+ }
+ .y_email{
+    border-radius: 0;
+    
+    resize: none;
+    outline: none;
+ }
+ .input-group-text_sub{
+    background: #C6B67E;
+    border-right: 1px solid black;
+    color: #ffff;
+ }
+ .y_email:focus { 
+    outline: none;
+}
+  .cpr{
+    position: absolute;
+    left: 42.22%;
+    right: 42.22%;
+    top: 79.07%;
+    bottom: 17.94%;
+    
+    /* 12 Regular */
+    
+    font-family: Graphik;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+    
+    text-align: center;
+    
+    /* ACACAC */
+    
+    color: #ACACAC;
+  }
+  .btn-outline-secondar:hover{
+      /* color: #FFFFFF; */
+  }
+  .text-muted:hover{
+      color: #FFFFFF;
+  }
+  .nav_btn{
+      width:170px;
+      height:45px;
+    position: absolute;
+    left: 50%;
+    top: 584px;
+    
+    /* 1F1F1F */
+    background-color: transparent;
+    border: 1px solid #1F1F1F;
+    box-sizing: border-box;
+  }
+  .btn_mid{
+    position: absolute;
+    width: 160px;
+    height: 45px;
+    right: calc(50% - 160px/2 );
+    top: 1998px;
+    
+    /* C6B67E */
+    color: #FFFFFF;
+    border: none;
+    background: #C6B67E;
+  }
