@@ -21,5 +21,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.50" level="application_server_libraries" />
     <orderEntry type="library" name="mysql-connector-java-8.0.17" level="project" />
+<<<<<<< HEAD
+=======
+    <orderEntry type="library" name="mysql-connector-java-8.0.171" level="project" />
+>>>>>>> 2bfadb270e9ca11b531bf97afed89e85ec5cbef6
   </component>
 </module>

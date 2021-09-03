@@ -7,7 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO implements IUserDAO {
+<<<<<<< HEAD
     private String jdbcURL = "jdbc:mysql://localhost:3306/demo?useSSL=false";
+=======
+    private String jdbcURL = "jdbc:mysql://localhost:3306/demo?allowPublicKeyRetrieval=true&useSSL=false";
+>>>>>>> 2bfadb270e9ca11b531bf97afed89e85ec5cbef6
     private String jdbcUsername = "root";
     private String jdbcPassword = "123456";
 
@@ -27,7 +31,11 @@ public class UserDAO implements IUserDAO {
     protected Connection getConnection() {
         Connection connection = null;
         try {
+<<<<<<< HEAD
             Class.forName("com.mysql.jdbc.Driver");
+=======
+            Class.forName("com.mysql.cj.jdbc.Driver");
+>>>>>>> 2bfadb270e9ca11b531bf97afed89e85ec5cbef6
             connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
