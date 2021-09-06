@@ -1,13 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2f7737b-c13c-4dba-91e8-7dc93aef1d7b" name="Default Changelist" comment="" />
+    <list default="true" id="c2f7737b-c13c-4dba-91e8-7dc93aef1d7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/.idea/artifacts/case_study_3_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/.idea/libraries/mysql_connector_java_8_0_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/case_study_3.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/common/Validate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/controller/ContractDetail.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/controller/ContractServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/controller/CustomerServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/controller/EmployeeServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/dao/CustomerDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/dao/ICustomerDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/model/Contract.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/model/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/model/Emplyee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/model/Service.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/classes/codegym/util/DBConnect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/lib/mysql-connector-java-8.0.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/lib/taglibs-standard-spec-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/customer/createCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/customer/deleteCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/customer/editCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/customer/findCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/customer/listCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/artifacts/case_study_3_war_exploded/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/common/Validate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/controller/ContractDetail.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/controller/ContractServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/controller/CustomerServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/controller/EmployeeServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/dao/CustomerDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/dao/ICustomerDAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/model/Contract.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/model/Customer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/model/Emplyee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/model/Service.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/out/production/case_study_3/codegym/util/DBConnect.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/common/Validate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/controller/ContractDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/controller/ContractServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/controller/EmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/dao/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/dao/ICustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/model/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/model/Emplyee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/model/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/src/codegym/util/DBConnect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/web/customer/createCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/web/customer/deleteCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/web/customer/editCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/web/customer/findCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/web/customer/listCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_3/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/.idea/artifacts/casestudy2_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/.idea/libraries/mysql_connector_java_8_0_17.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/casestudy2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/lib/mysql-connector-java-8.0.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/lib/taglibs-standard-impl-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/lib/taglibs-standard-spec-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/common/Validate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/controller/ContractDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/controller/ContractServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/controller/EmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/dao/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/dao/ICustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/model/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/model/Emplyee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/model/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/src/codegym/util/DBConnect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/web/customer/createCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/web/customer/deleteCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/web/customer/editCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/web/customer/findCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/web/customer/listCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../casestudy2/web/static/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/.idea/artifacts/castudy1_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/.idea/libraries/taglibs_standard_impl_1_2_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/castudy1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/lib/mysql-connector-java-8.0.17.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/lib/taglibs-standard-impl-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/lib/taglibs-standard-spec-1.2.5.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/src/com/codegym/common/Validate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/src/com/codegym/controller/ContractDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/src/com/codegym/controller/ContractServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/src/com/codegym/controller/CustomerServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/src/com/codegym/controller/EmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/src/com/codegym/dao/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/src/com/codegym/dao/ICustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/src/com/codegym/model/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/src/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/src/com/codegym/model/Emplyee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/src/com/codegym/model/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/web/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/web/customer/createCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/web/customer/deleteCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/web/customer/editCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/web/customer/findCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/web/customer/listCustomer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../castudy1/web/static/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../12_jbdc/thuc_hanh/product/out/production/product/service/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../12_jbdc/thuc_hanh/user_manager/lib/mysql-connector-java-8.0.17.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_3/lib/mysql-connector-java-8.0.17.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../12_jbdc/thuc_hanh/user_manager/lib/taglibs-standard-impl-1.2.5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_3/lib/taglibs-standard-impl-1.2.5.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../12_jbdc/thuc_hanh/user_manager/lib/taglibs-standard-spec-1.2.5.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_3/lib/taglibs-standard-spec-1.2.5.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/out/artifacts/thuchanh1_war_exploded/WEB-INF/classes/com/codegym/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/out/artifacts/thuchanh1_war_exploded/WEB-INF/classes/com/codegym/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/out/artifacts/thuchanh1_war_exploded/WEB-INF/classes/com/codegym/dao/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/out/artifacts/thuchanh1_war_exploded/WEB-INF/classes/com/codegym/dao/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/out/artifacts/thuchanh1_war_exploded/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/out/artifacts/thuchanh1_war_exploded/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/out/production/thuchanh1/com/codegym/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/out/production/thuchanh1/com/codegym/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/src/com/codegym/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/src/com/codegym/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/web/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/web/user/list.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
   <component name="ProjectId" id="1wMn7cnKU0qxCSou4bWBuoiJ8EH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../10_jsp_jstl/bai_tap/hienthidskhachhang" />
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.50" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.50" ALTERNATIVE_JRE_ENABLED="false">
       <deployment>
@@ -31,13 +175,27 @@
       </method>
     </configuration>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+      <changelist id="c2f7737b-c13c-4dba-91e8-7dc93aef1d7b" name="Default Changelist" comment="" />
       <created>1628277158725</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628277158725</updated>
+      <workItem from="1630749326121" duration="28000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1630749352230">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1630749352230" />
   </component>
 </project>
