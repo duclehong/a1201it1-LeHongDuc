@@ -18,24 +18,12 @@ public class CustomerDAO implements ICustomerDAO {
     private static final String INSERT_CUSTOMER_SQL = "INSERT INTO customers" + "  (customer_type_id, customer_name, customer_birthday,customer_gender,customer_id_card,customer_phone,customer_email,customer_address) VALUES " +
             " (?,?,?,?,?,?,?,?);";
 
-    private static final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
     private static final String SELECT_CUSTOMER_BY_ID = "select customer_type_id , customer_name,customer_birthday, customer_gender, customer_id_card, customer_phone , customer_email, customer_address from customers where customer_id =?";
     private static final String SELECT_ALL_CUSTOMER = "select * from customers";
     private static final String SELECT_CUSTOMER_FIND = "select * from customers where customer_id = ?";
     private static final String DELETE_CUSTOMER_SQL = "delete from customers where customer_id = ?";
-    private static final String UPDATE_USERS_SQL = "update users set name = ?,email= ?, country =? where id = ?;";
     private static final String UPDATE_CUSTOMER_SQL = "update customers set customer_type_id = ?, customer_name = ?,customer_birthday= ?, customer_gender =?, customer_id_card =?, customer_phone =?, customer_email =?, customer_address =? where customer_id = ?;";
 
-//    private static List<Customer> customers2;
-//    static {
-//        customers2 = new ArrayList<>();
-//        customers2.add(new Customer(1,2,"hehe",2020-04-01,));
-//        customers2.add(new Customer(2,3,"duck5", Validate.strToDate("2001-01-01"),"22.5","0256142654","dyc@gmail.com","na"));
-//        customers2.add(new Customer(3,1,"duck37","2021-09-04","15233321",22.5,"0256142654","dyc@gmail.com","nghệ an",2,2,2,"dau"));
-//        customers2.add(new Customer(4,2,"duck55","2021-09-04","15233321",22.5,"0256142654","dyc@gmail.com","nghệ an",2,2,2,"dau"));
-//        customers2.add(new Customer(5,2,"duck1","2021-09-04","15233321",22.5,"0256142654","dyc@gmail.com","nghệ an",2,2,2,"dau"));
-//        customers2.add(new Customer(6,2,"duck4","2021-09-04","15233321",22.5,"0256142654","dyc@gmail.com","nghệ an",2,2,2,"dau"));
-//    }
 
     public CustomerDAO() {
     }
@@ -54,27 +42,6 @@ public class CustomerDAO implements ICustomerDAO {
         return connection;
     }
 
-
-    @Override
-    public void insertCustomer(Customer customer) throws SQLException {
-
-        System.out.println(INSERT_CUSTOMER_SQL);
-        // try-with-resource statement will auto close the connection.
-        System.out.println(customer.getType());
-        try (Connection connection = getConnection(); PreparedStatement preparedStatement = connection.prepareStatement(INSERT_CUSTOMER_SQL)) {
-            preparedStatement.setInt(1, customer.getType());
-            preparedStatement.setString(2, customer.getName());
-            preparedStatement.setDate(3, (java.sql.Date) customer.getBirthday());
-            preparedStatement.setString(4, customer.getGender());
-            preparedStatement.setString(5, customer.getIdCard());
-            preparedStatement.setString(6, customer.getPhone());
-            preparedStatement.setString(7, customer.getEmail());
-            preparedStatement.setString(8, customer.getAddress());
-            System.out.println(preparedStatement);
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-        }
-    }
 
     @Override
     public Customer selectCustomer(int id) {
@@ -105,10 +72,6 @@ public class CustomerDAO implements ICustomerDAO {
         return customer;
     }
 
-    @Override
-    public List<Customer> selectAllCustomer() {
-        return null;
-    }
 
     @Override
     public boolean deleteCustomer(int id) throws SQLException {
@@ -120,10 +83,7 @@ public class CustomerDAO implements ICustomerDAO {
         return rowDeleted;
     }
 
-    @Override
-    public boolean updateCustomer(Customer customer) throws SQLException {
-        return false;
-    }
+
 
     @Override
     public List<Customer> showAllCustomer() {

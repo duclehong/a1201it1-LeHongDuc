@@ -2,7 +2,7 @@ package codegym.model;
 
 import java.util.Date;
 
-public class Emplyee {
+public class Emplyoee {
     private int id;
     private String name;
     private Date birthday;
@@ -16,10 +16,10 @@ public class Emplyee {
     private int division;
     private String userName;
 
-    public Emplyee() {
+    public Emplyoee() {
     }
 
-    public Emplyee(int id, String name, Date birthday, String idCard, double salary, String phone, String email, String address, int position, int education, int division, String userName) {
+    public Emplyoee(int id, String name, Date birthday, String idCard, double salary, String phone, String email, String address, int position, int education, int division) {
         this.id = id;
         this.name = name;
         this.birthday = birthday;
@@ -31,7 +31,9 @@ public class Emplyee {
         this.position = position;
         this.education = education;
         this.division = division;
-        this.userName = userName;
+    }
+
+    public Emplyoee(String name, Date birthday, String idCard, double salary, String phone, String email, String address, int position, int education, int division) {
     }
 
     public int getId() {
@@ -120,13 +122,5 @@ public class Emplyee {
 
     public void setDivision(int division) {
         this.division = division;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 }

@@ -29,13 +29,18 @@
                     <button type="button " class="btn btn-outline-info">List All Customer</button>
                 </a>
             </div>
-            <div class="col-sm">
-                <a href="/customer?action=create">
-                    <button type="button " class="btn btn-outline-info">Create Customer</button></a>
-            </div>
+
             <div class="col-sm">
                 <a href="/customer?action=create">
                     <button type="button o" class="btn btn-outline-info">Create Customer</button></a>
+            </div>
+            <div class="col-sm">
+                <a href="/services?action=create">
+                    <button type="button " class="btn btn-outline-info">Create Service</button></a>
+            </div>
+            <div class="col-sm">
+                <a href="/employee">
+                    <button type="button " class="btn btn-outline-info">List Employee</button></a>
             </div>
             <div class="col-sm">
                 <a href="/customer?action=create">

@@ -157,4 +157,5 @@ public class CustomerServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("customer/listCustomer.jsp");
         dispatcher.forward(request, response);
     }
+
     }

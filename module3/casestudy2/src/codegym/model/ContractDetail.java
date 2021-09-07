@@ -1,4 +1,4 @@
-package codegym.controller;
+package codegym.model;
 
 public class ContractDetail {
     private int id;
