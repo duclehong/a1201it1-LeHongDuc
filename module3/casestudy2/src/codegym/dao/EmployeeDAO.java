@@ -127,7 +127,6 @@ public class EmployeeDAO implements IEmplyeeDAO {
     @Override
     public boolean updateEmployee(int id, String name, Date birthday, String idCard, double salary, String phone, String email, String address, int position, int education, int division) {
         boolean rowUpdated = false;
-        System.out.println("hihi");
         String UPDATE_EMPLOYEE_SQL = "update employees set employee_name = ?, employee_birthday = ?,employee_id_card= ?, employee_salary =?, employee_phone =?, employee_email =?, employee_address =?, position_id =?, education_id =?, division_id =? where employee_id = ?;";
         try (Connection connection = getConnection(); PreparedStatement statement = connection.prepareStatement(UPDATE_EMPLOYEE_SQL);) {
             System.out.println("hehe");
