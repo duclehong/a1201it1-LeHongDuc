@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="mysql-connector-java-8.0.17">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../module3/13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/lib/mysql-connector-java-8.0.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../module3/13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/lib/taglibs-standard-impl-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../../module3/13_JDBC_Querying_&amp;_Transaction/thuc_hanh/thuchanh1/lib/taglibs-standard-spec-1.2.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
