@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:insert="~{blog/template.html::header}"></div>
+    <h1>List blog </h1>
+    <a href="/blog/create">Create new blog</a>
+    <form action="/blog/index">
+        Name: <input type="text" name="nameSearch" />
+        <input type="submit" value="Search"/>
+    </form>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr th:each="blog, row: ${blogs}">
+            <td th:text="${row.index + 1}"></td>
+            <td th:text="${blog.id}"></td>
+            <td th:text="${blog.name}"></td>>
+            <td><a th:href="@{/blog/detail/{id}(id=${blog.id})}">Detail</a></td>
+            <td><a th:href="@{/blog/edit/{id}(id=${blog.id})}">Edit</a></td>
+            <td><a th:href="@{/blog/delete/{id}(id=${blog.id})}">Delete</a></td>
+        </tr>
+    </table>
+    <p th:if="${message}" th:text="${message}"></p>
+    <div th:replace="~{blog/template.html::footer}"></div>
+</body>
+</html>
