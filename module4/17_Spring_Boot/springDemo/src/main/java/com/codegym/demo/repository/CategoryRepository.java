@@ -1,4 +1,7 @@
 package com.codegym.demo.repository;
 
-public class CategoryRepository {
+import com.codegym.demo.model.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryRepository extends JpaRepository<Category, Integer> {
 }
