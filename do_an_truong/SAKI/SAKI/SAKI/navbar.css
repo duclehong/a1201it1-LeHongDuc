@@ -1,0 +1,31 @@
+.form-inline .form-control {
+    width: 400px;
+}
+
+button:focus {
+    outline: 0;
+}
+
+.navbar .dropdown-menu .form-control {
+    width: 200px;
+}
+
+
+/* .navbar-brand {
+    font-size: 60px;
+} */
+
+.masthead {
+    height: 100vh;
+    min-height: 500px;
+    /* background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080'); */
+    background-image: url('tp.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fa-shopping-cart {
+    width: 24px !important;
+    height: 24px !important;
+}

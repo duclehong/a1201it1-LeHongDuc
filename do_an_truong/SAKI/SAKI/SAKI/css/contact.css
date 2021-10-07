@@ -1,0 +1,165 @@
+
+.home
+{
+	width: 100%;
+	height: 500px;
+	background: transparent;
+}
+.home_background img
+{
+	
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 20%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+ filter: brightness(50%);
+}
+.home_content
+{
+	position: absolute;
+	bottom: 300px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+
+}
+.home_title
+{
+	font-size: 72px;
+	font-weight: 800;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+
+/*about us*/
+
+.about
+{
+	padding-top: 105px;
+	padding-bottom: 146px;
+	z-index: 1;
+}
+.about_image
+{
+	position: absolute;
+	top: -38px;
+	left: 15px;
+}
+.about_content
+{
+	padding-top: 93px;
+}
+.about_logo
+{
+	position: absolute;
+	left: 0;
+	top: -50px;
+}
+.about_logo a
+{
+	color: #2e2e2e;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.about_text
+{
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 2.29;
+	color: #929191;
+}
+.about_social_list
+{
+	margin-top: 40px;
+}
+.about_social_item
+{
+	display: inline-block;
+	width: 40px;
+	height:40px;
+	border: solid 2px #fa9e1b;
+	border-radius: 50%;
+	text-align: center;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	margin-right: 15px;
+}
+.about_social_item:last-child
+{
+	margin-right: 0px;
+}
+.about_social_item a
+{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.about_social_item a i
+{
+	display: block;
+	position: relative;
+	color: #fa9e1b;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: 20px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.about_social_item:hover
+{
+	background: #fa9e1b;
+}
+.about_social_item:hover a i
+{
+	color: #FFFFFF;
+}
+.about_info
+{
+	padding-top: 100px;
+}
+.about_info .contact_info_item:last-child
+{
+	margin-bottom: 0px;
+}
+.about_info .contact_info_list
+{
+	margin-top: 0px;
+}
+.about_info .contact_info_text,
+.about_info .contact_info_text a
+{
+	color: #2e2e2e;
+}
+/*map*/
+
+.travelix_map
+{
+	width: 100%;
+}
+.google_map
+{
+	width: 100%;
+	height: 450px;
+}
+.map_container
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;

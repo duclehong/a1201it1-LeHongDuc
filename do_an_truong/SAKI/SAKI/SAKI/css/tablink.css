@@ -1,0 +1,134 @@
+.nav-item-tab{
+	
+	
+	padding-top: 40px;
+	font-size: 15px;
+	font-weight: 700;
+	color: #2d2c2c;
+	text-transform: uppercase;
+	text-align: center;
+	height: 100%;
+	flex-grow: 1;
+	background: #FFFFFF;
+	cursor: pointer;
+	
+
+
+	
+	
+	
+}
+.nav-item-tab:first-child
+{
+	border-top-left-radius: 94px;
+	padding-left: 7px;
+}
+
+.nav-item-tab:last-child
+{
+	border-top-right-radius: 94px;
+	padding-right: 7px;
+}
+.nav-item-tab:hover
+{
+	background: #fa9e1b;
+	color: #FFFFFF;
+
+}
+.nav-tabs{
+	position: absolute;
+	width: 80%;
+	height: 30vh;
+	margin-top: -90px;
+	
+	margin-left: 100px;
+	background: white;
+	border-radius: 200px;
+	
+}
+.tab-content{
+	position: absolute;
+	width: 100%;
+	
+	background: linear-gradient(to right, #fa9e1b, #8d4fff, #fa9e1b);
+	padding: 30px;
+}
+.search_input
+{
+	width: 100%;
+	height: 46px;
+	border: none;
+	outline: none;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 13px;
+	font-weight: 600;
+	color: #929191;
+	border-radius: 5px;
+}
+.tab{
+	height: 50vh;
+}
+.search_item div
+{
+	font-size: 13px;
+	font-weight: 700;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	margin-bottom: 14px;
+}
+
+.dropdown_item_select
+{
+	-webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	-webkit-user-select: none;
+	background-image: url(../images/dropdown.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+	border: solid 1px #FFFFFF;
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.dropdown_item_select::-ms-expand
+{
+    display: none;
+}
+.dropdown_item_select:hover
+{
+	border: solid 1px #fa9e1c;
+}
+.dropdown_item_select:focus
+{
+	outline-color: #fa9e1c;
+}
+
+
+
+.search_button
+{
+	font-size: 13px;
+	font-weight: 700;
+	color: #fff;
+	text-transform: uppercase;
+	line-height: 53px;
+	padding-left: 46px;
+	padding-right: 46px;
+	background: #31124b;
+	
+	border: none;
+	outline: none;
+	cursor: pointer;
+	
+}
+.search_button:hover
+{
+	opacity: 0.8;
+}

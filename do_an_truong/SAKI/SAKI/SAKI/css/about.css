@@ -1,0 +1,177 @@
+.home {
+    width: 100%;
+    height: 400px;
+    background: transparent;
+}
+
+.home_background img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(50%);
+}
+
+.home_content {
+    position: absolute;
+    bottom: 300px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.home_title {
+    font-size: 72px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.intro {
+    width: 100%;
+    padding-top: 92px;
+    padding-bottom: 105px;
+    background: #f6f9fb;
+}
+
+.intro_image {
+    position: absolute;
+    right: 0;
+    top: 13px;
+}
+
+.intro_image img {
+    width: 80%;
+    height: 80vh;
+}
+
+.intro_title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #2d2c2c;
+    text-transform: uppercase;
+}
+
+.intro_text {
+    margin-bottom: 0px;
+    font-weight: 600;
+    color: #929191;
+    margin-top: 30px;
+}
+
+.skills {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.skill-name {
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.skill-bar {
+    height: 10px;
+    background: #cacaca;
+    border-radius: 8px;
+    width: 100%;
+    position: relative;
+}
+
+.skill-per {
+    height: 10px;
+    background: #31124b;
+    border-radius: 8px;
+    width: 0;
+    position: relative;
+    font-weight: bold;
+    transition: 4s linear;
+}
+
+.skill-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    color: white;
+    font-size: 12px;
+    top: -35px;
+    right: 0px;
+    transform: translateX(50%);
+    background-color: #31124b;
+}
+
+.skill-per::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #31124b;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+.btn {
+    color: #31124b;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.btn .btn-link {
+    text-decoration: none;
+}
+
+.card-header {
+    border: 2px solid yellow;
+}
+
+.card {
+    border: none;
+}
+
+.card-header:hover {
+    background-color: #D2691E;
+}
+
+.card-header .btn:hover {
+    color: white;
+}
+
+.about {
+    margin-top: 20px;
+    height: 300px;
+    width: 1000px;
+}
+
+.about .box {
+    width: 25%;
+    float: left;
+    color: #D2691E;
+}
+
+.box {
+    margin-top: 20px;
+    color: #D2691E;
+}
+
+.chart-title {
+    position: absolute;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    width: 110px;
+    height: 110px;
+}
+
+.doan1 {
+    margin-top: 50px;
+}

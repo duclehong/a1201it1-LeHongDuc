@@ -1,0 +1,34 @@
+.swiper-container {
+      width: 600px;
+      height: 304px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -300px;
+      margin-top: -150px;
+
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+
+    }
+.swiper-slide img{
+  width: 100%;
+  height: 50vh;
+}
+.item-img-1{
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 0% 100%);
+  width: 100%;
+}
+.item-img-2{
+  
+width: 40%;
+  margin-top: -25%;
+  margin-left: 25%;
+  
+  position: relative;
+  border:2px solid white;
+}   
+   
+    

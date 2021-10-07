@@ -1,0 +1,55 @@
+.home {
+    width: 100%;
+    height: 400px;
+    background: transparent;
+}
+
+.home_background img {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(50%);
+}
+
+.home_content {
+    position: absolute;
+    bottom: 300px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+}
+.home_title {
+    font-size: 72px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-transform: uppercase;
+
+}
+.phone-name{
+    font-size: 20px;
+    color: #929191;
+    font-weight: 700;
+}
+.form-control{
+    width: 250px;
+    margin-left: 40%;
+}
+.btn-primary{
+    font-size: 20px;
+    padding:5px;
+    width: 200px;
+    margin-bottom: 30px;
+}
+.btn-primary a{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
