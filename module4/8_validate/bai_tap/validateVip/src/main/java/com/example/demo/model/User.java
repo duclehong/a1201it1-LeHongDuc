@@ -19,7 +19,9 @@ public class User implements Validator {
     @Min(18)
     private int age;
     @Pattern(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$",message = "email chua dung dinh dang")
+
     private String email;
+
 
     public void setAge(int age) {
         this.age = age;

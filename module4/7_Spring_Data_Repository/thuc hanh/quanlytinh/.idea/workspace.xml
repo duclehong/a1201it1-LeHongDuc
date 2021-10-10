@@ -7,150 +7,94 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3d00ee4-233b-4fa0-bd92-c529d41f94ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../17_Spring_Boot/springDemo/src/main/java/com/codegym/demo/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../17_Spring_Boot/springDemo/src/main/java/com/codegym/demo/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../17_Spring_Boot/springDemo/src/main/java/com/codegym/demo/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../17_Spring_Boot/src/main/java/com/example/demo/config/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../3_Thymeleaf/thuc_hanh/thymeleaf_test/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../3_Thymeleaf/thuc_hanh/thymeleaf_test/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../3_Thymeleaf/thuc_hanh/thymeleaf_test/src/main/webapp/WEB-INF/views/message.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../3_Thymeleaf/thuc_hanh/thymeleaf_test/src/main/webapp/WEB-INF/views/user/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../3_Thymeleaf/thuc_hanh/thymeleaf_test/src/main/webapp/WEB-INF/views/user/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../3_Thymeleaf/thuc_hanh/thymeleaf_test/src/main/webapp/WEB-INF/views/user/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../3_Thymeleaf/thuc_hanh/thymeleaf_test/src/main/webapp/WEB-INF/views/user/template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../3_Thymeleaf/thuc_hanh/thymeleaf_test/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../3_Thymeleaf/thuc_hanh/thymeleaf_test/src/main/webapp/static/css/detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/bai_tap/thu/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/bai_tap/thu/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/bai_tap/thu/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/bai_tap/thu/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/bai_tap/thu/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/bai_tap/thu/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/bai_tap/thu/thu.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/springmvc(Maven without XML config)/springmvc/springmvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/login.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/src/main/java/com/codegym/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/src/main/java/com/codegym/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/src/main/java/com/codegym/model/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/src/main/java/com/codegym/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/login/src/main/webapp/static/css/detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thuc_hanh/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thymeleaf/src/codegym/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thymeleaf/src/codegym/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../4_Data_Binding_Form/thymeleaf/thymeleaf.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/cms/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/cms/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/cms/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/cms/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/cms/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/cms/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/cms/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/cms/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/cms/src/main/java/cg/wbd/grandemonstration/controller/HibernateCustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/cms/src/main/java/cg/wbd/grandemonstration/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/test/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/test/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/test/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/test/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/test/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/test/src/com/form/login/LoginForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/test/src/form/Form.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/test/src/form/Form.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/test/src/lab2/NewJFrame1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/test/src/lab2/SecondFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../5_ORM/thuc_hanh/test/test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/springmvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/src/main/java/codegym/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/src/main/java/codegym/entity/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/src/main/java/codegym/repository/BlogRespository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/src/main/java/codegym/repository/iml/BlogRespositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/src/main/java/codegym/repository/iml/BlogRespositoryImpl2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/src/main/java/codegym/service/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/src/main/java/codegym/service/iml/BlogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/src/main/webapp/WEB-INF/views/blog/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/src/main/webapp/WEB-INF/views/blog/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/src/main/webapp/WEB-INF/views/blog/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/springmvc/src/main/webapp/WEB-INF/views/blog/template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/thuc hanh/spring-jpa-customer-management-master/.idea/modules/customer-management.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/thuc hanh/spring-jpa-customer-management-master/.idea/modules/customer-management_main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../6_jpa/thuc hanh/spring-jpa-customer-management-master/.idea/modules/customer-management_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/quanlytinh.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/config/AppConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/config/AppInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/entity/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/BlogRespository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/iml/BlogRespositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/iml/BlogRespositoryImpl2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/iml/UserRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/repository/iml/UserRepositoryImpl2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/service/BlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/service/iml/BlogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codegym/service/iml/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blog/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blog/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blog/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/blog/template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/message.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../8_validate/springmvc/.idea/springmvc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Spring_Boot/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Spring_Boot/.idea/Spring_Boot.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Spring_Boot/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Spring_Boot/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Spring_Boot/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/build/libs/spring-sandwich-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/build/libs/spring-sandwich-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/build/tmp/war/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/bai_tap/spring-sandwich/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/build/classes/java/main/controller/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/build/classes/java/main/controller/CustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/build/classes/java/main/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/build/classes/java/main/service/impl/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/build/libs/customer_manager-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2_spring_controller/thuc_hanh/customer_manager/build/libs/customer_manager-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/java/com/example/demo/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/java/com/example/demo/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/java/com/example/demo/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/java/com/example/demo/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/java/com/example/demo/repository/BlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/java/com/example/demo/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/java/com/example/demo/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/java/com/example/demo/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/java/com/example/demo/service/impl/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/java/com/example/demo/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/resources/templates/blog/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/resources/templates/blog/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/resources/templates/blog/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/resources/templates/blog/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/resources/templates/blog/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/resources/templates/category/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/resources/templates/category/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/resources/templates/category/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/blog/src/main/resources/templates/category/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/4.8/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/4.8/fileContent/annotation-processors.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/4.8/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/4.8/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.gradle/vcsWorkingDirs/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/classes/java/main/com/codegym/ApplicationConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/classes/java/main/com/codegym/ApplicationInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/classes/java/main/com/codegym/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/classes/java/main/com/codegym/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/classes/com/codegym/ApplicationConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/classes/com/codegym/ApplicationInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/classes/com/codegym/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/classes/com/codegym/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/attoparser-2.0.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/classmate-1.3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/hibernate-validator-6.0.10.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/jboss-logging-3.3.2.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/slf4j-api-1.6.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/spring-aop-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/spring-beans-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/spring-context-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/spring-core-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/spring-expression-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/spring-web-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/spring-webmvc-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/thymeleaf-3.0.4.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/thymeleaf-spring4-3.0.4.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/unbescape-1.1.4.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/lib/validation-api-2.0.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/views/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/exploded/validate-infor-user-1.0-SNAPSHOT.war/WEB-INF/views/result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/libs/validate-infor-user-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/out/production/classes/com/codegym/ApplicationConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/out/production/classes/com/codegym/ApplicationInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/out/production/classes/com/codegym/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/out/production/classes/com/codegym/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/src/main/java/com/codegym/ApplicationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/src/main/java/com/codegym/ApplicationInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/src/main/java/com/codegym/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/src/main/java/com/codegym/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validate-form/src/main/webapp/WEB-INF/views/result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../8_validate/bai_tap/validateVip/src/main/java/com/example/demo/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../8_validate/bai_tap/validateVip/src/main/java/com/example/demo/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +125,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../17_Spring_Boot/springDemo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -286,6 +230,7 @@
       <workItem from="1633335142373" duration="619000" />
       <workItem from="1633485580212" duration="992000" />
       <workItem from="1633515417133" duration="103000" />
+      <workItem from="1633860715182" duration="1520000" />
     </task>
     <servers />
   </component>
@@ -301,54 +246,54 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1633515518853" />
-    <state width="1024" height="298" key="GridCell.Tab.0.bottom" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.0.bottom" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
-    <state width="1024" height="298" key="GridCell.Tab.0.center" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
+    <state width="1024" height="301" key="GridCell.Tab.0.center" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
-    <state width="1024" height="298" key="GridCell.Tab.0.left" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
+    <state width="1024" height="301" key="GridCell.Tab.0.left" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
-    <state width="1024" height="298" key="GridCell.Tab.0.right" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
+    <state width="1024" height="301" key="GridCell.Tab.0.right" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
-    <state width="1024" height="298" key="GridCell.Tab.1.bottom" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
+    <state width="1024" height="301" key="GridCell.Tab.1.bottom" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
-    <state width="1024" height="298" key="GridCell.Tab.1.center" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
+    <state width="1024" height="301" key="GridCell.Tab.1.center" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
-    <state width="1024" height="298" key="GridCell.Tab.1.left" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
+    <state width="1024" height="301" key="GridCell.Tab.1.left" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
-    <state width="1024" height="298" key="GridCell.Tab.1.right" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
+    <state width="1024" height="301" key="GridCell.Tab.1.right" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
-    <state width="1024" height="298" key="GridCell.Tab.2.bottom" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
+    <state width="1024" height="301" key="GridCell.Tab.2.bottom" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
-    <state width="1024" height="298" key="GridCell.Tab.2.center" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
+    <state width="1024" height="301" key="GridCell.Tab.2.center" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
-    <state width="1024" height="298" key="GridCell.Tab.2.left" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
+    <state width="1024" height="301" key="GridCell.Tab.2.left" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
-    <state width="1024" height="298" key="GridCell.Tab.2.right" timestamp="1633318842101">
+    <state width="1024" height="301" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
+    <state width="1024" height="301" key="GridCell.Tab.2.right" timestamp="1633863805748">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1024" height="298" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1633318842101" />
+    <state width="1024" height="301" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1633863805748" />
     <state width="1024" height="213" key="GridCell.Tab.7.bottom" timestamp="1633314970778">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -385,5 +330,9 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1633314829764" />
+    <state x="209" y="78" key="new project wizard" timestamp="1633861049486">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="209" y="78" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1633861049486" />
   </component>
 </project>
