@@ -2,8 +2,10 @@ package com.example.demo.controller;
 
 import com.example.demo.model.Blog;
 import com.example.demo.model.Category;
+import com.example.demo.model.Student;
 import com.example.demo.service.BlogService;
 import com.example.demo.service.CategoryService;
+import com.example.demo.service.DuplicateTitleEcxeption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -50,10 +52,14 @@ public class BlogController {
     }
     @PostMapping("/create-blog")
     private String create(@ModelAttribute("blog") Blog blog, Model model, RedirectAttributes redirectAttributes){
-        blogService.save(blog);
-        model.addAttribute("blog", new Blog());
-        redirectAttributes.addFlashAttribute("createSuccess", "Create blog successfully");
-        return "redirect:/";
+        try {
+            blogService.save(blog);
+            model.addAttribute("blog", new Blog());
+            redirectAttributes.addFlashAttribute("createSuccess", "Create blog successfully");
+            return "redirect:/";
+        }catch (DuplicateTitleEcxeption e){
+            return "error";
+        }
     }
 
     @GetMapping("/edit-blog/{id}")
@@ -64,11 +70,15 @@ public class BlogController {
     }
 
     @PostMapping("edit-blog")
-    public String edit(@ModelAttribute("blog") Blog blog, Model model, RedirectAttributes redirectAttributes){
+    public String edit(@ModelAttribute("blog") Blog blog, Model model, RedirectAttributes redirectAttributes) throws DuplicateTitleEcxeption{
         blogService.save(blog);
         model.addAttribute("blog", blog);
         redirectAttributes.addFlashAttribute("editSuccess", "Edit Blog successfully");
         return "redirect:/";
+    }
+    @ExceptionHandler(DuplicateTitleEcxeption.class)
+    public String showError(){
+        return "error";
     }
     @GetMapping("/delete-blog/{id}")
     public String showDeleteForm(Model model, @PathVariable Long id){
@@ -87,4 +97,5 @@ public class BlogController {
         model.addAttribute("blog", blogService.findById(id));
         return "/blog/view";
     }
+    Student a = new Student();
 }

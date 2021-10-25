@@ -3,7 +3,9 @@ package com.example.demo.service.impl;
 import com.example.demo.model.Blog;
 import com.example.demo.repository.BlogRepository;
 import com.example.demo.service.BlogService;
+import com.example.demo.service.DuplicateTitleEcxeption;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -24,8 +26,12 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public void save(Blog blog) {
-        blogRepository.save(blog);
+    public void save(Blog blog) throws DuplicateTitleEcxeption {
+        try {
+            blogRepository.save(blog);
+        }catch (DataIntegrityViolationException e){
+            throw new DuplicateTitleEcxeption();
+        }
     }
 
     @Override

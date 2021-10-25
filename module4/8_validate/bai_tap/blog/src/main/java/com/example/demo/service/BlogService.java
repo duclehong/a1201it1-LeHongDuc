@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 public interface BlogService {
     public Page<Blog> findAll(Pageable pageable);
     public Blog findById(Long id);
-    public void save(Blog blog);
+    public void save(Blog blog) throws DuplicateTitleEcxeption;
     public void remove(Long id);
     public Page<Blog> findAllByFirstNameContaining(String name, Pageable pageable);
 }

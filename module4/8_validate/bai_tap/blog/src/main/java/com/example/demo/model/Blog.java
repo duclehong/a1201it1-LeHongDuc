@@ -8,10 +8,14 @@ public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String author;
+
     @Column(unique = true)
     private String title;
+
     private String content;
+
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
