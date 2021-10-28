@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show blog list</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<h1>Blog list</h1>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="create">
+    Create Blog
+</button>
+<form>
+    Search by name:
+    <input name="s" type="text" id="s"/>
+    <input type="submit" value="Search" id="search"/>
+</form><br/>
+<table border="1" id="table">
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Content</td>
+        <td>Image link</td>
+        <td>Category</td>
+        <td>Edit</td>
+        <td>Delete</td>
+        <td>View</td>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="blog : ${blogs}">
+        <tr>
+            <td th:text="${blog.name}"></td>
+            <td th:text="${blog.content}"></td>
+            <td th:text="${blog.image}"></td>
+            <td th:text="${blog.category.name}"></td>
+            <td>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="editBlog"
+                th:onclick="'javascipt:edit(\'' + ${blog.id} + '\')'">
+                    Edit Blog
+                </button>
+            </td>
+            <td><a th:href="@{/delete-blog/__${blog.id}__}">delete</a></td>
+            <td><a th:href="@{/view-blog/__${blog.id}__}">view</a></td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            </div>
+<!--            <div class="modal-footer">-->
+<!--                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--                <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--            </div>-->
+        </div>
+    </div>
+</div>
+<div>
+    <a th:href="@{'/blogs/'(page=${blogs.number - 1})}" th:if="${blogs.hasPrevious()}">Previous</a>
+    <span th:text="${blogs.number + 1}"></span>/<span th:text="${blogs.totalPages}"></span>
+    <a th:href="@{'/blogs/'(page=${blogs.number + 1})}" th:if="${blogs.hasNext()}">Next</a>
+</div>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#search").click(function () {
+            $.ajax({
+                url : "/blogs",
+                type :"GET",
+                dataType :"HTML",
+                success : function (data) {
+                    $("#table").html(data);
+                }
+            })
+        })
+        $("#create").click(function () {
+            $.ajax({
+                url : "/create-blog",
+                type :"GET",
+                dataType :"HTML",
+                success : function (data) {
+                    $(".modal-body").html(data);
+                    $("#exampleModalLong").modal('show');
+                }
+            })
+        })
+    });
+    function edit(id) {
+        $.ajax({
+            url : "/edit-blog/" + id,
+            type :"GET",
+            dataType :"HTML",
+            success : function (data) {
+                $(".modal-body").html(data);
+                $("#exampleModalLong").modal('show');
+            }
+        })
+
+    }
+</script>
+</body>
+</html>
