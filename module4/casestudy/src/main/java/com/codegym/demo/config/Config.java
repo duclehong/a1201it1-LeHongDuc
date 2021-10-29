@@ -12,7 +12,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 import java.nio.charset.StandardCharsets;
 
 @Configuration
-public class    Config {
+public class Config {
     @Bean
     public SpringTemplateEngine springTemplateEngine()
     {
