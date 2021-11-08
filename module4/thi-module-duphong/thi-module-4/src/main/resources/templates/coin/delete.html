@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+<h1>Are you sure?</h1>
+<form th:action="@{/delete}" th:object="${coin}" method="post">
+    <input type="hidden" th:field="*{id}">
+    <table>
+        <tr>
+            <td th:text="${coin.name}"></td>
+            <td th:text="${coin.price}"></td>
+            <td th:text="${coin.birthday}"></td>
+        </tr>
+    </table>
+    <input type="submit" value="delete">
+</form>
+</body>
+</html>

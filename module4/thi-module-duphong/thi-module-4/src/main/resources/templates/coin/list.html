@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="wrapper">
+    <nav th:replace="layout :: navtop2"></nav>
+    <nav th:replace="layout :: navtop"></nav>
+    <div id="page-wrapper" th:fragment="navside-index">
+        <div id="page-inner">
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="form-inline d-flex justify-content-center form-control-sm">
+                        <input class="form-control form-control-sm mr-3 w-75" name="s" type="text"
+                               placeholder="Search by name" aria-label="Search">
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                    <br>
+                    <form method="get" th:action="@{/create}">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fa fa-plus-square"></i> Create
+                        </button>
+                    </form>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table border="1" class="table table-striped table-bordered table-hover">
+                                        <tr>
+                                            <th> Stt</th>
+                                            <th> Name</th>
+                                            <th> Price</th>
+                                            <th> Date of Birth</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <th:block th:each="coins, index : ${coins}">
+                                            <tr>
+                                                <td th:id="'coinId' + ${index.index}" th:text="${coins.id}" hidden>  </td>
+                                                <td th:id="'stt' + ${index.index}" th:text="${index.index +1 }" >  </td>
+                                                <td th:id="'coinName' + ${index.index}" th:text="${coins.name}"></td>
+                                                <td th:text="${coins.price}"></td>
+                                                <td th:text="${coins.birthday}"></td>
+                                                <td><form method="get" th:action="@{/edit/__${coins.id}__ }">
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <i class="fa fa-edit"></i> Edit
+                                                    </button>
+                                                </form></td>
+<!--                                                <td><a th:href="@{/edit/__${coins.id}__ }"> Edit </a></td>-->
+<!--                                                <td><a th:href="@{/delete/__${coins.id}__ }"> <button ></button></a></td>-->
+                                                <td>
+                                                    <button th:onclick="'javascript:coinSetId(' + ${index.index} + ')'"
+                                                            class="btn btn-danger btnModalDelete"><i
+                                                            class="fa fa-pencil"></i> Delete
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </th:block>
+                                    </table>
+                                    <div>
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination">
+                                                <li class="page-item"><a class="page-link"
+                                                                         th:href="@{'/'(page=${coins.number - 1})}"
+                                                                         th:if="${coins.hasPrevious()}">Previous</a>
+                                                </li>
+                                                <li class="page-item"><span class="page-link"
+                                                                            th:text="${coins.number + 1}"></span><span
+                                                        class="page-link" th:text="${coins.totalPages}"></span></li>
+                                                <li class="page-item"><a
+                                                        th:href="@{'/'(page=${coins.number + 1})}"
+                                                        th:if="${coins.hasNext()}">Next</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="notify">
+                        <th:block th:if="${createSuccess}">
+                            <p th:text="${createSuccess}"></p>
+                        </th:block>
+                        <th:block th:if="${editSuccess}">
+                            <p th:text="${editSuccess}"></p>
+                        </th:block>
+                        <th:block th:if="${deleteSuccess}">
+                            <p th:text="${deleteSuccess}"></p>
+                        </th:block>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--        modal delete-->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title text-center" id="exampleModalLabel2">Delete Coin</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="modelId" size="50" disabled style="border: none;background: white; color: red">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" th:onclick="'javascript:submitDelete()'">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+<form th:action="@{/delete}" method="post" id="deleteCoin">
+    <input type="hidden" name="action" value="deleteCoin">
+    <input type="hidden" name="idCoin" id="idCoin">
+</form>
+
+<!--            modal view-->
+<div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title1 text-center" id="exampleModalLabel">View Coin</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Body
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function showView(index) {
+        let id = document.getElementById("coinId" + index).innerHTML;
+        $.ajax({
+            type: "GET",
+            url: "/view/" + id,
+            dataType: "HTML",
+            success: function (data) {
+                $(".modal-body").html(data);
+                $('#viewModal').modal('show');
+            }
+        })
+    }
+
+    function coinSetId(index) {
+        let name = document.getElementById("coinName" + index).innerHTML;
+        let id = document.getElementById("coinId" + index).innerHTML;
+        document.getElementById("idCoin").value = id;
+        document.getElementById("modelId").value = "Do you want delete coin name: " + name;
+        $('#deleteModal').modal('show');
+    }
+
+    function submitDelete() {
+        <!-- để submit form delete  -->
+        document.getElementById("deleteCoin").submit();
+        alert("Delete coin successfully");
+    }
+</script>
+</html>

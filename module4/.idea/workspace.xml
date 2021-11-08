@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c278a61-f60f-42a6-b027-fac8d77f1912" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/AttachService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/ContractDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/Division.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/EducationDegree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/Log.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/RentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/ServiceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/repository/CustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/repository/CustomerTypeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/repository/GenderRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/service/CustomerTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/service/DuplicateIDException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/service/GenderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/service/impl/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/service/impl/CustomerTypeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/service/impl/GenderServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/css/custom-styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/css/font-awesome.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/font-awesome/fonts/fontawesome-webfontba72.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/font-awesome/fonts/fontawesome-webfontba72.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/font-awesome/fonts/fontawesome-webfontba72.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/font-awesome/fonts/fontawesome-webfontba72.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/font-awesome/fonts/fontawesome-webfontd41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/fonts/glyphicons-halflings-regulard41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/js/custom-scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/js/dataTables/datatables.bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/js/dataTables/datatables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/js/dataTables/jquery.datatables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/js/jquery-1.10.2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/js/jquery.metismenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/js/morris/morris-0.4.3.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/js/morris/morris.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/assets/js/morris/raphael-2.1.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/static/js/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/templates/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/templates/customer/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/templates/customer/inputs-not-acceptable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/casestudy/src/main/resources/templates/customer/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/19_String_Regex/out/production/19_String_Regex/Practice/CrawlNews.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module2/19_String_Regex/out/production/19_String_Regex/Practice/CrawlNews.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/19_String_Regex/out/production/19_String_Regex/Practice/CrawlSongExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/../module2/19_String_Regex/out/production/19_String_Regex/Practice/CrawlSongExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/19_String_Regex/src/Practice/CrawlNews.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2/19_String_Regex/src/Practice/CrawlNews.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/19_String_Regex/src/Practice/CrawlSongExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module2/19_String_Regex/src/Practice/CrawlSongExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/html-thymeleaf/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/html-thymeleaf/java/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/html-thymeleaf/java/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/html-thymeleaf/xml/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/html-thymeleaf/xml/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/html-thymeleaf/xml/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/jsp/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/jsp/java/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/jsp/java/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/jsp/xml/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/jsp/xml/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/config/jsp/xml/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/5.2.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/5.2.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/build/classes/java/main/com/example/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/build/classes/java/main/com/example/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/build/classes/java/main/com/example/controller/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/build/libs/spring-gradle-java-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/src/main/java/com/example/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/src/main/java/com/example/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/src/main/java/com/example/controller/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-java/src/main/webapp/WEB-INF/views/greeting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/5.2.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/5.2.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/5.2.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.idea/modules/spring-gradle-xml.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/build/classes/java/main/com/example/controller/GreetingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/build/libs/spring-gradle-xml-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/src/main/java/com/example/controller/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/src/main/webapp/WEB-INF/views/greeting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gradle-master/spring-gradle-xml/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/artifacts/speedtest_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/artifacts/speedtest_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/libraries/Maven__javax_annotation_jsr250_api_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/libraries/Maven__junit_junit_4_13_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/mvnvm.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/speedtest.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/src/main/java/fr/cedrik/speedtest/SpeedTestServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpeedTest-master/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring_Boot/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring_Boot/.idea/Spring_Boot.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring_Boot/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring_Boot/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spring_Boot/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/demo/CasestudyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/CaseStudyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/demo/config/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/demo/controller/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/demo/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/demo/model/CustomerType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/demo/model/Division.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/demo/model/EducationDegree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/demo/model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/demo/model/Position.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/demo/model/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/java/com/codegym/demo/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/casestudy/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/casestudy/src/test/java/com/codegym/demo/CasestudyApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/src/main/java/com/example/demo/controller/CounterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/src/main/resources/static/js/speedtest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/src/main/resources/static/js/speedtest_worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/laptrinhweb25/10/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="20UsMzWAODu9MWAkhu80xq92LID" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/casestudy" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c278a61-f60f-42a6-b027-fac8d77f1912" name="Default Changelist" comment="" />
+      <created>1636110457170</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636110457170</updated>
+      <workItem from="1636110460288" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1636110469750">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1636110469750" />
+  </component>
+</project>
