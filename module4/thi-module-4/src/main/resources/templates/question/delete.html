@@ -6,13 +6,13 @@
 </head>
 <body>
 <h1>Are you sure?</h1>
-<form th:action="@{/delete}" th:object="${coin}" method="post">
+<form th:action="@{/delete}" th:object="${question}" method="post">
     <input type="hidden" th:field="*{id}">
     <table>
         <tr>
-            <td th:text="${coin.name}"></td>
-            <td th:text="${coin.price}"></td>
-            <td th:text="${coin.birthday}"></td>
+            <td th:text="${question.title}"></td>
+            <td th:text="${question.question}"></td>
+            <td th:text="${question.status}"></td>
         </tr>
     </table>
     <input type="submit" value="delete">

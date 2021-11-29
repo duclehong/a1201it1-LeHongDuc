@@ -12,23 +12,20 @@ import java.util.regex.Pattern;
 public class CrawlSongExample {
     public static void main(String[] args) {
         try {
-            // Code here
-            URL url = new URL("https://www.nhaccuatui.com/bai-hat/sai-gon-hom-nay-mua-jsol-ft-hoang-duyen.EZwfyBx9IT1N.html");
-            // open the stream and put it into BufferedReader
+            URL url = new URL("https://vnexpress.net/covid-19/covid-19-viet-nam?fbclid=IwAR27DwuZb2T2qNm9DxZ6zGKoq_KwZ3jXBYdh3MGvCzH0VTJM1c5dOiZoOO0");
             Scanner scanner = new Scanner(new InputStreamReader(url.openStream()));
             scanner.useDelimiter("\\Z");
             String content = scanner.next();
-            // close scanner
-            scanner.close();
+            
             // remove all new line
             content = content.replaceAll("\\n+", "");
             // regex
-            Pattern p = Pattern.compile("content=\"(.*?)| Nghe nhạc hay online mới nhất chất lượng cao\" />");
+            Pattern p = Pattern.compile("content=\"(.*?)/>");
             Matcher m = p.matcher(content);
             while (m.find()) {
                 System.out.println(m.group(1));
             }
-
+            scanner.close();
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {

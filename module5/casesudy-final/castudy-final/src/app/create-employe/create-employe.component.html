@@ -1,0 +1,88 @@
+<h2 class="text-center">Create Emplyee</h2>
+<form [formGroup]="createEmployee" (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3">
+  <div class="form-group row">
+    <label class="col">
+      Id Nhân Viên
+      <input type="text" class="form-control" formControlName="idEmployee">
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Họ Và Tên
+      <input type="text" class="form-control" formControlName="name">
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Vị Trí
+      <select formControlName="viTri" class="form-control">
+        <option value="">Chọn</option>
+        <option value="vn">Sep</option>
+        <option value="us">Nhan Vien</option>
+      </select>
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Trình Độ
+      <select formControlName="trinhDo" class="form-control">
+        <option value="">Chọn</option>
+        <option value="vn">Cử Nhân</option>
+        <option value="us">Thạc Sĩ</option>
+        <option value="us">Tiến Sĩ</option>
+      </select>
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Bộ Phận
+      <select formControlName="boPhan" class="form-control">
+        <option value="">Chọn</option>
+        <option value="vn">Marketing</option>
+        <option value="us">Dev</option>
+      </select>
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Ngày Sinh
+      <input type="date" class="form-control" formControlName="birthDay">
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      CMND
+      <input type="text" class="form-control" formControlName="cmnd">
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Lương
+      <input type="text" class="form-control" formControlName="luong">
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Số Điện thoại
+      <input type="text" class="form-control" formControlName="std">
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Email
+      <input type="email" class="form-control" formControlName="email">
+    </label>
+  </div>
+  <div class="form-group row">
+    <label class="col">
+      Địa chỉ
+      <input type="text" class="form-control" formControlName="address">
+    </label>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-info" type="submit">Submit</button>
+  </div>
+</form>
+<pre>
+  {{ createEmployee.value | json}}
+  </pre>

@@ -1,0 +1,10 @@
+<h2>Boder Radius</h2>
+
+<div>
+  <label>Enter Boder Radius (px):</label>
+  <input type="number" [value]="borderRadius" (change)="onChange($event.target.value)">
+</div>
+
+<div class="output" [style.borderRadius.px]="boderRadius">
+ 
+</div>

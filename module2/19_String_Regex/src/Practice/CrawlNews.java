@@ -13,7 +13,7 @@ public class CrawlNews {
     public static void main(String[] args) {
         try {
             // Code here
-            URL url = new URL("https://dantri.com.vn/the-gioi.htm");
+            URL url = new URL("https://vnexpress.net/covid-19");
             // open the stream and put it into BufferedReader
             Scanner scanner = new Scanner(new InputStreamReader(url.openStream()));
             scanner.useDelimiter("\\Z");
@@ -23,7 +23,7 @@ public class CrawlNews {
             // remove all new line
             content = content.replaceAll("\\n+", "");
             // regex
-            Pattern p = Pattern.compile("MainList.*title=\"(.*?)\" href=\"/the-gioi");
+            Pattern p = Pattern.compile("<span\"(.*?)\" </span>");
             Matcher m = p.matcher(content);
             while (m.find()) {
 

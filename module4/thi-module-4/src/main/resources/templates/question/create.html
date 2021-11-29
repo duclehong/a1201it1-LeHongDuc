@@ -19,34 +19,45 @@
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-6">
-                                <form th:action="@{/create}" method="post" th:object="${coin}">
+                                <form th:action="@{/create}" method="post" th:object="${question}">
                                     <div class="container ">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <form class="form-light mt-20" role="form">
                                                     <div class="form-group">
-                                                        <label>Name</label>
-                                                        <input th:field="*{name}" type="text"
-                                                               class="form-control" placeholder=" name" required>
-                                                        <label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"> </label>
+                                                        <label>Tiêu đề</label>
+                                                        <input th:field="*{title}" type="text"
+                                                               class="form-control" placeholder=" tiêu đề" required>
+                                                        <label th:if="${#fields.hasErrors('title')}" th:errors="*{title}"> </label>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Price</label>
-                                                        <input th:field="*{price}" type="text"
-                                                               class="form-control" placeholder="price" required>
+                                                        <label>Nội dung</label>
+                                                        <input th:field="*{question}" type="text"
+                                                               class="form-control" placeholder="nội dung" required>
 <!--                                                        <label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"> </label>-->
                                                     </div>
                                                     <div class="form-group">
-                                                        <label>Birth Day</label>
-                                                        <input th:field="*{birthday}" type="date"
-                                                               class="form-control" placeholder="Birth Day" required>
-                                                        <label th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}" style="color: red"></label>
+                                                        <label>Loại câu hỏi</label>
+                                                        <select th:field="*{idQuestionType}"
+                                                                class="form-control" required>
+                                                            <option th:each="p : ${questionType}"
+                                                                    th:value="${p.idQuestion}"
+                                                                    th:text="${p.name}"></option>
+                                                        </select>
+<!--                                                        <select class="form-control"-->
+<!--                                                                 required>-->
+<!--&lt;!&ndash;                                                            <option th:each="p : ${customerType}"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                                    th:value="${p.customer_type_id}"&ndash;&gt;-->
+<!--&lt;!&ndash;                                                                    th:text="${p.customer_type_name}"></option>&ndash;&gt;-->
+<!--                                                            <option th:value="1"-->
+<!--                                                                    th:text="type1"></option>-->
+<!--                                                            <option th:value="2"-->
+<!--                                                                    th:text="type2"></option>-->
+
+<!--                                                        </select>-->
+<!--                                                        <label th:if="${#fields.hasErrors('question_type')}" th:errors="*{idQuestionType}"> </label>-->
+                                                        <!--                                                        <label th:if="${#fields.hasErrors('')}" th:errors="*{question_type}" style="color: red"></label>-->
                                                     </div>
-                                                    <!-- <div class="form-group">
-                                                    <label>Message</label>
-                                                    <textarea class="form-control" id="message" placeholder="Write you message here..."
-                                                        style="height:100px;"></textarea>
-                                                </div> -->
                                                     <button type="submit" class="btn btn-success btn-lg">Create</button>
                                                     <p><br/></p>
                                                 </form>
